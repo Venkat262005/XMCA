@@ -71,10 +71,25 @@ class XMCARequestHandler(SimpleHTTPRequestHandler):
             self.end_headers()
 
 
+class ReusableHTTPServer(HTTPServer):
+    allow_reuse_address = True
+
+
 def run_server(port: int = 8080):
     server_address = ("127.0.0.1", port)
     logger.info(f"Starting XMCA-Net Studio server on http://localhost:{port}")
-    httpd = HTTPServer(server_address, XMCARequestHandler)
+    try:
+        httpd = ReusableHTTPServer(server_address, XMCARequestHandler)
+    except OSError as e:
+        if e.errno == 48:
+            alt_port = port + 1
+            logger.warning(f"Port {port} in use. Attempting fallback to port {alt_port}...")
+            server_address = ("127.0.0.1", alt_port)
+            httpd = ReusableHTTPServer(server_address, XMCARequestHandler)
+            port = alt_port
+        else:
+            raise e
+
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
