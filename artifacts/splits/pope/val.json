@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pope_000016",
+    "dataset": "pope",
+    "image_id": "img_pope_00007",
+    "image_path": "data/images/img_pope_00007.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 16
+    }
+  },
+  {
+    "id": "pope_000017",
+    "dataset": "pope",
+    "image_id": "img_pope_00007",
+    "image_path": "data/images/img_pope_00007.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 17
+    }
+  },
+  {
+    "id": "pope_000036",
+    "dataset": "pope",
+    "image_id": "img_pope_00007",
+    "image_path": "data/images/img_pope_00007.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 36
+    }
+  }
+]

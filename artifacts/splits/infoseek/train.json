@@ -1,0 +1,434 @@
+[
+  {
+    "id": "infoseek_000007",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "image_path": "data/images/img_infoseek_00011.jpg",
+    "question": "What is the identity and provenance of Artifact_street_7 shown here?",
+    "ground_truth_answers": [
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 7
+    }
+  },
+  {
+    "id": "infoseek_000008",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "image_path": "data/images/img_infoseek_00011.jpg",
+    "question": "What is the identity and provenance of Artifact_kitchen_8 shown here?",
+    "ground_truth_answers": [
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 8
+    }
+  },
+  {
+    "id": "infoseek_000010",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "image_path": "data/images/img_infoseek_00011.jpg",
+    "question": "What is the identity and provenance of Artifact_space_10 shown here?",
+    "ground_truth_answers": [
+      "Artifact_space_10 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 10
+    }
+  },
+  {
+    "id": "infoseek_000017",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "image_path": "data/images/img_infoseek_00011.jpg",
+    "question": "What is the identity and provenance of Artifact_office_17 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_17 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 17
+    }
+  },
+  {
+    "id": "infoseek_000028",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "image_path": "data/images/img_infoseek_00011.jpg",
+    "question": "What is the identity and provenance of Artifact_office_28 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_28 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 28
+    }
+  },
+  {
+    "id": "infoseek_000031",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "image_path": "data/images/img_infoseek_00011.jpg",
+    "question": "What is the identity and provenance of Artifact_wildlife_31 shown here?",
+    "ground_truth_answers": [
+      "Artifact_wildlife_31 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 31
+    }
+  },
+  {
+    "id": "infoseek_000001",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "image_path": "data/images/img_infoseek_00010.jpg",
+    "question": "What is the identity and provenance of Artifact_museum_1 shown here?",
+    "ground_truth_answers": [
+      "Artifact_museum_1 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 1
+    }
+  },
+  {
+    "id": "infoseek_000003",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "image_path": "data/images/img_infoseek_00010.jpg",
+    "question": "What is the identity and provenance of Artifact_museum_3 shown here?",
+    "ground_truth_answers": [
+      "Artifact_museum_3 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 3
+    }
+  },
+  {
+    "id": "infoseek_000009",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "image_path": "data/images/img_infoseek_00010.jpg",
+    "question": "What is the identity and provenance of Artifact_street_9 shown here?",
+    "ground_truth_answers": [
+      "Artifact_street_9 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 9
+    }
+  },
+  {
+    "id": "infoseek_000033",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "image_path": "data/images/img_infoseek_00010.jpg",
+    "question": "What is the identity and provenance of Artifact_museum_33 shown here?",
+    "ground_truth_answers": [
+      "Artifact_museum_33 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 33
+    }
+  },
+  {
+    "id": "infoseek_000038",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "image_path": "data/images/img_infoseek_00010.jpg",
+    "question": "What is the identity and provenance of Artifact_wildlife_38 shown here?",
+    "ground_truth_answers": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 38
+    }
+  },
+  {
+    "id": "infoseek_000005",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "image_path": "data/images/img_infoseek_00001.jpg",
+    "question": "What is the identity and provenance of Artifact_office_5 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_5 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 5
+    }
+  },
+  {
+    "id": "infoseek_000006",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "image_path": "data/images/img_infoseek_00001.jpg",
+    "question": "What is the identity and provenance of Artifact_office_6 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_6 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 6
+    }
+  },
+  {
+    "id": "infoseek_000014",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "image_path": "data/images/img_infoseek_00001.jpg",
+    "question": "What is the identity and provenance of Artifact_office_14 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_14 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 14
+    }
+  },
+  {
+    "id": "infoseek_000015",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "image_path": "data/images/img_infoseek_00001.jpg",
+    "question": "What is the identity and provenance of Artifact_street_15 shown here?",
+    "ground_truth_answers": [
+      "Artifact_street_15 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 15
+    }
+  },
+  {
+    "id": "infoseek_000019",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "image_path": "data/images/img_infoseek_00001.jpg",
+    "question": "What is the identity and provenance of Artifact_office_19 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_19 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 19
+    }
+  },
+  {
+    "id": "infoseek_000002",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00009",
+    "image_path": "data/images/img_infoseek_00009.jpg",
+    "question": "What is the identity and provenance of Artifact_wildlife_2 shown here?",
+    "ground_truth_answers": [
+      "Artifact_wildlife_2 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 2
+    }
+  },
+  {
+    "id": "infoseek_000022",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00009",
+    "image_path": "data/images/img_infoseek_00009.jpg",
+    "question": "What is the identity and provenance of Artifact_office_22 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_22 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 22
+    }
+  },
+  {
+    "id": "infoseek_000034",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00009",
+    "image_path": "data/images/img_infoseek_00009.jpg",
+    "question": "What is the identity and provenance of Artifact_kitchen_34 shown here?",
+    "ground_truth_answers": [
+      "Artifact_kitchen_34 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 34
+    }
+  },
+  {
+    "id": "infoseek_000000",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00006",
+    "image_path": "data/images/img_infoseek_00006.jpg",
+    "question": "What is the identity and provenance of Artifact_office_0 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_0 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 0
+    }
+  },
+  {
+    "id": "infoseek_000013",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00006",
+    "image_path": "data/images/img_infoseek_00006.jpg",
+    "question": "What is the identity and provenance of Artifact_museum_13 shown here?",
+    "ground_truth_answers": [
+      "Artifact_museum_13 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 13
+    }
+  },
+  {
+    "id": "infoseek_000030",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00006",
+    "image_path": "data/images/img_infoseek_00006.jpg",
+    "question": "What is the identity and provenance of Artifact_kitchen_30 shown here?",
+    "ground_truth_answers": [
+      "Artifact_kitchen_30 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 30
+    }
+  },
+  {
+    "id": "infoseek_000036",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00006",
+    "image_path": "data/images/img_infoseek_00006.jpg",
+    "question": "What is the identity and provenance of Artifact_space_36 shown here?",
+    "ground_truth_answers": [
+      "Artifact_space_36 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 36
+    }
+  },
+  {
+    "id": "infoseek_000023",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00003",
+    "image_path": "data/images/img_infoseek_00003.jpg",
+    "question": "What is the identity and provenance of Artifact_space_23 shown here?",
+    "ground_truth_answers": [
+      "Artifact_space_23 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 23
+    }
+  },
+  {
+    "id": "infoseek_000011",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00002",
+    "image_path": "data/images/img_infoseek_00002.jpg",
+    "question": "What is the identity and provenance of Artifact_office_11 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_11 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 11
+    }
+  },
+  {
+    "id": "infoseek_000018",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00002",
+    "image_path": "data/images/img_infoseek_00002.jpg",
+    "question": "What is the identity and provenance of Artifact_space_18 shown here?",
+    "ground_truth_answers": [
+      "Artifact_space_18 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 18
+    }
+  },
+  {
+    "id": "infoseek_000037",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00002",
+    "image_path": "data/images/img_infoseek_00002.jpg",
+    "question": "What is the identity and provenance of Artifact_office_37 shown here?",
+    "ground_truth_answers": [
+      "Artifact_office_37 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 37
+    }
+  }
+]

@@ -1,0 +1,7042 @@
+[
+  {
+    "id": "faithscore_000012",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000025",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000035",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000016",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000039",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000004",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000024",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000027",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000032",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000007",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000008",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000010",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000017",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000028",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000031",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000001",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000003",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000009",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000033",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000038",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000005",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000006",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000014",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000015",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000019",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000002",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000022",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000034",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000000",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000013",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000030",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000036",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000023",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000011",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000018",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000037",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000026",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000029",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "faithscore_000020",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "faithscore_000021",
+    "dataset": "faithscore",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000012",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000025",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000035",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000016",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000039",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000004",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "aokvqa_000024",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "aokvqa_000027",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000032",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000007",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000008",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern kitchen environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern kitchen environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000010",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "aokvqa_000017",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000028",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000031",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "aokvqa_000001",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000003",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000009",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "aokvqa_000033",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000038",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000005",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000006",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "aokvqa_000014",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000015",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000019",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000002",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern wildlife environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "aokvqa_000022",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000034",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern kitchen environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern kitchen environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000000",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000013",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000030",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern kitchen environment with"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern kitchen environment with"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000036",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000023",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000011",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000018",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000037",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern office environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000026",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern street environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000029",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "aokvqa_000020",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern space environment with hi"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "aokvqa_000021",
+    "dataset": "aokvqa",
+    "claims": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to The scene shows a modern museum environment with h"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000012",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000025",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000035",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000016",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000039",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000004",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000024",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000027",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000032",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000007",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_street_7 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_street_7 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000008",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_kitchen_8 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_kitchen_8 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000010",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_11 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_11 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000017",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_17 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_17 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000028",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_28 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_28 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000031",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_31 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_31 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000001",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_1 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_1 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000003",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_3 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_3 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000009",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_street_9 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_street_9 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000033",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_33 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_33 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000038",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000005",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_5 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_5 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000006",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_6 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_6 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000014",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_14 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_14 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000015",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_street_15 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_street_15 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000019",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_kitchen_34 originated in 19th-century ind"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_kitchen_34 originated in 19th-century ind"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000002",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_2 originated in 19th-century ind"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_2 originated in 19th-century ind"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000022",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000034",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_kitchen_34 originated in 19th-century ind"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_kitchen_34 originated in 19th-century ind"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000000",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_0 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_0 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000013",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000030",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_kitchen_30 originated in 19th-century ind"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_kitchen_30 originated in 19th-century ind"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000036",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_space_36 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_space_36 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000023",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_space_23 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_space_23 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000011",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_11 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_11 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000018",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_space_18 originated in 19th-century indus"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_space_18 originated in 19th-century indus"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000037",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_office_37 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_office_37 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000026",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_2 originated in 19th-century ind"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_2 originated in 19th-century ind"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000029",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "infoseek_000020",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "infoseek_000021",
+    "dataset": "infoseek",
+    "claims": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000002",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000006",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "pope_000020",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000033",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000009",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000015",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000035",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000000",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000026",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000028",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000030",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000011",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "pope_000032",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000005",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "pope_000027",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000031",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000039",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000012",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000021",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000023",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000034",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000010",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000019",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "pope_000022",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000003",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000004",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000013",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "pope_000024",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000038",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000007",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000025",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  },
+  {
+    "id": "pope_000037",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000014",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000001",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000018",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000008",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000029",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000016",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000017",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 0
+  },
+  {
+    "id": "pope_000036",
+    "dataset": "pope",
+    "claims": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "boxes": [
+      [
+        0.0,
+        0.0,
+        224.0,
+        224.0
+      ],
+      [
+        0.0,
+        0.0,
+        112.0,
+        112.0
+      ],
+      [
+        112.0,
+        0.0,
+        224.0,
+        112.0
+      ],
+      [
+        0.0,
+        112.0,
+        112.0,
+        224.0
+      ],
+      [
+        112.0,
+        112.0,
+        224.0,
+        224.0
+      ]
+    ],
+    "labels": [
+      "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in"
+    ],
+    "s_p": 0.85,
+    "is_hallucination_gt": 1
+  }
+]

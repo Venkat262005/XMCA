@@ -1,0 +1,17 @@
+{
+  "dataset": "infoseek",
+  "sample_counts": {
+    "train": 27,
+    "val": 4,
+    "test": 9
+  },
+  "total_samples": 40,
+  "hashes": {
+    "train_parquet_sha256": "7689b52d7d4a92cc971b68e01db1723fe6d004dd00062b5164c39d11ab945738",
+    "train_json_sha256": "d5545532acbd10500e7a6c26103a63f66a87b9bf17386520f666da280ecc977b",
+    "val_parquet_sha256": "dfc4929ba05153a9096a69c0eb32a67edca72813204cbbd1622650ac55c287fd",
+    "val_json_sha256": "a241eca5a1aaf225c9017609ded1c37454cf6be644a16c5aea464f41f6e9a342",
+    "test_parquet_sha256": "4685e4fef3be2ad7b3f409c35d3140ef45cbf238f2d7fda749317bbd062244ff",
+    "test_json_sha256": "99479576607832fab253b1b1d0427066a07cf59c8a9f0128105d45e5075ccc7f"
+  }
+}

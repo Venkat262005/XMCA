@@ -1,0 +1,39 @@
+{"corpus_id": "doc_000000", "text": "The scene shows a modern street environment with high visual detail.", "source_dataset": "faithscore", "source_id": "faithscore_000007"}
+{"corpus_id": "doc_000001", "text": "The scene shows a modern kitchen environment with high visual detail.", "source_dataset": "faithscore", "source_id": "faithscore_000008"}
+{"corpus_id": "doc_000002", "text": "The scene shows a modern space environment with high visual detail.", "source_dataset": "faithscore", "source_id": "faithscore_000010"}
+{"corpus_id": "doc_000003", "text": "The scene shows a modern office environment with high visual detail.", "source_dataset": "faithscore", "source_id": "faithscore_000017"}
+{"corpus_id": "doc_000004", "text": "The scene shows a modern wildlife environment with high visual detail.", "source_dataset": "faithscore", "source_id": "faithscore_000031"}
+{"corpus_id": "doc_000005", "text": "The scene shows a modern museum environment with high visual detail.", "source_dataset": "faithscore", "source_id": "faithscore_000001"}
+{"corpus_id": "doc_000006", "text": "It serves for regular maintenance and inspection in street tasks.", "source_dataset": "aokvqa", "source_id": "aokvqa_000007"}
+{"corpus_id": "doc_000007", "text": "It serves for regular maintenance and inspection in kitchen tasks.", "source_dataset": "aokvqa", "source_id": "aokvqa_000008"}
+{"corpus_id": "doc_000008", "text": "It serves for regular maintenance and inspection in space tasks.", "source_dataset": "aokvqa", "source_id": "aokvqa_000010"}
+{"corpus_id": "doc_000009", "text": "It serves for regular maintenance and inspection in office tasks.", "source_dataset": "aokvqa", "source_id": "aokvqa_000017"}
+{"corpus_id": "doc_000010", "text": "It serves for regular maintenance and inspection in wildlife tasks.", "source_dataset": "aokvqa", "source_id": "aokvqa_000031"}
+{"corpus_id": "doc_000011", "text": "It serves for regular maintenance and inspection in museum tasks.", "source_dataset": "aokvqa", "source_id": "aokvqa_000001"}
+{"corpus_id": "doc_000012", "text": "Artifact_street_7 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000007"}
+{"corpus_id": "doc_000013", "text": "Artifact_kitchen_8 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000008"}
+{"corpus_id": "doc_000014", "text": "Artifact_space_10 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000010"}
+{"corpus_id": "doc_000015", "text": "Artifact_office_17 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000017"}
+{"corpus_id": "doc_000016", "text": "Artifact_office_28 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000028"}
+{"corpus_id": "doc_000017", "text": "Artifact_wildlife_31 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000031"}
+{"corpus_id": "doc_000018", "text": "Artifact_museum_1 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000001"}
+{"corpus_id": "doc_000019", "text": "Artifact_museum_3 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000003"}
+{"corpus_id": "doc_000020", "text": "Artifact_street_9 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000009"}
+{"corpus_id": "doc_000021", "text": "Artifact_museum_33 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000033"}
+{"corpus_id": "doc_000022", "text": "Artifact_wildlife_38 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000038"}
+{"corpus_id": "doc_000023", "text": "Artifact_office_5 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000005"}
+{"corpus_id": "doc_000024", "text": "Artifact_office_6 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000006"}
+{"corpus_id": "doc_000025", "text": "Artifact_office_14 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000014"}
+{"corpus_id": "doc_000026", "text": "Artifact_street_15 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000015"}
+{"corpus_id": "doc_000027", "text": "Artifact_office_19 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000019"}
+{"corpus_id": "doc_000028", "text": "Artifact_wildlife_2 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000002"}
+{"corpus_id": "doc_000029", "text": "Artifact_office_22 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000022"}
+{"corpus_id": "doc_000030", "text": "Artifact_kitchen_34 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000034"}
+{"corpus_id": "doc_000031", "text": "Artifact_office_0 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000000"}
+{"corpus_id": "doc_000032", "text": "Artifact_museum_13 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000013"}
+{"corpus_id": "doc_000033", "text": "Artifact_kitchen_30 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000030"}
+{"corpus_id": "doc_000034", "text": "Artifact_space_36 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000036"}
+{"corpus_id": "doc_000035", "text": "Artifact_space_23 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000023"}
+{"corpus_id": "doc_000036", "text": "Artifact_office_11 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000011"}
+{"corpus_id": "doc_000037", "text": "Artifact_space_18 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000018"}
+{"corpus_id": "doc_000038", "text": "Artifact_office_37 originated in 19th-century industrial collection.", "source_dataset": "infoseek", "source_id": "infoseek_000037"}

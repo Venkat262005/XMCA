@@ -1,0 +1,66 @@
+[
+  {
+    "id": "aokvqa_000026",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00012",
+    "image_path": "data/images/img_aokvqa_00012.jpg",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in street tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 26
+    }
+  },
+  {
+    "id": "aokvqa_000029",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00012",
+    "image_path": "data/images/img_aokvqa_00012.jpg",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in museum tasks."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 29
+    }
+  },
+  {
+    "id": "aokvqa_000020",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00005",
+    "image_path": "data/images/img_aokvqa_00005.jpg",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 20
+    }
+  },
+  {
+    "id": "aokvqa_000021",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00005",
+    "image_path": "data/images/img_aokvqa_00005.jpg",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in museum tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 21
+    }
+  }
+]

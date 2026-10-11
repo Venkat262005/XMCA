@@ -1,0 +1,178 @@
+[
+  {
+    "id": "pope_000002",
+    "dataset": "pope",
+    "image_id": "img_pope_00010",
+    "image_path": "data/images/img_pope_00010.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 2
+    }
+  },
+  {
+    "id": "pope_000006",
+    "dataset": "pope",
+    "image_id": "img_pope_00010",
+    "image_path": "data/images/img_pope_00010.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 6
+    }
+  },
+  {
+    "id": "pope_000020",
+    "dataset": "pope",
+    "image_id": "img_pope_00010",
+    "image_path": "data/images/img_pope_00010.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 20
+    }
+  },
+  {
+    "id": "pope_000033",
+    "dataset": "pope",
+    "image_id": "img_pope_00010",
+    "image_path": "data/images/img_pope_00010.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 33
+    }
+  },
+  {
+    "id": "pope_000009",
+    "dataset": "pope",
+    "image_id": "img_pope_00003",
+    "image_path": "data/images/img_pope_00003.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 9
+    }
+  },
+  {
+    "id": "pope_000015",
+    "dataset": "pope",
+    "image_id": "img_pope_00003",
+    "image_path": "data/images/img_pope_00003.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 15
+    }
+  },
+  {
+    "id": "pope_000035",
+    "dataset": "pope",
+    "image_id": "img_pope_00003",
+    "image_path": "data/images/img_pope_00003.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 35
+    }
+  },
+  {
+    "id": "pope_000000",
+    "dataset": "pope",
+    "image_id": "img_pope_00006",
+    "image_path": "data/images/img_pope_00006.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 0
+    }
+  },
+  {
+    "id": "pope_000026",
+    "dataset": "pope",
+    "image_id": "img_pope_00006",
+    "image_path": "data/images/img_pope_00006.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 26
+    }
+  },
+  {
+    "id": "pope_000028",
+    "dataset": "pope",
+    "image_id": "img_pope_00006",
+    "image_path": "data/images/img_pope_00006.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 28
+    }
+  },
+  {
+    "id": "pope_000030",
+    "dataset": "pope",
+    "image_id": "img_pope_00006",
+    "image_path": "data/images/img_pope_00006.jpg",
+    "question": "Is there a fridge in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 30
+    }
+  }
+]

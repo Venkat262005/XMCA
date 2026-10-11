@@ -1,0 +1,17 @@
+{
+  "dataset": "pope",
+  "sample_counts": {
+    "train": 26,
+    "val": 3,
+    "test": 11
+  },
+  "total_samples": 40,
+  "hashes": {
+    "train_parquet_sha256": "981d23c89ef49a379208527f6e56061e8ac0095b7fc67e8ec72101c7833774e3",
+    "train_json_sha256": "a14e001f6218cd2f833bb8dc98e824308d04d882ee609a7da94209588c2228d7",
+    "val_parquet_sha256": "eae04a121907baca8f06c8f1b258c1f9fe4b410c0787b1f825061613adc2ad53",
+    "val_json_sha256": "b00c0d0a0e2ffc34df5bd70e78cb495e56213356202273fb77497cd1e1b57be0",
+    "test_parquet_sha256": "a1a842232eae1e5360ede2face12b18df0f5d580ad9af473d8c52c8633f13076",
+    "test_json_sha256": "b797549edcf197271a31099b45eb8d8532c145ca1e8532468830402f7ba7c9c4"
+  }
+}

@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "infoseek_000005",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_office_5 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_5 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_office_5 originated in 19th-century indus.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 5
+    }
+  },
+  {
+    "id": "infoseek_000006",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_office_6 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_6 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_office_6 originated in 19th-century indus.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 6
+    }
+  },
+  {
+    "id": "infoseek_000014",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_office_14 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_14 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_office_14 originated in 19th-century indu.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 14
+    }
+  },
+  {
+    "id": "infoseek_000015",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_street_15 shown here?",
+    "retrieved_passages": [
+      "Artifact_street_15 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_street_15 originated in 19th-century indu.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 15
+    }
+  },
+  {
+    "id": "infoseek_000019",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00001",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_office_19 shown here?",
+    "retrieved_passages": [
+      "Artifact_kitchen_34 originated in 19th-century industrial collection.",
+      "Artifact_office_19 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_kitchen_34 originated in 19th-century ind.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 19
+    }
+  },
+  {
+    "id": "infoseek_000002",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00009",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_wildlife_2 shown here?",
+    "retrieved_passages": [
+      "Artifact_wildlife_2 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_2 originated in 19th-century ind.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 2
+    }
+  },
+  {
+    "id": "infoseek_000022",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00009",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_office_22 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 22
+    }
+  },
+  {
+    "id": "infoseek_000034",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00009",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_kitchen_34 shown here?",
+    "retrieved_passages": [
+      "Artifact_kitchen_34 originated in 19th-century industrial collection.",
+      "Artifact_office_19 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_kitchen_34 originated in 19th-century ind.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 34
+    }
+  },
+  {
+    "id": "infoseek_000000",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00006",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_office_0 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_0 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_office_0 originated in 19th-century indus.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 0
+    }
+  },
+  {
+    "id": "infoseek_000013",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00006",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_museum_13 shown here?",
+    "retrieved_passages": [
+      "Artifact_museum_13 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 13
+    }
+  },
+  {
+    "id": "infoseek_000030",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00006",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_kitchen_30 shown here?",
+    "retrieved_passages": [
+      "Artifact_kitchen_30 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_kitchen_30 originated in 19th-century ind.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 30
+    }
+  },
+  {
+    "id": "infoseek_000036",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00006",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_space_36 shown here?",
+    "retrieved_passages": [
+      "Artifact_space_36 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_space_36 originated in 19th-century indus.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 36
+    }
+  },
+  {
+    "id": "infoseek_000023",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00003",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_space_23 shown here?",
+    "retrieved_passages": [
+      "Artifact_space_23 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_space_23 originated in 19th-century indus.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 23
+    }
+  },
+  {
+    "id": "infoseek_000011",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00002",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_office_11 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_11 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_office_11 originated in 19th-century indu.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 11
+    }
+  },
+  {
+    "id": "infoseek_000018",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00002",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_space_18 shown here?",
+    "retrieved_passages": [
+      "Artifact_space_18 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_space_18 originated in 19th-century indus.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 18
+    }
+  },
+  {
+    "id": "infoseek_000037",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00002",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_office_37 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_37 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_office_37 originated in 19th-century indu.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 37
+    }
+  },
+  {
+    "id": "infoseek_000026",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00012",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_street_26 shown here?",
+    "retrieved_passages": [
+      "Artifact_wildlife_2 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_2 originated in 19th-century ind.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 26
+    }
+  },
+  {
+    "id": "infoseek_000029",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00012",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_museum_29 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 29
+    }
+  },
+  {
+    "id": "infoseek_000020",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00005",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_space_20 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 20
+    }
+  },
+  {
+    "id": "infoseek_000021",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00005",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "What is the identity and provenance of Artifact_museum_21 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to It serves for regular maintenance and inspection i.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 21
+    }
+  },
+  {
+    "id": "pope_000002",
+    "dataset": "pope",
+    "image_id": "img_pope_00010",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 2
+    }
+  },
+  {
+    "id": "pope_000006",
+    "dataset": "pope",
+    "image_id": "img_pope_00010",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a dog in the image?",
+    "retrieved_passages": [
+      "Artifact_museum_13 originated in 19th-century industrial collection.",
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 6
+    }
+  },
+  {
+    "id": "pope_000020",
+    "dataset": "pope",
+    "image_id": "img_pope_00010",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a chair in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 20
+    }
+  },
+  {
+    "id": "pope_000033",
+    "dataset": "pope",
+    "image_id": "img_pope_00010",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 33
+    }
+  },
+  {
+    "id": "pope_000009",
+    "dataset": "pope",
+    "image_id": "img_pope_00003",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 9
+    }
+  },
+  {
+    "id": "pope_000015",
+    "dataset": "pope",
+    "image_id": "img_pope_00003",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a bottle in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 15
+    }
+  },
+  {
+    "id": "pope_000035",
+    "dataset": "pope",
+    "image_id": "img_pope_00003",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a chair in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 35
+    }
+  },
+  {
+    "id": "pope_000000",
+    "dataset": "pope",
+    "image_id": "img_pope_00006",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 0
+    }
+  },
+  {
+    "id": "pope_000026",
+    "dataset": "pope",
+    "image_id": "img_pope_00006",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a chair in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 26
+    }
+  },
+  {
+    "id": "pope_000028",
+    "dataset": "pope",
+    "image_id": "img_pope_00006",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 28
+    }
+  },
+  {
+    "id": "pope_000030",
+    "dataset": "pope",
+    "image_id": "img_pope_00006",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a fridge in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 30
+    }
+  },
+  {
+    "id": "pope_000011",
+    "dataset": "pope",
+    "image_id": "img_pope_00011",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 11
+    }
+  },
+  {
+    "id": "pope_000032",
+    "dataset": "pope",
+    "image_id": "img_pope_00011",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 32
+    }
+  },
+  {
+    "id": "pope_000005",
+    "dataset": "pope",
+    "image_id": "img_pope_00009",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 5
+    }
+  },
+  {
+    "id": "pope_000027",
+    "dataset": "pope",
+    "image_id": "img_pope_00009",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 27
+    }
+  },
+  {
+    "id": "pope_000031",
+    "dataset": "pope",
+    "image_id": "img_pope_00009",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a bottle in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 31
+    }
+  },
+  {
+    "id": "pope_000039",
+    "dataset": "pope",
+    "image_id": "img_pope_00009",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 39
+    }
+  },
+  {
+    "id": "pope_000012",
+    "dataset": "pope",
+    "image_id": "img_pope_00000",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a dog in the image?",
+    "retrieved_passages": [
+      "Artifact_museum_13 originated in 19th-century industrial collection.",
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 12
+    }
+  },
+  {
+    "id": "pope_000021",
+    "dataset": "pope",
+    "image_id": "img_pope_00000",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 21
+    }
+  },
+  {
+    "id": "pope_000023",
+    "dataset": "pope",
+    "image_id": "img_pope_00000",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 23
+    }
+  },
+  {
+    "id": "pope_000034",
+    "dataset": "pope",
+    "image_id": "img_pope_00000",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a chair in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 34
+    }
+  },
+  {
+    "id": "pope_000010",
+    "dataset": "pope",
+    "image_id": "img_pope_00008",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 10
+    }
+  },
+  {
+    "id": "pope_000019",
+    "dataset": "pope",
+    "image_id": "img_pope_00008",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a chair in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 19
+    }
+  },
+  {
+    "id": "pope_000022",
+    "dataset": "pope",
+    "image_id": "img_pope_00008",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a chair in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 22
+    }
+  },
+  {
+    "id": "pope_000003",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a dog in the image?",
+    "retrieved_passages": [
+      "Artifact_museum_13 originated in 19th-century industrial collection.",
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 3
+    }
+  },
+  {
+    "id": "pope_000004",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 4
+    }
+  },
+  {
+    "id": "pope_000013",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a dog in the image?",
+    "retrieved_passages": [
+      "Artifact_museum_13 originated in 19th-century industrial collection.",
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 13
+    }
+  },
+  {
+    "id": "pope_000024",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a fridge in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 24
+    }
+  },
+  {
+    "id": "pope_000038",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 38
+    }
+  },
+  {
+    "id": "pope_000007",
+    "dataset": "pope",
+    "image_id": "img_pope_00002",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 7
+    }
+  },
+  {
+    "id": "pope_000025",
+    "dataset": "pope",
+    "image_id": "img_pope_00002",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 25
+    }
+  },
+  {
+    "id": "pope_000037",
+    "dataset": "pope",
+    "image_id": "img_pope_00002",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 37
+    }
+  },
+  {
+    "id": "pope_000014",
+    "dataset": "pope",
+    "image_id": "img_pope_00001",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a car in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 14
+    }
+  },
+  {
+    "id": "pope_000001",
+    "dataset": "pope",
+    "image_id": "img_pope_00012",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a dog in the image?",
+    "retrieved_passages": [
+      "Artifact_museum_13 originated in 19th-century industrial collection.",
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_museum_13 originated in 19th-century indu.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 1
+    }
+  },
+  {
+    "id": "pope_000018",
+    "dataset": "pope",
+    "image_id": "img_pope_00012",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 18
+    }
+  },
+  {
+    "id": "pope_000008",
+    "dataset": "pope",
+    "image_id": "img_pope_00004",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 8
+    }
+  },
+  {
+    "id": "pope_000029",
+    "dataset": "pope",
+    "image_id": "img_pope_00004",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a fridge in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 29
+    }
+  },
+  {
+    "id": "pope_000016",
+    "dataset": "pope",
+    "image_id": "img_pope_00007",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a laptop in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 16
+    }
+  },
+  {
+    "id": "pope_000017",
+    "dataset": "pope",
+    "image_id": "img_pope_00007",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a chair in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 17
+    }
+  },
+  {
+    "id": "pope_000036",
+    "dataset": "pope",
+    "image_id": "img_pope_00007",
+    "vlm_name": "Qwen2-VL-2B-Instruct",
+    "question": "Is there a chair in the image?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "Artifact_kitchen_8 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Based on the image and evidence, the answer relates to Artifact_wildlife_38 originated in 19th-century in.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 36
+    }
+  }
+]

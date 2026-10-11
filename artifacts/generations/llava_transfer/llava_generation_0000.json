@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "faithscore_000012",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this wildlife scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 12
+    }
+  },
+  {
+    "id": "faithscore_000025",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this space scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern space environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 25
+    }
+  },
+  {
+    "id": "faithscore_000035",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 35
+    }
+  },
+  {
+    "id": "faithscore_000016",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00004",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this street scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 16
+    }
+  },
+  {
+    "id": "faithscore_000039",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00004",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this space scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern space environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 39
+    }
+  },
+  {
+    "id": "faithscore_000004",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this wildlife scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 4
+    }
+  },
+  {
+    "id": "faithscore_000024",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this space scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern space environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 24
+    }
+  },
+  {
+    "id": "faithscore_000027",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this street scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 27
+    }
+  },
+  {
+    "id": "faithscore_000032",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this wildlife scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 32
+    }
+  },
+  {
+    "id": "faithscore_000007",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this street scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 7
+    }
+  },
+  {
+    "id": "faithscore_000008",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this kitchen scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in kitchen tasks.",
+      "The scene shows a modern kitchen environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 8
+    }
+  },
+  {
+    "id": "faithscore_000010",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this space scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern space environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 10
+    }
+  },
+  {
+    "id": "faithscore_000017",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 17
+    }
+  },
+  {
+    "id": "faithscore_000028",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 28
+    }
+  },
+  {
+    "id": "faithscore_000031",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this wildlife scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 31
+    }
+  },
+  {
+    "id": "faithscore_000001",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this museum scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 1
+    }
+  },
+  {
+    "id": "faithscore_000003",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this museum scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 3
+    }
+  },
+  {
+    "id": "faithscore_000009",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this street scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 9
+    }
+  },
+  {
+    "id": "faithscore_000033",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this museum scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 33
+    }
+  },
+  {
+    "id": "faithscore_000038",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this wildlife scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 38
+    }
+  },
+  {
+    "id": "faithscore_000005",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 5
+    }
+  },
+  {
+    "id": "faithscore_000006",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 6
+    }
+  },
+  {
+    "id": "faithscore_000014",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 14
+    }
+  },
+  {
+    "id": "faithscore_000015",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this street scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 15
+    }
+  },
+  {
+    "id": "faithscore_000019",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 19
+    }
+  },
+  {
+    "id": "faithscore_000002",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00009",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this wildlife scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 2
+    }
+  },
+  {
+    "id": "faithscore_000022",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00009",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 22
+    }
+  },
+  {
+    "id": "faithscore_000034",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00009",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this kitchen scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in kitchen tasks.",
+      "The scene shows a modern kitchen environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 34
+    }
+  },
+  {
+    "id": "faithscore_000000",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00006",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 0
+    }
+  },
+  {
+    "id": "faithscore_000013",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00006",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this museum scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 13
+    }
+  },
+  {
+    "id": "faithscore_000030",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00006",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this kitchen scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in kitchen tasks.",
+      "The scene shows a modern kitchen environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 30
+    }
+  },
+  {
+    "id": "faithscore_000036",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00006",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this space scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern space environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 36
+    }
+  },
+  {
+    "id": "faithscore_000023",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00003",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this space scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern space environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 23
+    }
+  },
+  {
+    "id": "faithscore_000011",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00002",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 11
+    }
+  },
+  {
+    "id": "faithscore_000018",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00002",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this space scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern space environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 18
+    }
+  },
+  {
+    "id": "faithscore_000037",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00002",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this office scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern office environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 37
+    }
+  },
+  {
+    "id": "faithscore_000026",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00012",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this street scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 26
+    }
+  },
+  {
+    "id": "faithscore_000029",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00012",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this museum scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 29
+    }
+  },
+  {
+    "id": "faithscore_000020",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00005",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this space scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern space environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 20
+    }
+  },
+  {
+    "id": "faithscore_000021",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00005",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "Describe the details observed in this museum scene.",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern museum environment with high visual detail.",
+      "Artifact_street_7 originated in 19th-century industrial collection."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 21
+    }
+  },
+  {
+    "id": "aokvqa_000012",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern wildlife environment is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 12
+    }
+  },
+  {
+    "id": "aokvqa_000025",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern space environment with high visual detail.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern kitchen environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern space environment wi is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 25
+    }
+  },
+  {
+    "id": "aokvqa_000035",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 35
+    }
+  },
+  {
+    "id": "aokvqa_000016",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00004",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern street environment with high visual detail.",
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern street environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 16
+    }
+  },
+  {
+    "id": "aokvqa_000039",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00004",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern space environment with high visual detail.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern kitchen environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern space environment wi is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 39
+    }
+  },
+  {
+    "id": "aokvqa_000004",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern wildlife environment is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 4
+    }
+  },
+  {
+    "id": "aokvqa_000024",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern space environment with high visual detail.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern kitchen environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern space environment wi is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 24
+    }
+  },
+  {
+    "id": "aokvqa_000027",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern street environment with high visual detail.",
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern street environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 27
+    }
+  },
+  {
+    "id": "aokvqa_000032",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern wildlife environment is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 32
+    }
+  },
+  {
+    "id": "aokvqa_000007",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern street environment with high visual detail.",
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern street environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 7
+    }
+  },
+  {
+    "id": "aokvqa_000008",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this kitchen setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern kitchen environment with high visual detail.",
+      "It serves for regular maintenance and inspection in kitchen tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern kitchen environment  is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 8
+    }
+  },
+  {
+    "id": "aokvqa_000010",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern space environment with high visual detail.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern kitchen environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern space environment wi is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 10
+    }
+  },
+  {
+    "id": "aokvqa_000017",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 17
+    }
+  },
+  {
+    "id": "aokvqa_000028",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 28
+    }
+  },
+  {
+    "id": "aokvqa_000031",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern wildlife environment is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 31
+    }
+  },
+  {
+    "id": "aokvqa_000001",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern museum environment with high visual detail.",
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern museum environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 1
+    }
+  },
+  {
+    "id": "aokvqa_000003",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern museum environment with high visual detail.",
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern museum environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 3
+    }
+  },
+  {
+    "id": "aokvqa_000009",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern street environment with high visual detail.",
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern street environment w is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 9
+    }
+  },
+  {
+    "id": "aokvqa_000033",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern museum environment with high visual detail.",
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern museum environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 33
+    }
+  },
+  {
+    "id": "aokvqa_000038",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern wildlife environment is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 38
+    }
+  },
+  {
+    "id": "aokvqa_000005",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 5
+    }
+  },
+  {
+    "id": "aokvqa_000006",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 6
+    }
+  },
+  {
+    "id": "aokvqa_000014",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 14
+    }
+  },
+  {
+    "id": "aokvqa_000015",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern street environment with high visual detail.",
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern street environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 15
+    }
+  },
+  {
+    "id": "aokvqa_000019",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 19
+    }
+  },
+  {
+    "id": "aokvqa_000002",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00009",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern wildlife environment with high visual detail.",
+      "It serves for regular maintenance and inspection in wildlife tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern wildlife environment is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 2
+    }
+  },
+  {
+    "id": "aokvqa_000022",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00009",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 22
+    }
+  },
+  {
+    "id": "aokvqa_000034",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00009",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this kitchen setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern kitchen environment with high visual detail.",
+      "It serves for regular maintenance and inspection in kitchen tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern kitchen environment  is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 34
+    }
+  },
+  {
+    "id": "aokvqa_000000",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00006",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 0
+    }
+  },
+  {
+    "id": "aokvqa_000013",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00006",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern museum environment with high visual detail.",
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern museum environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 13
+    }
+  },
+  {
+    "id": "aokvqa_000030",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00006",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this kitchen setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern kitchen environment with high visual detail.",
+      "It serves for regular maintenance and inspection in kitchen tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern kitchen environment  is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 30
+    }
+  },
+  {
+    "id": "aokvqa_000036",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00006",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern space environment with high visual detail.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern kitchen environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern space environment wi is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 36
+    }
+  },
+  {
+    "id": "aokvqa_000023",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00003",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern space environment with high visual detail.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern kitchen environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern space environment wi is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 23
+    }
+  },
+  {
+    "id": "aokvqa_000011",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00002",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 11
+    }
+  },
+  {
+    "id": "aokvqa_000018",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00002",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern space environment with high visual detail.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern kitchen environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern space environment wi is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 18
+    }
+  },
+  {
+    "id": "aokvqa_000037",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00002",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern office environment with high visual detail.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern office environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 37
+    }
+  },
+  {
+    "id": "aokvqa_000026",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00012",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern street environment with high visual detail.",
+      "It serves for regular maintenance and inspection in street tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern street environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 26
+    }
+  },
+  {
+    "id": "aokvqa_000029",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00012",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern museum environment with high visual detail.",
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern museum environment w is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 29
+    }
+  },
+  {
+    "id": "aokvqa_000020",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00005",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern space environment with high visual detail.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "The scene shows a modern kitchen environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern space environment wi is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 20
+    }
+  },
+  {
+    "id": "aokvqa_000021",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00005",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "retrieved_passages": [
+      "The scene shows a modern museum environment with high visual detail.",
+      "It serves for regular maintenance and inspection in museum tasks.",
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "generated_answer": "Transfer VLM analysis: The scene shows a modern museum environment w is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 21
+    }
+  },
+  {
+    "id": "infoseek_000012",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_wildlife_12 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 12
+    }
+  },
+  {
+    "id": "infoseek_000025",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_space_25 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 25
+    }
+  },
+  {
+    "id": "infoseek_000035",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00008",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_office_35 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 35
+    }
+  },
+  {
+    "id": "infoseek_000016",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00004",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_street_16 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 16
+    }
+  },
+  {
+    "id": "infoseek_000039",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00004",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_space_39 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 39
+    }
+  },
+  {
+    "id": "infoseek_000004",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_wildlife_4 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 4
+    }
+  },
+  {
+    "id": "infoseek_000024",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_space_24 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 24
+    }
+  },
+  {
+    "id": "infoseek_000027",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_street_27 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 27
+    }
+  },
+  {
+    "id": "infoseek_000032",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00007",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_wildlife_32 shown here?",
+    "retrieved_passages": [
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks.",
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: It serves for regular maintenance and inspect is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 32
+    }
+  },
+  {
+    "id": "infoseek_000007",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_street_7 shown here?",
+    "retrieved_passages": [
+      "Artifact_street_7 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_street_7 originated in 19th-century  is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 7
+    }
+  },
+  {
+    "id": "infoseek_000008",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_kitchen_8 shown here?",
+    "retrieved_passages": [
+      "Artifact_kitchen_8 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_kitchen_8 originated in 19th-century is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 8
+    }
+  },
+  {
+    "id": "infoseek_000010",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_space_10 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_11 originated in 19th-century industrial collection.",
+      "Artifact_space_10 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_office_11 originated in 19th-century is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "space",
+      "sample_idx": 10
+    }
+  },
+  {
+    "id": "infoseek_000017",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_office_17 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_17 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_office_17 originated in 19th-century is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 17
+    }
+  },
+  {
+    "id": "infoseek_000028",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_office_28 shown here?",
+    "retrieved_passages": [
+      "Artifact_office_28 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_office_28 originated in 19th-century is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "office",
+      "sample_idx": 28
+    }
+  },
+  {
+    "id": "infoseek_000031",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00011",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_wildlife_31 shown here?",
+    "retrieved_passages": [
+      "Artifact_wildlife_31 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_wildlife_31 originated in 19th-centu is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 31
+    }
+  },
+  {
+    "id": "infoseek_000001",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_museum_1 shown here?",
+    "retrieved_passages": [
+      "Artifact_museum_1 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_museum_1 originated in 19th-century  is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 1
+    }
+  },
+  {
+    "id": "infoseek_000003",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_museum_3 shown here?",
+    "retrieved_passages": [
+      "Artifact_museum_3 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_museum_3 originated in 19th-century  is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 3
+    }
+  },
+  {
+    "id": "infoseek_000009",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_street_9 shown here?",
+    "retrieved_passages": [
+      "Artifact_street_9 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_street_9 originated in 19th-century  is consistent with the image.",
+    "is_hallucination_gt": 1,
+    "metadata": {
+      "category": "street",
+      "sample_idx": 9
+    }
+  },
+  {
+    "id": "infoseek_000033",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_museum_33 shown here?",
+    "retrieved_passages": [
+      "Artifact_museum_33 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_museum_33 originated in 19th-century is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 33
+    }
+  },
+  {
+    "id": "infoseek_000038",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00010",
+    "vlm_name": "LLaVA-OneVision",
+    "question": "What is the identity and provenance of Artifact_wildlife_38 shown here?",
+    "retrieved_passages": [
+      "Artifact_wildlife_38 originated in 19th-century industrial collection.",
+      "It serves for regular maintenance and inspection in office tasks.",
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "generated_answer": "Transfer VLM analysis: Artifact_wildlife_38 originated in 19th-centu is consistent with the image.",
+    "is_hallucination_gt": 0,
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 38
+    }
+  }
+]

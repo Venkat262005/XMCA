@@ -1,0 +1,418 @@
+[
+  {
+    "id": "pope_000011",
+    "dataset": "pope",
+    "image_id": "img_pope_00011",
+    "image_path": "data/images/img_pope_00011.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 11
+    }
+  },
+  {
+    "id": "pope_000032",
+    "dataset": "pope",
+    "image_id": "img_pope_00011",
+    "image_path": "data/images/img_pope_00011.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 32
+    }
+  },
+  {
+    "id": "pope_000005",
+    "dataset": "pope",
+    "image_id": "img_pope_00009",
+    "image_path": "data/images/img_pope_00009.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 5
+    }
+  },
+  {
+    "id": "pope_000027",
+    "dataset": "pope",
+    "image_id": "img_pope_00009",
+    "image_path": "data/images/img_pope_00009.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 27
+    }
+  },
+  {
+    "id": "pope_000031",
+    "dataset": "pope",
+    "image_id": "img_pope_00009",
+    "image_path": "data/images/img_pope_00009.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 31
+    }
+  },
+  {
+    "id": "pope_000039",
+    "dataset": "pope",
+    "image_id": "img_pope_00009",
+    "image_path": "data/images/img_pope_00009.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 39
+    }
+  },
+  {
+    "id": "pope_000012",
+    "dataset": "pope",
+    "image_id": "img_pope_00000",
+    "image_path": "data/images/img_pope_00000.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 12
+    }
+  },
+  {
+    "id": "pope_000021",
+    "dataset": "pope",
+    "image_id": "img_pope_00000",
+    "image_path": "data/images/img_pope_00000.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 21
+    }
+  },
+  {
+    "id": "pope_000023",
+    "dataset": "pope",
+    "image_id": "img_pope_00000",
+    "image_path": "data/images/img_pope_00000.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 23
+    }
+  },
+  {
+    "id": "pope_000034",
+    "dataset": "pope",
+    "image_id": "img_pope_00000",
+    "image_path": "data/images/img_pope_00000.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 34
+    }
+  },
+  {
+    "id": "pope_000010",
+    "dataset": "pope",
+    "image_id": "img_pope_00008",
+    "image_path": "data/images/img_pope_00008.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 10
+    }
+  },
+  {
+    "id": "pope_000019",
+    "dataset": "pope",
+    "image_id": "img_pope_00008",
+    "image_path": "data/images/img_pope_00008.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 19
+    }
+  },
+  {
+    "id": "pope_000022",
+    "dataset": "pope",
+    "image_id": "img_pope_00008",
+    "image_path": "data/images/img_pope_00008.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 22
+    }
+  },
+  {
+    "id": "pope_000003",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "image_path": "data/images/img_pope_00005.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 3
+    }
+  },
+  {
+    "id": "pope_000004",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "image_path": "data/images/img_pope_00005.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 4
+    }
+  },
+  {
+    "id": "pope_000013",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "image_path": "data/images/img_pope_00005.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 13
+    }
+  },
+  {
+    "id": "pope_000024",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "image_path": "data/images/img_pope_00005.jpg",
+    "question": "Is there a fridge in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 24
+    }
+  },
+  {
+    "id": "pope_000038",
+    "dataset": "pope",
+    "image_id": "img_pope_00005",
+    "image_path": "data/images/img_pope_00005.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 38
+    }
+  },
+  {
+    "id": "pope_000007",
+    "dataset": "pope",
+    "image_id": "img_pope_00002",
+    "image_path": "data/images/img_pope_00002.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 7
+    }
+  },
+  {
+    "id": "pope_000025",
+    "dataset": "pope",
+    "image_id": "img_pope_00002",
+    "image_path": "data/images/img_pope_00002.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 25
+    }
+  },
+  {
+    "id": "pope_000037",
+    "dataset": "pope",
+    "image_id": "img_pope_00002",
+    "image_path": "data/images/img_pope_00002.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 37
+    }
+  },
+  {
+    "id": "pope_000014",
+    "dataset": "pope",
+    "image_id": "img_pope_00001",
+    "image_path": "data/images/img_pope_00001.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 14
+    }
+  },
+  {
+    "id": "pope_000001",
+    "dataset": "pope",
+    "image_id": "img_pope_00012",
+    "image_path": "data/images/img_pope_00012.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 1
+    }
+  },
+  {
+    "id": "pope_000018",
+    "dataset": "pope",
+    "image_id": "img_pope_00012",
+    "image_path": "data/images/img_pope_00012.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 18
+    }
+  },
+  {
+    "id": "pope_000008",
+    "dataset": "pope",
+    "image_id": "img_pope_00004",
+    "image_path": "data/images/img_pope_00004.jpg",
+    "question": "Is there a laptop in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 8
+    }
+  },
+  {
+    "id": "pope_000029",
+    "dataset": "pope",
+    "image_id": "img_pope_00004",
+    "image_path": "data/images/img_pope_00004.jpg",
+    "question": "Is there a fridge in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 29
+    }
+  }
+]

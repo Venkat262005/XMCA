@@ -1,0 +1,146 @@
+[
+  {
+    "id": "faithscore_000012",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00008",
+    "image_path": "data/images/img_faithscore_00008.jpg",
+    "question": "Describe the details observed in this wildlife scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern wildlife environment with high visual detail."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 12
+    }
+  },
+  {
+    "id": "faithscore_000025",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00008",
+    "image_path": "data/images/img_faithscore_00008.jpg",
+    "question": "Describe the details observed in this space scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 25
+    }
+  },
+  {
+    "id": "faithscore_000035",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00008",
+    "image_path": "data/images/img_faithscore_00008.jpg",
+    "question": "Describe the details observed in this office scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern office environment with high visual detail."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 35
+    }
+  },
+  {
+    "id": "faithscore_000016",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00004",
+    "image_path": "data/images/img_faithscore_00004.jpg",
+    "question": "Describe the details observed in this street scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern street environment with high visual detail."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 16
+    }
+  },
+  {
+    "id": "faithscore_000039",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00004",
+    "image_path": "data/images/img_faithscore_00004.jpg",
+    "question": "Describe the details observed in this space scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 39
+    }
+  },
+  {
+    "id": "faithscore_000004",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00007",
+    "image_path": "data/images/img_faithscore_00007.jpg",
+    "question": "Describe the details observed in this wildlife scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern wildlife environment with high visual detail."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 4
+    }
+  },
+  {
+    "id": "faithscore_000024",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00007",
+    "image_path": "data/images/img_faithscore_00007.jpg",
+    "question": "Describe the details observed in this space scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern space environment with high visual detail."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 24
+    }
+  },
+  {
+    "id": "faithscore_000027",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00007",
+    "image_path": "data/images/img_faithscore_00007.jpg",
+    "question": "Describe the details observed in this street scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern street environment with high visual detail."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 27
+    }
+  },
+  {
+    "id": "faithscore_000032",
+    "dataset": "faithscore",
+    "image_id": "img_faithscore_00007",
+    "image_path": "data/images/img_faithscore_00007.jpg",
+    "question": "Describe the details observed in this wildlife scene.",
+    "ground_truth_answers": [
+      "The scene shows a modern wildlife environment with high visual detail."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "free_form",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 32
+    }
+  }
+]

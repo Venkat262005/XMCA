@@ -1,0 +1,17 @@
+{
+  "dataset": "aokvqa",
+  "sample_counts": {
+    "train": 27,
+    "val": 4,
+    "test": 9
+  },
+  "total_samples": 40,
+  "hashes": {
+    "train_parquet_sha256": "892ff1355690f8bd80b2988637226b64c025c1938acc35010c91cd365017bb8e",
+    "train_json_sha256": "e4f3046e0ab853c2df8b339636117d535dcde5b9bd9db4d5878a80adcf6561d1",
+    "val_parquet_sha256": "d32ec6a37b2ad157cb57e8f9ca4824767a4fca1620102116b1a75fe3a8c8384c",
+    "val_json_sha256": "3691d332cb1474ee4696070ef90b914d27745cfbdf5d996971274ce7cc111fdc",
+    "test_parquet_sha256": "e42a9ca6cb9d93bfe687d1216c9f3b15a00d0d6e262f5d83462c84e49e27b0ad",
+    "test_json_sha256": "486baca5212273760f7c36421b6de5c96d6914a562c74d3975d1806ef409e10d"
+  }
+}

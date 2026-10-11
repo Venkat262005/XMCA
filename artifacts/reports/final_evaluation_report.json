@@ -1,0 +1,54 @@
+{
+  "held_out_test_metrics": {
+    "auroc": 0.5977011494252873,
+    "auprc": 0.27964912280701754,
+    "f1": 0.47058823529411764,
+    "precision": 0.32,
+    "recall": 0.8888888888888888,
+    "ece": 0.039035087719298214,
+    "threshold": 0.20600000000000002
+  },
+  "bootstrap_95_ci": {
+    "auroc": {
+      "mean": 0.5968657147235361,
+      "std": 0.09740163605226547,
+      "lower_ci": 0.41664402173913057,
+      "upper_ci": 0.7577455590386625
+    },
+    "auprc": {
+      "mean": 0.2896068314332984,
+      "std": 0.09199737194326983,
+      "lower_ci": 0.11357456140350879,
+      "upper_ci": 0.4601615473342447
+    },
+    "f1": {
+      "mean": 0.4568462747571354,
+      "std": 0.1158020783142242,
+      "lower_ci": 0.2305555555555556,
+      "upper_ci": 0.6345088991430455
+    },
+    "precision": {
+      "mean": 0.31644035681390426,
+      "std": 0.09987548562368782,
+      "lower_ci": 0.13607954545454548,
+      "upper_ci": 0.5
+    },
+    "recall": {
+      "mean": 0.8794685175935176,
+      "std": 0.11478095815162388,
+      "lower_ci": 0.625,
+      "upper_ci": 1.0
+    },
+    "ece": {
+      "mean": 0.08987061403508773,
+      "std": 0.04369793867421199,
+      "lower_ci": 0.019287280701754395,
+      "upper_ci": 0.18208333333333332
+    }
+  },
+  "proxy_failure_attribution_counts": {
+    "retrieval_proxy_failure": 25,
+    "utilization_proxy_failure": 13
+  },
+  "claim_boundary": "Proxy attribution only (no human-validated causal attribution claimed)"
+}

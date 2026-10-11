@@ -1,0 +1,66 @@
+[
+  {
+    "id": "infoseek_000026",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00012",
+    "image_path": "data/images/img_infoseek_00012.jpg",
+    "question": "What is the identity and provenance of Artifact_street_26 shown here?",
+    "ground_truth_answers": [
+      "Artifact_street_26 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 26
+    }
+  },
+  {
+    "id": "infoseek_000029",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00012",
+    "image_path": "data/images/img_infoseek_00012.jpg",
+    "question": "What is the identity and provenance of Artifact_museum_29 shown here?",
+    "ground_truth_answers": [
+      "Artifact_museum_29 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 29
+    }
+  },
+  {
+    "id": "infoseek_000020",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00005",
+    "image_path": "data/images/img_infoseek_00005.jpg",
+    "question": "What is the identity and provenance of Artifact_space_20 shown here?",
+    "ground_truth_answers": [
+      "Artifact_space_20 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 20
+    }
+  },
+  {
+    "id": "infoseek_000021",
+    "dataset": "infoseek",
+    "image_id": "img_infoseek_00005",
+    "image_path": "data/images/img_infoseek_00005.jpg",
+    "question": "What is the identity and provenance of Artifact_museum_21 shown here?",
+    "ground_truth_answers": [
+      "Artifact_museum_21 originated in 19th-century industrial collection."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "entity_qa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 21
+    }
+  }
+]

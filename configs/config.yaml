@@ -1,0 +1,134 @@
+project:
+  name: "XMCA-Net-Lite"
+  description: "Research-grade Retrieval-Augmented VLM Diagnostic & Hallucination System"
+  version: "1.0.0"
+  random_seeds: [42, 101, 202, 303, 404]
+  default_seed: 42
+  claim_boundary: "Proxy attribution only (no human-validated causal attribution claimed)"
+
+paths:
+  # Kaggle vs local path fallback logic handles these seamlessly
+  base_dir: "artifacts"
+  data_dir: "artifacts/data"
+  splits_dir: "artifacts/splits"
+  corpora_dir: "artifacts/corpora"
+  generations_dir: "artifacts/generations"
+  perception_dir: "artifacts/perception"
+  retrieval_dir: "artifacts/retrieval"
+  utilization_dir: "artifacts/utilization"
+  combiner_dir: "artifacts/combiner"
+  checkpoints_dir: "artifacts/checkpoints"
+  ablations_dir: "artifacts/ablations"
+  reports_dir: "artifacts/reports"
+  kaggle_input_base: "/kaggle/input"
+  kaggle_working_base: "/kaggle/working"
+
+datasets:
+  strict_max_per_dataset: 2000
+  split_ratios:
+    train: 0.70
+    val: 0.10
+    test: 0.20
+  split_by_key: "image_id"
+  sources:
+    pope:
+      name: "POPE"
+      purpose: "Object hallucination and perception evaluation"
+      max_samples: 2000
+      task_type: "binary_vqa"
+    faithscore:
+      name: "FaithScore_LLaVA1k"
+      purpose: "Free-form image-grounded faithfulness"
+      max_samples: 2000
+      task_type: "free_form"
+    aokvqa:
+      name: "A-OKVQA"
+      purpose: "Knowledge-based visual question answering with retrieval"
+      max_samples: 2000
+      task_type: "knowledge_vqa"
+    infoseek:
+      name: "InfoSeek"
+      purpose: "Entity-centric retrieval question answering"
+      max_samples: 2000
+      task_type: "entity_qa"
+
+execution:
+  shard_size: 250
+  completed_ids_filename: "completed_ids.json"
+  use_4bit_quantization: true
+  quant_type: "nf4"
+  device_map: "auto"
+  batch_size: 8
+  num_workers: 2
+
+models:
+  main_vlm:
+    model_id: "Qwen/Qwen2-VL-2B-Instruct"
+    quantization: "4bit_nf4"
+    max_new_tokens: 128
+    temperature: 0.1
+  transfer_vlm:
+    model_id: "llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
+    quantization: "4bit_nf4"
+    max_new_tokens: 128
+    temperature: 0.1
+  retriever:
+    model_id: "BAAI/bge-small-en-v1.5"
+    top_k: 5
+    similarity_metric: "cosine"
+  reranker:
+    model_id: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    top_k_rerank: 3
+  perception:
+    detector_model_id: "google/owlvit-base-patch32"
+    similarity_model_id: "google/siglip-base-patch16-224"
+    box_threshold: 0.15
+    text_threshold: 0.20
+  utilization:
+    model_id: "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
+    use_lora: true
+    lora_r: 8
+    lora_alpha: 16
+    lora_dropout: 0.1
+    max_seq_length: 512
+    epochs: 3
+    lr: 2.0e-5
+  combiner:
+    model_type: "lightgbm" # lightgbm or xgboost
+    calibration: "isotonic"
+    n_estimators: 100
+    learning_rate: 0.05
+    max_depth: 4
+    num_leaves: 15
+
+evaluation:
+  metrics:
+    - "auroc"
+    - "auprc"
+    - "f1"
+    - "precision"
+    - "recall"
+    - "ece"
+  bootstrap_iterations: 1000
+  bootstrap_ci: 0.95
+  ece_bins: 10
+  tune_threshold_metric: "f1"
+
+ablations:
+  conditions:
+    - name: "full_model"
+      description: "Full XMCA-Net-Lite: S_P + S_R + S_U + interaction features"
+    - name: "no_perception"
+      description: "Remove Perception score S_P"
+    - name: "no_retrieval"
+      description: "Remove Retrieval score S_R"
+    - name: "no_utilization"
+      description: "Remove Utilization score S_U"
+    - name: "text_only_utilization"
+      description: "Replace cross-modal utilization with text-only NLI"
+    - name: "fixed_weighted_fusion"
+      description: "Replace learned isotonic retrieval fusion with fixed weighted fusion"
+    - name: "min_rule_baseline"
+      description: "Heuristic baseline: 1 - min(S_P, S_R, S_U)"
+    - name: "cross_vlm_transfer"
+      description: "Train combiner on Qwen2-VL, evaluate directly on LLaVA-OneVision"

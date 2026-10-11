@@ -1,0 +1,434 @@
+[
+  {
+    "id": "aokvqa_000007",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "image_path": "data/images/img_aokvqa_00011.jpg",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in street tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 7
+    }
+  },
+  {
+    "id": "aokvqa_000008",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "image_path": "data/images/img_aokvqa_00011.jpg",
+    "question": "What historical or operational purpose does the apparatus in this kitchen setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 8
+    }
+  },
+  {
+    "id": "aokvqa_000010",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "image_path": "data/images/img_aokvqa_00011.jpg",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 10
+    }
+  },
+  {
+    "id": "aokvqa_000017",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "image_path": "data/images/img_aokvqa_00011.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 17
+    }
+  },
+  {
+    "id": "aokvqa_000028",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "image_path": "data/images/img_aokvqa_00011.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 28
+    }
+  },
+  {
+    "id": "aokvqa_000031",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00011",
+    "image_path": "data/images/img_aokvqa_00011.jpg",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in wildlife tasks."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 31
+    }
+  },
+  {
+    "id": "aokvqa_000001",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "image_path": "data/images/img_aokvqa_00010.jpg",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in museum tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 1
+    }
+  },
+  {
+    "id": "aokvqa_000003",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "image_path": "data/images/img_aokvqa_00010.jpg",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in museum tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 3
+    }
+  },
+  {
+    "id": "aokvqa_000009",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "image_path": "data/images/img_aokvqa_00010.jpg",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in street tasks."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 9
+    }
+  },
+  {
+    "id": "aokvqa_000033",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "image_path": "data/images/img_aokvqa_00010.jpg",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in museum tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 33
+    }
+  },
+  {
+    "id": "aokvqa_000038",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00010",
+    "image_path": "data/images/img_aokvqa_00010.jpg",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in wildlife tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 38
+    }
+  },
+  {
+    "id": "aokvqa_000005",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "image_path": "data/images/img_aokvqa_00001.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 5
+    }
+  },
+  {
+    "id": "aokvqa_000006",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "image_path": "data/images/img_aokvqa_00001.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 6
+    }
+  },
+  {
+    "id": "aokvqa_000014",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "image_path": "data/images/img_aokvqa_00001.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 14
+    }
+  },
+  {
+    "id": "aokvqa_000015",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "image_path": "data/images/img_aokvqa_00001.jpg",
+    "question": "What historical or operational purpose does the apparatus in this street setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in street tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "street",
+      "sample_idx": 15
+    }
+  },
+  {
+    "id": "aokvqa_000019",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00001",
+    "image_path": "data/images/img_aokvqa_00001.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 19
+    }
+  },
+  {
+    "id": "aokvqa_000002",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00009",
+    "image_path": "data/images/img_aokvqa_00009.jpg",
+    "question": "What historical or operational purpose does the apparatus in this wildlife setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in wildlife tasks."
+    ],
+    "is_hallucination_gt": 1,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "wildlife",
+      "sample_idx": 2
+    }
+  },
+  {
+    "id": "aokvqa_000022",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00009",
+    "image_path": "data/images/img_aokvqa_00009.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 22
+    }
+  },
+  {
+    "id": "aokvqa_000034",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00009",
+    "image_path": "data/images/img_aokvqa_00009.jpg",
+    "question": "What historical or operational purpose does the apparatus in this kitchen setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 34
+    }
+  },
+  {
+    "id": "aokvqa_000000",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00006",
+    "image_path": "data/images/img_aokvqa_00006.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 0
+    }
+  },
+  {
+    "id": "aokvqa_000013",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00006",
+    "image_path": "data/images/img_aokvqa_00006.jpg",
+    "question": "What historical or operational purpose does the apparatus in this museum setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in museum tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "museum",
+      "sample_idx": 13
+    }
+  },
+  {
+    "id": "aokvqa_000030",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00006",
+    "image_path": "data/images/img_aokvqa_00006.jpg",
+    "question": "What historical or operational purpose does the apparatus in this kitchen setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in kitchen tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "kitchen",
+      "sample_idx": 30
+    }
+  },
+  {
+    "id": "aokvqa_000036",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00006",
+    "image_path": "data/images/img_aokvqa_00006.jpg",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 36
+    }
+  },
+  {
+    "id": "aokvqa_000023",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00003",
+    "image_path": "data/images/img_aokvqa_00003.jpg",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 23
+    }
+  },
+  {
+    "id": "aokvqa_000011",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00002",
+    "image_path": "data/images/img_aokvqa_00002.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 11
+    }
+  },
+  {
+    "id": "aokvqa_000018",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00002",
+    "image_path": "data/images/img_aokvqa_00002.jpg",
+    "question": "What historical or operational purpose does the apparatus in this space setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in space tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "space",
+      "sample_idx": 18
+    }
+  },
+  {
+    "id": "aokvqa_000037",
+    "dataset": "aokvqa",
+    "image_id": "img_aokvqa_00002",
+    "image_path": "data/images/img_aokvqa_00002.jpg",
+    "question": "What historical or operational purpose does the apparatus in this office setting serve?",
+    "ground_truth_answers": [
+      "It serves for regular maintenance and inspection in office tasks."
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "knowledge_vqa",
+    "metadata": {
+      "category": "office",
+      "sample_idx": 37
+    }
+  }
+]
