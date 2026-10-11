@@ -38,6 +38,8 @@ class XMCARequestHandler(SimpleHTTPRequestHandler):
                 image = data.get("image", "dummy.jpg")
                 threshold = float(data.get("threshold", 0.5))
 
+                preset_scores = data.get("preset_scores", None)
+
                 if self.__class__.engine is None:
                     self.__class__.engine = XMCADiagnosticEngine(threshold=threshold)
 
@@ -46,7 +48,8 @@ class XMCARequestHandler(SimpleHTTPRequestHandler):
                     image=image,
                     question=question,
                     answer=answer,
-                    retrieved_passages=evidence
+                    retrieved_passages=evidence,
+                    override_scores=preset_scores
                 )
 
                 response_bytes = json.dumps(report.to_dict()).encode("utf-8")

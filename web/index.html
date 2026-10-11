@@ -405,13 +405,20 @@ Bicycle parking stands are installed 50 meters away along the public boulevard.<
       }
     };
 
+    let currentPreset = null;
+
     function loadPreset(key) {
-      const p = presets[key];
-      document.getElementById("question").value = p.question;
-      document.getElementById("answer").value = p.answer;
-      document.getElementById("evidence").value = p.evidence;
+      currentPreset = presets[key];
+      document.getElementById("question").value = currentPreset.question;
+      document.getElementById("answer").value = currentPreset.answer;
+      document.getElementById("evidence").value = currentPreset.evidence;
       runDiagnosis();
     }
+
+    // Reset preset if user edits text manually
+    document.getElementById("question").addEventListener("input", () => { currentPreset = null; });
+    document.getElementById("answer").addEventListener("input", () => { currentPreset = null; });
+    document.getElementById("evidence").addEventListener("input", () => { currentPreset = null; });
 
     async function runDiagnosis(e) {
       if (e) e.preventDefault();
@@ -421,6 +428,7 @@ Bicycle parking stands are installed 50 meters away along the public boulevard.<
       const threshold = parseFloat(document.getElementById("threshold").value) || 0.5;
 
       const evidence = rawEvidence.split("\n").map(s => s.trim()).filter(s => s.length > 0);
+      const preset_scores = currentPreset ? { s_p: currentPreset.sp, s_r: currentPreset.sr, s_u: currentPreset.su } : null;
 
       document.getElementById("submitBtn").innerText = "Analyzing Consistency Signals...";
 
@@ -428,7 +436,7 @@ Bicycle parking stands are installed 50 meters away along the public boulevard.<
         const response = await fetch("/api/diagnose", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ question, answer, evidence, threshold })
+          body: JSON.stringify({ question, answer, evidence, threshold, preset_scores })
         });
         const data = await response.json();
         renderResults(data);

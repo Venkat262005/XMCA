@@ -108,15 +108,35 @@ class DeBERTaNLIEngine:
             except Exception as e:
                 logger.warning(f"DeBERTa prediction error ({e}). Returning fallback probabilities.")
 
-        # Fallback keyword overlap
+        # Fallback directional keyword coverage without stopwords
+        STOPWORDS = {
+            "the", "a", "an", "is", "are", "was", "were", "in", "on", "at", "by", "for", "with",
+            "about", "against", "between", "into", "through", "during", "before", "after",
+            "above", "below", "to", "from", "up", "down", "out", "off", "over", "under",
+            "again", "further", "then", "once", "here", "there", "when", "where", "why", "how",
+            "all", "any", "both", "each", "few", "more", "most", "other", "some", "such",
+            "only", "own", "same", "so", "than", "too", "very", "can", "will", "just", "should",
+            "now", "of", "and", "this", "that", "these", "those", "displays", "shows"
+        }
         results = []
         for premise, hyp in premise_hypothesis_pairs:
-            p_words = set(premise.lower().split())
-            h_words = set(hyp.lower().split())
-            overlap = len(p_words.intersection(h_words)) / max(len(h_words), 1)
+            p_words = {w.strip(".,;:!?\"'()").lower() for w in premise.split()} - STOPWORDS
+            h_words = {w.strip(".,;:!?\"'()").lower() for w in hyp.split()} - STOPWORDS
+            if not h_words:
+                coverage = 0.85
+            else:
+                # Substring / partial match fallback
+                matched = 0
+                for hw in h_words:
+                    if any(hw in pw or pw in hw for pw in p_words):
+                        matched += 1
+                coverage = matched / len(h_words)
+
+            entail = float(np.clip(coverage, 0.05, 1.0))
+            contra = float(np.clip(1.0 - coverage, 0.0, 1.0)) if coverage < 0.25 else 0.05
             results.append({
-                "entailment": float(np.clip(overlap * 0.9, 0.0, 1.0)),
-                "neutral": float(0.1),
-                "contradiction": float(np.clip(1.0 - overlap, 0.0, 1.0))
+                "entailment": entail,
+                "neutral": 0.1,
+                "contradiction": contra
             })
         return results

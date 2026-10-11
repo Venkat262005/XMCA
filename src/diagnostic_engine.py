@@ -99,7 +99,8 @@ class XMCADiagnosticEngine:
         question: str,
         answer: str,
         retrieved_passages: Optional[List[str]] = None,
-        visual_context: Optional[str] = None
+        visual_context: Optional[str] = None,
+        override_scores: Optional[Dict[str, float]] = None
     ) -> DiagnosticReport:
         """
         Diagnose a multimodal QA generation instance.
@@ -110,6 +111,7 @@ class XMCADiagnosticEngine:
             answer: Generated VLM answer.
             retrieved_passages: Optional list of retrieved knowledge passages. If None, retrieves from indexed corpus.
             visual_context: Optional text summary of image context.
+            override_scores: Optional dictionary of precomputed/preset consistency scores (s_p, s_r, s_u).
 
         Returns:
             DiagnosticReport containing calibrated hallucination probability,
@@ -139,6 +141,12 @@ class XMCADiagnosticEngine:
         # 4. Utilization Consistency (S_U)
         v_ctx = visual_context or "visual scene elements"
         s_u = self.u_scorer.compute_s_u(claims, passages, visual_context=v_ctx, is_text_only=False)
+
+        # Apply override scores if explicitly provided (e.g. from preset simulation)
+        if override_scores:
+            s_p = float(override_scores.get("s_p", s_p))
+            s_r = float(override_scores.get("s_r", s_r))
+            s_u = float(override_scores.get("s_u", s_u))
 
         # 5. Multi-Head Combiner Diagnosis
         diag_dict = self.combiner.diagnose_single(
