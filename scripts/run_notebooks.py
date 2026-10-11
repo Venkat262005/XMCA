@@ -48,11 +48,14 @@ def execute_notebook(notebook_path: Path, timeout: int = 1800) -> bool:
         with open(notebook_path, "r", encoding="utf-8") as f:
             nb = nbformat.read(f, as_version=4)
 
+        import os
+        os.environ["PYTHONPATH"] = f"{PROJECT_ROOT}:{os.environ.get('PYTHONPATH', '')}"
+
         client = NotebookClient(
             nb,
             timeout=timeout,
             kernel_name="python3",
-            resources={"metadata": {"path": str(notebook_path.parent)}},
+            resources={"metadata": {"path": str(PROJECT_ROOT)}},
         )
 
         client.execute()
