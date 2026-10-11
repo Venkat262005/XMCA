@@ -98,18 +98,85 @@ The ablation suite evaluates 8 distinct experimental conditions across seeds `[4
 
 ---
 
-## 🚀 Quickstart
+## 🎯 Diagnostic Engine & Real-Time Studio
 
-### 1. Local Testing & Verification
+XMCA-Net-Lite provides both a Python API, a Command-Line Interface (CLI), and a real-time Web Studio for interactive diagnosis:
+
+### 1. Command-Line Interface (`diagnose_cli.py`)
+Audit any multimodal question-answer pair and retrieve the root cause:
 ```bash
-# Run unit test suite
-pytest tests/
-
-# Run complete end-to-end integration smoke test
-python3 scripts/smoke_test_pipeline.py
+python3 diagnose_cli.py \
+  --question "What is parked next to the storefront?" \
+  --answer "A blue bicycle is leaning against the brick wall of the shop." \
+  --evidence "The storefront features red brick facades and public walkways."
 ```
 
-### 2. Kaggle T4 Deployment
-1. Upload this repository as a Kaggle Dataset or clone it into `/kaggle/working/xmca`.
-2. Attach a Kaggle T4 GPU instance.
-3. Open and run notebooks sequentially: `00_environment_data.ipynb` through `09_reporting.ipynb`.
+Output:
+```text
+=================================================================
+        XMCA-Net-Lite Multimodal Diagnostic Report
+=================================================================
+Status:                      [HALLUCINATION DETECTED]
+Hallucination Probability:   92.4%
+Primary Breakdown Cause:     PERCEPTION_FAILURE
+-----------------------------------------------------------------
+Consistency Scores:
+  • Perception (S_P):        0.1500
+  • Retrieval  (S_R):        0.8500
+  • Utilization (S_U):       0.8000
+-----------------------------------------------------------------
+Cause Attribution Probabilities:
+  • perception_failure     [70.4%] █████████████████████
+  • retrieval_failure      [ 7.8%] ██
+  • utilization_failure    [11.7%] ███
+  • faithful               [10.0%] ███
+-----------------------------------------------------------------
+Actionable Recommendation:
+  Remediation: Enhance visual resolution, apply object grounding verification (e.g. OWL-ViT filters).
+=================================================================
+```
+
+### 2. Interactive Web Studio
+Launch the diagnostic studio:
+```bash
+python3 web/server.py 8080
+# Open http://localhost:8080 in your browser
+```
+
+---
+
+## 🚀 Step-by-Step Next Steps For You
+
+### Phase 1: Local / Repository Exploration
+1. **Run the Unit Test Suite**:
+   ```bash
+   pytest tests/
+   ```
+2. **Test Sample Predictions with CLI**:
+   ```bash
+   python3 diagnose_cli.py --question "..." --answer "..."
+   ```
+3. **Launch the Web Studio**:
+   ```bash
+   python3 web/server.py 8080
+   ```
+
+### Phase 2: Running on Kaggle T4 GPU
+1. **Upload Code to Kaggle**:
+   - Push this workspace to your GitHub repository or upload the directory as a Kaggle Dataset.
+2. **Create a Kaggle Notebook**:
+   - Accelerator: **GPU T4 x 2** (or single T4).
+   - Persistence: Variables and outputs enabled.
+   - Install dependencies: `!pip install -r requirements.txt`.
+3. **Execute Notebooks Sequentially**:
+   - `00_environment_data.ipynb` -> Prepares official POPE, FaithScore, A-OKVQA, InfoSeek splits with zero image leakage.
+   - `01_prepare_corpora.ipynb` -> Indexes corpus with FAISS & BGE-small.
+   - `02_generate_qwen.ipynb` -> Generates Qwen2-VL-2B in 4-bit NF4 in shards $\le 250$ with `completed_ids.json`.
+   - `03_generate_llava.ipynb` -> Generates LLaVA-OneVision transfer shards.
+   - `04_perception.ipynb` -> Computes $S_P$ via OWL-ViT and SigLIP.
+   - `05_retrieval.ipynb` -> Computes $S_R$ via dense + MiniLM reranker.
+   - `06_utilization.ipynb` -> Computes $S_U$ via DeBERTa-v3 LoRA NLI.
+   - `07_combiner.ipynb` -> Fits calibrated LightGBM combiner on train, calibrates on val.
+   - `08_ablation.ipynb` -> Runs the 8 required ablations across 5 random seeds.
+   - `09_reporting.ipynb` -> Evaluates held-out test split once, generates reliability diagrams and bootstrap 95% CIs.
+

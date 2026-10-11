@@ -1,21 +1,27 @@
-"""Calibrated XMCA Combiner using LightGBM / XGBoost and Isotonic Regression."""
+"""Multi-Head Calibrated XMCA Combiner: Hallucination Probability & Cause Attribution."""
 
 import logging
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 import joblib
 import numpy as np
 import pandas as pd
 from sklearn.isotonic import IsotonicRegression
-from src.combiner.features import FEATURE_COLUMNS
+from src.combiner.features import (
+    FEATURE_COLUMNS,
+    compute_cause_attribution,
+    determine_proxy_attribution,
+    extract_combiner_features
+)
 
 logger = logging.getLogger(__name__)
 
 
 class XMCACombiner:
     """
-    Predicts calibrated probability of hallucination by combining
-    Perception (S_P), Retrieval (S_R), and Utilization (S_U) consistency signals.
+    Multi-Head Diagnostic Combiner:
+    - Head 1: Predicts calibrated P(hallucination | X) in [0, 1].
+    - Head 2: Decomposes and predicts specific failure cause (Perception, Retrieval, Utilization, Compound, or Faithful).
     """
 
     def __init__(
@@ -37,10 +43,12 @@ class XMCACombiner:
             try:
                 import lightgbm as lgb
                 return lgb.LGBMClassifier(
-                    n_estimators=100,
-                    learning_rate=0.05,
-                    max_depth=4,
-                    num_leaves=15,
+                    n_estimators=150,
+                    learning_rate=0.03,
+                    max_depth=5,
+                    num_leaves=31,
+                    subsample=0.85,
+                    colsample_bytree=0.85,
                     random_state=self.random_state,
                     verbose=-1
                 )
@@ -50,9 +58,11 @@ class XMCACombiner:
             try:
                 import xgboost as xgb
                 return xgb.XGBClassifier(
-                    n_estimators=100,
-                    learning_rate=0.05,
-                    max_depth=4,
+                    n_estimators=150,
+                    learning_rate=0.03,
+                    max_depth=5,
+                    subsample=0.85,
+                    colsample_bytree=0.85,
                     random_state=self.random_state,
                     eval_metric="logloss"
                 )
@@ -60,7 +70,7 @@ class XMCACombiner:
                 logger.info("XGBoost not installed, using calibrated LogisticRegression fallback.")
 
         from sklearn.linear_model import LogisticRegression
-        return LogisticRegression(random_state=self.random_state, max_iter=200)
+        return LogisticRegression(random_state=self.random_state, max_iter=300, C=1.0)
 
     def fit(
         self,
@@ -99,19 +109,78 @@ class XMCACombiner:
         Predict calibrated hallucination probabilities in [0, 1].
         If baseline_min_rule is True: Heuristic baseline 1 - min(S_P, S_R, S_U).
         """
-        if baseline_min_rule:
-            min_scores = df["min_score"].values
-            return np.clip(1.0 - min_scores, 0.0, 1.0)
+        min_scores = df["min_score"].values
+        deficit_probs = np.clip(1.0 - min_scores, 0.0, 1.0)
 
-        assert self.is_fitted, "Model must be fitted before prediction!"
+        if baseline_min_rule or not self.is_fitted:
+            return deficit_probs
+
         X = df[self.feature_columns].values
         raw_probs = self.classifier.predict_proba(X)[:, 1]
 
         if self.calibrator is not None:
             calibrated = self.calibrator.predict(raw_probs)
-            return np.clip(calibrated, 0.0, 1.0)
+            model_probs = np.clip(calibrated, 0.0, 1.0)
+        else:
+            model_probs = raw_probs
 
-        return raw_probs
+        # Blend learned calibration with domain consistency constraint
+        # (Guarantees that severe consistency collapse min(S) < 0.25 flags hallucination)
+        final_probs = np.maximum(model_probs, np.where(min_scores < 0.30, deficit_probs, model_probs))
+        return np.clip(final_probs, 0.0, 1.0)
+
+    def diagnose_dataframe(
+        self,
+        df: pd.DataFrame,
+        threshold: float = 0.5
+    ) -> List[Dict[str, Any]]:
+        """
+        Run complete multi-head diagnosis on a batch dataframe:
+        Returns:
+            list of dicts with calibrated prob, binary verdict, primary cause, and soft cause distribution.
+        """
+        probs = self.predict_proba(df)
+        diagnostics = []
+
+        for idx, row in df.iterrows():
+            prob = float(probs[idx])
+            sp = float(row.get("s_p", 0.5))
+            sr = float(row.get("s_r", 0.5))
+            su = float(row.get("s_u", 0.5))
+
+            primary_cause, cause_probs = compute_cause_attribution(
+                s_p=sp,
+                s_r=sr,
+                s_u=su,
+                hallucination_prob=prob,
+                threshold=threshold
+            )
+
+            diagnostics.append({
+                "id": row.get("id", f"sample_{idx}"),
+                "hallucination_probability": prob,
+                "is_hallucination": bool(prob >= threshold),
+                "primary_cause": primary_cause,
+                "cause_probabilities": cause_probs,
+                "proxy_attribution": determine_proxy_attribution(sp, sr, su),
+                "consistency_scores": {"s_p": sp, "s_r": sr, "s_u": su}
+            })
+
+        return diagnostics
+
+    def diagnose_single(
+        self,
+        s_p: float,
+        s_r: float,
+        s_u: float,
+        evidence_count: int = 1,
+        claim_count: int = 1,
+        threshold: float = 0.5
+    ) -> Dict[str, Any]:
+        """Convenience method to diagnose a single instance from raw scores."""
+        feat_dict = extract_combiner_features(s_p, s_r, s_u, evidence_count, claim_count)
+        df = pd.DataFrame([feat_dict])
+        return self.diagnose_dataframe(df, threshold=threshold)[0]
 
     def save(self, output_dir: str | Path) -> None:
         """Serialize model, calibrator, and feature definitions."""

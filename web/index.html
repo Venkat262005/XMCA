@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMCA-Net-Lite | Research-Grade RAG-VLM Diagnostic Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: rgba(18, 24, 38, 0.75);
+      --border: rgba(255, 255, 255, 0.08);
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, var(--bg) 50%, #05070c 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      color: #a5b4fc;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .preset-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .preset-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preset-btn:hover {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    input, textarea {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.92rem;
+      transition: border 0.2s;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    textarea { resize: vertical; min-height: 80px; }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      border: none;
+      color: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+      margin-top: 8px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    }
+
+    /* Results styling */
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .meter-box {
+      text-align: center;
+    }
+
+    .prob-val {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .cause-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .cause-perception { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+    .cause-retrieval { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+    .cause-utilization { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid #a855f7; }
+    .cause-faithful { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+    .cause-compound { background: rgba(236, 72, 153, 0.2); color: #f472b6; border: 1px solid #ec4899; }
+
+    .signal-bars { margin-bottom: 20px; }
+    .signal-item { margin-bottom: 12px; }
+    .signal-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+
+    .progress-track {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.4s ease;
+    }
+
+    .claim-card {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+    }
+
+    .claim-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .summary-box {
+      background: rgba(99, 102, 241, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 12px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-top: 15px;
+    }
+
+    .rec-box {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid var(--success);
+      padding: 12px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge-pill">Research Diagnostic Engine</div>
+      <h1>XMCA-Net-Lite Multimodal Studio</h1>
+      <p class="subtitle">Tri-modal diagnostic system predicting VLM hallucination probabilities and breaking down root cause attribution (Perception vs. Retrieval vs. Utilization).</p>
+    </header>
+
+    <div class="grid">
+      <!-- Input Panel -->
+      <div class="card">
+        <h2><span>⚡</span> Input Query & Generation</h2>
+
+        <div class="preset-buttons">
+          <button class="preset-btn" onclick="loadPreset('perception')">Preset: Perception Hallucination</button>
+          <button class="preset-btn" onclick="loadPreset('retrieval')">Preset: Retrieval Gap</button>
+          <button class="preset-btn" onclick="loadPreset('utilization')">Preset: Evidence Unfaithfulness</button>
+          <button class="preset-btn" onclick="loadPreset('faithful')">Preset: Fully Grounded</button>
+        </div>
+
+        <form id="diagForm" onsubmit="runDiagnosis(event)">
+          <div class="form-group">
+            <label for="question">Multimodal Question</label>
+            <input type="text" id="question" required value="What is parked next to the storefront?">
+          </div>
+
+          <div class="form-group">
+            <label for="answer">Generated VLM Answer</label>
+            <textarea id="answer" required>A blue bicycle is leaning against the brick wall of the storefront.</textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="evidence">Retrieved Evidence Passages (One per line)</label>
+            <textarea id="evidence">The storefront is built from 19th century red brick architecture.
+Bicycle parking stands are installed 50 meters away along the public boulevard.</textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="threshold">Diagnostic Decision Threshold</label>
+            <input type="number" id="threshold" step="0.01" min="0.1" max="0.9" value="0.50">
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">Run Multimodal Diagnosis</button>
+        </form>
+      </div>
+
+      <!-- Output Diagnostic Report -->
+      <div class="card" id="resultsCard">
+        <h2><span>🔍</span> Diagnostic Assessment</h2>
+
+        <div class="metric-row">
+          <div class="meter-box">
+            <label>Hallucination Probability</label>
+            <div class="prob-val" id="probDisplay" style="color: #ef4444;">--</div>
+          </div>
+          <div>
+            <label>Root Cause Attribution</label>
+            <div id="causeDisplay" class="cause-tag cause-perception">ANALYZING...</div>
+          </div>
+        </div>
+
+        <div class="signal-bars">
+          <div class="signal-item">
+            <div class="signal-header">
+              <span>Perception Consistency (S_P)</span>
+              <strong id="spVal">--</strong>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="spFill" style="width: 0%; background: #3b82f6;"></div>
+            </div>
+          </div>
+
+          <div class="signal-item">
+            <div class="signal-header">
+              <span>Retrieval Consistency (S_R)</span>
+              <strong id="srVal">--</strong>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="srFill" style="width: 0%; background: #f59e0b;"></div>
+            </div>
+          </div>
+
+          <div class="signal-item">
+            <div class="signal-header">
+              <span>Utilization Consistency (S_U)</span>
+              <strong id="suVal">--</strong>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="suFill" style="width: 0%; background: #a855f7;"></div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Atomic Claim Audit</h3>
+        <div id="claimsContainer" style="margin-top: 10px;">
+          <div class="claim-card">Submit a query to view atomic claim verification...</div>
+        </div>
+
+        <div class="summary-box" id="explanationBox">
+          Diagnostic summary will appear here.
+        </div>
+
+        <div class="rec-box" id="recBox">
+          Engineering remediation recommendations will appear here.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const presets = {
+      perception: {
+        question: "Is there a blue bicycle parked next to the shop wall?",
+        answer: "Yes, a blue bicycle is leaning against the brick wall of the shop.",
+        evidence: "The storefront features red brick facades and public walkways.",
+        sp: 0.15, sr: 0.85, su: 0.80
+      },
+      retrieval: {
+        question: "What ancient dynasty constructed the monument visible on the hill?",
+        answer: "The monument was constructed during the Ming Dynasty in 1420.",
+        evidence: "The hill contains scenic hiking trails and modern observation towers.",
+        sp: 0.88, sr: 0.12, su: 0.85
+      },
+      utilization: {
+        question: "What is inside the frozen pond according to records?",
+        answer: "A rare tropical pink dolphin is living in the frozen pond.",
+        evidence: "The pond freezes completely during winter months. Only cold-hardy trout and waterfowl reside in the area.",
+        sp: 0.85, sr: 0.90, su: 0.05
+      },
+      faithful: {
+        question: "What style of building is shown in the image?",
+        answer: "The building displays 19th century industrial brick architecture with stone lintels.",
+        evidence: "Historical records confirm the building was constructed in 1885 using Victorian industrial brick masonry.",
+        sp: 0.92, sr: 0.95, su: 0.90
+      }
+    };
+
+    function loadPreset(key) {
+      const p = presets[key];
+      document.getElementById("question").value = p.question;
+      document.getElementById("answer").value = p.answer;
+      document.getElementById("evidence").value = p.evidence;
+      runDiagnosis();
+    }
+
+    async function runDiagnosis(e) {
+      if (e) e.preventDefault();
+      const question = document.getElementById("question").value;
+      const answer = document.getElementById("answer").value;
+      const rawEvidence = document.getElementById("evidence").value;
+      const threshold = parseFloat(document.getElementById("threshold").value) || 0.5;
+
+      const evidence = rawEvidence.split("\n").map(s => s.trim()).filter(s => s.length > 0);
+
+      document.getElementById("submitBtn").innerText = "Analyzing Consistency Signals...";
+
+      try {
+        const response = await fetch("/api/diagnose", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question, answer, evidence, threshold })
+        });
+        const data = await response.json();
+        renderResults(data);
+      } catch (err) {
+        console.error("Diagnosis error:", err);
+      } finally {
+        document.getElementById("submitBtn").innerText = "Run Multimodal Diagnosis";
+      }
+    }
+
+    function renderResults(data) {
+      const prob = data.hallucination_probability;
+      const probElem = document.getElementById("probDisplay");
+      probElem.innerText = `${(prob * 100).toFixed(1)}%`;
+      probElem.style.color = prob >= 0.5 ? '#ef4444' : '#10b981';
+
+      const causeElem = document.getElementById("causeDisplay");
+      causeElem.className = `cause-tag cause-${data.primary_cause.replace('_failure', '')}`;
+      causeElem.innerText = data.primary_cause.replace('_', ' ').toUpperCase();
+
+      // Signals
+      const sp = data.consistency_scores.s_p;
+      const sr = data.consistency_scores.s_r;
+      const su = data.consistency_scores.s_u;
+
+      document.getElementById("spVal").innerText = sp.toFixed(3);
+      document.getElementById("srVal").innerText = sr.toFixed(3);
+      document.getElementById("suVal").innerText = su.toFixed(3);
+
+      document.getElementById("spFill").style.width = `${sp * 100}%`;
+      document.getElementById("srFill").style.width = `${sr * 100}%`;
+      document.getElementById("suFill").style.width = `${su * 100}%`;
+
+      // Claims
+      const claimsContainer = document.getElementById("claimsContainer");
+      claimsContainer.innerHTML = "";
+      data.claims_audited.forEach(c => {
+        const isOk = c.verdict === "grounded";
+        const icon = isOk ? "✓" : "✗";
+        const col = isOk ? "#10b981" : "#ef4444";
+        claimsContainer.innerHTML += `
+          <div class="claim-card">
+            <div class="claim-header">
+              <span>Claim #${c.claim_index}</span>
+              <strong style="color: ${col};">${c.verdict.toUpperCase()}</strong>
+            </div>
+            <div>"${c.claim_text}"</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 5px;">
+              P: ${c.perception_support.toFixed(2)} | R: ${c.retrieval_support.toFixed(2)} | U: ${c.utilization_support.toFixed(2)}
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById("explanationBox").innerText = data.natural_language_explanation;
+      document.getElementById("recBox").innerText = data.actionable_recommendation;
+    }
+
+    // Auto-run first preset on initial load
+    window.onload = () => loadPreset('perception');
+  </script>
+</body>
+</html>
