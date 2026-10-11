@@ -51,9 +51,10 @@ def execute_notebook(notebook_path: Path, timeout: int = 1800) -> bool:
         import os
         os.environ["PYTHONPATH"] = f"{PROJECT_ROOT}:{os.environ.get('PYTHONPATH', '')}"
 
+        effective_timeout = None if (timeout is None or timeout <= 0) else timeout
         client = NotebookClient(
             nb,
-            timeout=timeout,
+            timeout=effective_timeout,
             kernel_name="python3",
             resources={"metadata": {"path": str(PROJECT_ROOT)}},
         )
@@ -98,8 +99,8 @@ def main():
     parser.add_argument(
         "--timeout",
         type=int,
-        default=1800,
-        help="Timeout in seconds per cell (default: 1800s / 30min)",
+        default=None,
+        help="Timeout in seconds per cell (default: None / unlimited)",
     )
 
     args = parser.parse_args()
