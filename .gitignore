@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.dylib
+
+# Pytest / testing cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local virtual environment
+.venv/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints*/
+
+# macOS
+.DS_Store
+
+# Temporary files & locks
+*.tmp
+*.lock

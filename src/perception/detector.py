@@ -69,18 +69,41 @@ class OwlViTDetector:
                 target_sizes = torch.Tensor([image.size[::-1]])
                 if torch.cuda.is_available():
                     target_sizes = target_sizes.to("cuda")
-                results = self._processor.post_process_object_detection(
-                    outputs=outputs,
-                    target_sizes=target_sizes,
-                    threshold=self.box_threshold
-                )[0]
+                if hasattr(self._processor, "post_process_grounded_object_detection"):
+                    results = self._processor.post_process_grounded_object_detection(
+                        outputs=outputs,
+                        target_sizes=target_sizes,
+                        threshold=self.box_threshold,
+                        text_labels=[query_labels]
+                    )[0]
+                    boxes = results["boxes"].cpu().numpy().tolist()
+                    scores = results["scores"].cpu().numpy().tolist()
+                    labels = results.get("text_labels", [query_labels[idx] for idx in results["labels"].cpu().numpy().tolist() if idx < len(query_labels)])
+                elif hasattr(self._processor, "post_process_object_detection"):
+                    results = self._processor.post_process_object_detection(
+                        outputs=outputs,
+                        target_sizes=target_sizes,
+                        threshold=self.box_threshold
+                    )[0]
+                    boxes = results["boxes"].cpu().numpy().tolist()
+                    scores = results["scores"].cpu().numpy().tolist()
+                    labels_idx = results["labels"].cpu().numpy().tolist()
+                    labels = [query_labels[idx] for idx in labels_idx if idx < len(query_labels)]
+                elif hasattr(self._processor, "image_processor") and hasattr(self._processor.image_processor, "post_process_object_detection"):
+                    results = self._processor.image_processor.post_process_object_detection(
+                        outputs=outputs,
+                        target_sizes=target_sizes,
+                        threshold=self.box_threshold
+                    )[0]
+                    boxes = results["boxes"].cpu().numpy().tolist()
+                    scores = results["scores"].cpu().numpy().tolist()
+                    labels_idx = results["labels"].cpu().numpy().tolist()
+                    labels = [query_labels[idx] for idx in labels_idx if idx < len(query_labels)]
+                else:
+                    boxes, labels, scores = [], [], []
 
-                boxes = results["boxes"].cpu().numpy().tolist()
-                scores = results["scores"].cpu().numpy().tolist()
-                labels_idx = results["labels"].cpu().numpy().tolist()
-                labels = [query_labels[idx] for idx in labels_idx if idx < len(query_labels)]
-
-                return boxes, labels, scores
+                if boxes:
+                    return boxes, labels, scores
             except Exception as e:
                 logger.warning(f"OWL-ViT detection error ({e}). Using fallback grid.")
 

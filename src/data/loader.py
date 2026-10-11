@@ -107,32 +107,48 @@ def load_dataset_records(
                 for idx, row in enumerate(ds):
                     if idx >= max_samples:
                         break
+                    clean_meta = {
+                        k: v for k, v in row.items()
+                        if k != "image" and not hasattr(v, "save") and isinstance(v, (str, int, float, bool, list, dict))
+                    }
+                    img_id = str(row.get("image_source", f"pope_img_{idx}"))
+                    img_path = f"data/images/{img_id}.jpg"
+                    if isinstance(row.get("image"), str):
+                        img_path = row.get("image")
                     records.append(XMCADataPoint(
                         id=f"pope_{idx:05d}",
                         dataset="pope",
-                        image_id=str(row.get("image_source", f"pope_img_{idx}")),
-                        image_path=str(row.get("image", "")),
-                        question=row.get("question", ""),
-                        ground_truth_answers=[row.get("ground_truth", "yes")],
-                        is_hallucination_gt=1 if row.get("ground_truth", "").lower() == "no" else 0,
+                        image_id=img_id,
+                        image_path=img_path,
+                        question=str(row.get("question", "")),
+                        ground_truth_answers=[str(row.get("ground_truth", "yes"))],
+                        is_hallucination_gt=1 if str(row.get("ground_truth", "")).lower() == "no" else 0,
                         task_type="binary_vqa",
-                        metadata=row
+                        metadata=clean_meta
                     ).to_dict())
             elif "aokvqa" in dataset_key:
                 ds = load_dataset("HuggingFaceM4/A-OKVQA", split="validation", trust_remote_code=True)
                 for idx, row in enumerate(ds):
                     if idx >= max_samples:
                         break
+                    clean_meta = {
+                        k: v for k, v in row.items()
+                        if k != "image" and not hasattr(v, "save") and isinstance(v, (str, int, float, bool, list, dict))
+                    }
+                    img_id = str(row.get("image_id", f"aokvqa_img_{idx}"))
+                    img_path = f"data/images/{img_id}.jpg"
+                    if isinstance(row.get("image"), str):
+                        img_path = row.get("image")
                     records.append(XMCADataPoint(
                         id=f"aokvqa_{idx:05d}",
                         dataset="aokvqa",
-                        image_id=str(row.get("image_id", f"aokvqa_img_{idx}")),
-                        image_path=str(row.get("image", "")),
-                        question=row.get("question", ""),
-                        ground_truth_answers=row.get("rationales", [""]),
+                        image_id=img_id,
+                        image_path=img_path,
+                        question=str(row.get("question", "")),
+                        ground_truth_answers=[str(r) for r in row.get("rationales", [""])],
                         is_hallucination_gt=0,
                         task_type="knowledge_vqa",
-                        metadata=row
+                        metadata=clean_meta
                     ).to_dict())
         except Exception as e:
             logger.info(f"HuggingFace auto-load for {dataset_name} skipped/unavailable ({e}). Using offline benchmark pool.")

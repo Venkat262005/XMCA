@@ -1,17 +1,17 @@
 {
   "dataset": "faithscore",
   "sample_counts": {
-    "train": 27,
-    "val": 4,
-    "test": 9
+    "train": 1400,
+    "val": 200,
+    "test": 400
   },
-  "total_samples": 40,
+  "total_samples": 2000,
   "hashes": {
-    "train_parquet_sha256": "011e96190c96cf05cc0661b6a0cfea080ab7476656c66a93a5a480fd61237ace",
-    "train_json_sha256": "bae518fc3e27a18e6540473408ec5cca7a41fafe30d71280dbf80aee9f9a62b4",
-    "val_parquet_sha256": "156b530c0398f13244a4bf0406242fd105c3e5cc40bd5450e2f70faf52c9bece",
-    "val_json_sha256": "5674748b162ae40182d60cb792690692fff6790796457bbb3573e25fba5c3fa1",
-    "test_parquet_sha256": "e1c5083bf57b6205ffe1ef71e63982b18d57c4830303d2af9af58cfb2410ff40",
-    "test_json_sha256": "2ab66bb7db3195beb87db6e2a454266b8b3252fd11339a8946950ab5fa9d6779"
+    "train_parquet_sha256": "b7dcc92beade0465ea5bf9413b7b8f2302725778f6b8af0d4a623549a4194ddd",
+    "train_json_sha256": "b768b20f966cd911139322ccf27388c1061967ed3bb638b7bbd394ae1795f487",
+    "val_parquet_sha256": "5e215ff9008276080c69b42b6e94e50aef800b5d07f28fda3e2afb27c251f15b",
+    "val_json_sha256": "9bf17cf04e027e89ded77df1d8075d5d8a4c3ca06e64abcf90eb7db7beb01251",
+    "test_parquet_sha256": "e2c144de849a661dee565a5fd4540639b0e533c270b0aa9d90a95985606b05e4",
+    "test_json_sha256": "f5e923a11e080e32605f337d1622b5570b18903204c34a28075c857dabe58a65"
   }
 }

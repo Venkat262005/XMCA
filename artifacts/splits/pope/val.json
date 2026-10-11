@@ -1,50 +1,3962 @@
 [
   {
-    "id": "pope_000016",
+    "id": "pope_01422",
     "dataset": "pope",
-    "image_id": "img_pope_00007",
-    "image_path": "data/images/img_pope_00007.jpg",
+    "image_id": "COCO_val2014_000000100215",
+    "image_path": "data/images/COCO_val2014_000000100215.jpg",
+    "question": "Is there a clock in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1422",
+      "question_id": "1423",
+      "question": "Is there a clock in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000100215",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01423",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000100215",
+    "image_path": "data/images/COCO_val2014_000000100215.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1423",
+      "question_id": "1424",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000100215",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01424",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000100215",
+    "image_path": "data/images/COCO_val2014_000000100215.jpg",
+    "question": "Is there a bed in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1424",
+      "question_id": "1425",
+      "question": "Is there a bed in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000100215",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01425",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000100215",
+    "image_path": "data/images/COCO_val2014_000000100215.jpg",
+    "question": "Is there a book in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1425",
+      "question_id": "1426",
+      "question": "Is there a book in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000100215",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01426",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000100215",
+    "image_path": "data/images/COCO_val2014_000000100215.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1426",
+      "question_id": "1427",
+      "question": "Is there a bottle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000100215",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01427",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000100215",
+    "image_path": "data/images/COCO_val2014_000000100215.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1427",
+      "question_id": "1428",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000100215",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00900",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000430052",
+    "image_path": "data/images/COCO_val2014_000000430052.jpg",
+    "question": "Is there a vase in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "900",
+      "question_id": "901",
+      "question": "Is there a vase in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000430052",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00901",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000430052",
+    "image_path": "data/images/COCO_val2014_000000430052.jpg",
+    "question": "Is there a potted plant in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "901",
+      "question_id": "902",
+      "question": "Is there a potted plant in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000430052",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00902",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000430052",
+    "image_path": "data/images/COCO_val2014_000000430052.jpg",
+    "question": "Is there a bird in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "902",
+      "question_id": "903",
+      "question": "Is there a bird in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000430052",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00903",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000430052",
+    "image_path": "data/images/COCO_val2014_000000430052.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "903",
+      "question_id": "904",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000430052",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00904",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000430052",
+    "image_path": "data/images/COCO_val2014_000000430052.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "904",
+      "question_id": "905",
+      "question": "Is there a bottle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000430052",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00905",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000430052",
+    "image_path": "data/images/COCO_val2014_000000430052.jpg",
+    "question": "Is there a cup in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "905",
+      "question_id": "906",
+      "question": "Is there a cup in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000430052",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01986",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000543393",
+    "image_path": "data/images/COCO_val2014_000000543393.jpg",
+    "question": "Is there a fire hydrant in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1986",
+      "question_id": "1987",
+      "question": "Is there a fire hydrant in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000543393",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01987",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000543393",
+    "image_path": "data/images/COCO_val2014_000000543393.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1987",
+      "question_id": "1988",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000543393",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01988",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000543393",
+    "image_path": "data/images/COCO_val2014_000000543393.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1988",
+      "question_id": "1989",
+      "question": "Is there a car in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000543393",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01989",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000543393",
+    "image_path": "data/images/COCO_val2014_000000543393.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1989",
+      "question_id": "1990",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000543393",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01990",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000543393",
+    "image_path": "data/images/COCO_val2014_000000543393.jpg",
+    "question": "Is there a stop sign in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1990",
+      "question_id": "1991",
+      "question": "Is there a stop sign in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000543393",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01991",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000543393",
+    "image_path": "data/images/COCO_val2014_000000543393.jpg",
+    "question": "Is there a traffic light in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1991",
+      "question_id": "1992",
+      "question": "Is there a traffic light in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000543393",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01452",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000018918",
+    "image_path": "data/images/COCO_val2014_000000018918.jpg",
+    "question": "Is there a sink in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1452",
+      "question_id": "1453",
+      "question": "Is there a sink in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000018918",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01453",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000018918",
+    "image_path": "data/images/COCO_val2014_000000018918.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1453",
+      "question_id": "1454",
+      "question": "Is there a bottle in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000018918",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01454",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000018918",
+    "image_path": "data/images/COCO_val2014_000000018918.jpg",
+    "question": "Is there a bowl in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1454",
+      "question_id": "1455",
+      "question": "Is there a bowl in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000018918",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01455",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000018918",
+    "image_path": "data/images/COCO_val2014_000000018918.jpg",
+    "question": "Is there a cup in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1455",
+      "question_id": "1456",
+      "question": "Is there a cup in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000018918",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01456",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000018918",
+    "image_path": "data/images/COCO_val2014_000000018918.jpg",
+    "question": "Is there an oven in the imange?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1456",
+      "question_id": "1457",
+      "question": "Is there an oven in the imange?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000018918",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01457",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000018918",
+    "image_path": "data/images/COCO_val2014_000000018918.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1457",
+      "question_id": "1458",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000018918",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00060",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000574692",
+    "image_path": "data/images/COCO_val2014_000000574692.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "60",
+      "question_id": "61",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000574692",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00061",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000574692",
+    "image_path": "data/images/COCO_val2014_000000574692.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "61",
+      "question_id": "62",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000574692",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00062",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000574692",
+    "image_path": "data/images/COCO_val2014_000000574692.jpg",
+    "question": "Is there an orange in the imange?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "62",
+      "question_id": "63",
+      "question": "Is there an orange in the imange?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000574692",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00063",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000574692",
+    "image_path": "data/images/COCO_val2014_000000574692.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "63",
+      "question_id": "64",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000574692",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00064",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000574692",
+    "image_path": "data/images/COCO_val2014_000000574692.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "64",
+      "question_id": "65",
+      "question": "Is there a bottle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000574692",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00065",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000574692",
+    "image_path": "data/images/COCO_val2014_000000574692.jpg",
+    "question": "Is there a cup in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "65",
+      "question_id": "66",
+      "question": "Is there a cup in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000574692",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00894",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000354398",
+    "image_path": "data/images/COCO_val2014_000000354398.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "894",
+      "question_id": "895",
+      "question": "Is there a dog in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000354398",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00895",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000354398",
+    "image_path": "data/images/COCO_val2014_000000354398.jpg",
+    "question": "Is there a frisbee in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "895",
+      "question_id": "896",
+      "question": "Is there a frisbee in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000354398",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00896",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000354398",
+    "image_path": "data/images/COCO_val2014_000000354398.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "896",
+      "question_id": "897",
+      "question": "Is there a truck in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000354398",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00897",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000354398",
+    "image_path": "data/images/COCO_val2014_000000354398.jpg",
+    "question": "Is there a traffic light in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "897",
+      "question_id": "898",
+      "question": "Is there a traffic light in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000354398",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00898",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000354398",
+    "image_path": "data/images/COCO_val2014_000000354398.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "898",
+      "question_id": "899",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000354398",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00899",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000354398",
+    "image_path": "data/images/COCO_val2014_000000354398.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "899",
+      "question_id": "900",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000354398",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01890",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000515820",
+    "image_path": "data/images/COCO_val2014_000000515820.jpg",
+    "question": "Is there a tv in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1890",
+      "question_id": "1891",
+      "question": "Is there a tv in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000515820",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01891",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000515820",
+    "image_path": "data/images/COCO_val2014_000000515820.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1891",
+      "question_id": "1892",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000515820",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01892",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000515820",
+    "image_path": "data/images/COCO_val2014_000000515820.jpg",
+    "question": "Is there a clock in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1892",
+      "question_id": "1893",
+      "question": "Is there a clock in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000515820",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01893",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000515820",
+    "image_path": "data/images/COCO_val2014_000000515820.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1893",
+      "question_id": "1894",
+      "question": "Is there a chair in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000515820",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01894",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000515820",
+    "image_path": "data/images/COCO_val2014_000000515820.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1894",
+      "question_id": "1895",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000515820",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01895",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000515820",
+    "image_path": "data/images/COCO_val2014_000000515820.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1895",
+      "question_id": "1896",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000515820",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00342",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000054025",
+    "image_path": "data/images/COCO_val2014_000000054025.jpg",
+    "question": "Is there a traffic light in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "342",
+      "question_id": "343",
+      "question": "Is there a traffic light in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000054025",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00343",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000054025",
+    "image_path": "data/images/COCO_val2014_000000054025.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "343",
+      "question_id": "344",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000054025",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00344",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000054025",
+    "image_path": "data/images/COCO_val2014_000000054025.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "344",
+      "question_id": "345",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000054025",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00345",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000054025",
+    "image_path": "data/images/COCO_val2014_000000054025.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "345",
+      "question_id": "346",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000054025",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00346",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000054025",
+    "image_path": "data/images/COCO_val2014_000000054025.jpg",
+    "question": "Is there a backpack in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "346",
+      "question_id": "347",
+      "question": "Is there a backpack in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000054025",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00347",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000054025",
+    "image_path": "data/images/COCO_val2014_000000054025.jpg",
+    "question": "Is there a skis in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "347",
+      "question_id": "348",
+      "question": "Is there a skis in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000054025",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00984",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000460931",
+    "image_path": "data/images/COCO_val2014_000000460931.jpg",
+    "question": "Is there a donut in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "984",
+      "question_id": "985",
+      "question": "Is there a donut in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000460931",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00985",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000460931",
+    "image_path": "data/images/COCO_val2014_000000460931.jpg",
+    "question": "Is there a spoon in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "985",
+      "question_id": "986",
+      "question": "Is there a spoon in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000460931",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00986",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000460931",
+    "image_path": "data/images/COCO_val2014_000000460931.jpg",
+    "question": "Is there a cake in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "986",
+      "question_id": "987",
+      "question": "Is there a cake in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000460931",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00987",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000460931",
+    "image_path": "data/images/COCO_val2014_000000460931.jpg",
+    "question": "Is there a cup in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "987",
+      "question_id": "988",
+      "question": "Is there a cup in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000460931",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00988",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000460931",
+    "image_path": "data/images/COCO_val2014_000000460931.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "988",
+      "question_id": "989",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000460931",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00989",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000460931",
+    "image_path": "data/images/COCO_val2014_000000460931.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "989",
+      "question_id": "990",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000460931",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01620",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000397665",
+    "image_path": "data/images/COCO_val2014_000000397665.jpg",
+    "question": "Is there a motorcycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1620",
+      "question_id": "1621",
+      "question": "Is there a motorcycle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000397665",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01621",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000397665",
+    "image_path": "data/images/COCO_val2014_000000397665.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1621",
+      "question_id": "1622",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000397665",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01622",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000397665",
+    "image_path": "data/images/COCO_val2014_000000397665.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1622",
+      "question_id": "1623",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000397665",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01623",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000397665",
+    "image_path": "data/images/COCO_val2014_000000397665.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1623",
+      "question_id": "1624",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000397665",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01624",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000397665",
+    "image_path": "data/images/COCO_val2014_000000397665.jpg",
+    "question": "Is there a handbag in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1624",
+      "question_id": "1625",
+      "question": "Is there a handbag in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000397665",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01625",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000397665",
+    "image_path": "data/images/COCO_val2014_000000397665.jpg",
+    "question": "Is there a backpack in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1625",
+      "question_id": "1626",
+      "question": "Is there a backpack in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000397665",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00456",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000406403",
+    "image_path": "data/images/COCO_val2014_000000406403.jpg",
+    "question": "Is there a snowboard in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "456",
+      "question_id": "457",
+      "question": "Is there a snowboard in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000406403",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00457",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000406403",
+    "image_path": "data/images/COCO_val2014_000000406403.jpg",
+    "question": "Is there a backpack in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "457",
+      "question_id": "458",
+      "question": "Is there a backpack in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000406403",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00458",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000406403",
+    "image_path": "data/images/COCO_val2014_000000406403.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "458",
+      "question_id": "459",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000406403",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00459",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000406403",
+    "image_path": "data/images/COCO_val2014_000000406403.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "459",
+      "question_id": "460",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000406403",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00460",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000406403",
+    "image_path": "data/images/COCO_val2014_000000406403.jpg",
+    "question": "Is there a skis in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "460",
+      "question_id": "461",
+      "question": "Is there a skis in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000406403",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00461",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000406403",
+    "image_path": "data/images/COCO_val2014_000000406403.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "461",
+      "question_id": "462",
+      "question": "Is there a dog in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000406403",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00288",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000012333",
+    "image_path": "data/images/COCO_val2014_000000012333.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "288",
+      "question_id": "289",
+      "question": "Is there a chair in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000012333",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00289",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000012333",
+    "image_path": "data/images/COCO_val2014_000000012333.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "289",
+      "question_id": "290",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000012333",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00290",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000012333",
+    "image_path": "data/images/COCO_val2014_000000012333.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "290",
+      "question_id": "291",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000012333",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00291",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000012333",
+    "image_path": "data/images/COCO_val2014_000000012333.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "291",
+      "question_id": "292",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000012333",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00292",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000012333",
+    "image_path": "data/images/COCO_val2014_000000012333.jpg",
+    "question": "Is there a horse in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "292",
+      "question_id": "293",
+      "question": "Is there a horse in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000012333",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00293",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000012333",
+    "image_path": "data/images/COCO_val2014_000000012333.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "293",
+      "question_id": "294",
+      "question": "Is there a dog in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000012333",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00708",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000239130",
+    "image_path": "data/images/COCO_val2014_000000239130.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "708",
+      "question_id": "709",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000239130",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00709",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000239130",
+    "image_path": "data/images/COCO_val2014_000000239130.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "709",
+      "question_id": "710",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000239130",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00710",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000239130",
+    "image_path": "data/images/COCO_val2014_000000239130.jpg",
+    "question": "Is there a bicycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "710",
+      "question_id": "711",
+      "question": "Is there a bicycle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000239130",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00711",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000239130",
+    "image_path": "data/images/COCO_val2014_000000239130.jpg",
+    "question": "Is there a motorcycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "711",
+      "question_id": "712",
+      "question": "Is there a motorcycle in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000239130",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00712",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000239130",
+    "image_path": "data/images/COCO_val2014_000000239130.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "712",
+      "question_id": "713",
+      "question": "Is there a car in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000239130",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00713",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000239130",
+    "image_path": "data/images/COCO_val2014_000000239130.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "713",
+      "question_id": "714",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000239130",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00684",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000069196",
+    "image_path": "data/images/COCO_val2014_000000069196.jpg",
+    "question": "Is there a backpack in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "684",
+      "question_id": "685",
+      "question": "Is there a backpack in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000069196",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00685",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000069196",
+    "image_path": "data/images/COCO_val2014_000000069196.jpg",
+    "question": "Is there a skis in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "685",
+      "question_id": "686",
+      "question": "Is there a skis in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000069196",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00686",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000069196",
+    "image_path": "data/images/COCO_val2014_000000069196.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "686",
+      "question_id": "687",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000069196",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00687",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000069196",
+    "image_path": "data/images/COCO_val2014_000000069196.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "687",
+      "question_id": "688",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000069196",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00688",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000069196",
+    "image_path": "data/images/COCO_val2014_000000069196.jpg",
+    "question": "Is there an airplane in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "688",
+      "question_id": "689",
+      "question": "Is there an airplane in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000069196",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00689",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000069196",
+    "image_path": "data/images/COCO_val2014_000000069196.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "689",
+      "question_id": "690",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000069196",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01818",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000436127",
+    "image_path": "data/images/COCO_val2014_000000436127.jpg",
+    "question": "Is there a clock in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1818",
+      "question_id": "1819",
+      "question": "Is there a clock in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000436127",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01819",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000436127",
+    "image_path": "data/images/COCO_val2014_000000436127.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1819",
+      "question_id": "1820",
+      "question": "Is there a chair in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000436127",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01820",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000436127",
+    "image_path": "data/images/COCO_val2014_000000436127.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1820",
+      "question_id": "1821",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000436127",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01821",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000436127",
+    "image_path": "data/images/COCO_val2014_000000436127.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1821",
+      "question_id": "1822",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000436127",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01822",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000436127",
+    "image_path": "data/images/COCO_val2014_000000436127.jpg",
+    "question": "Is there a horse in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1822",
+      "question_id": "1823",
+      "question": "Is there a horse in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000436127",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01823",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000436127",
+    "image_path": "data/images/COCO_val2014_000000436127.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1823",
+      "question_id": "1824",
+      "question": "Is there a dog in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000436127",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00792",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000303099",
+    "image_path": "data/images/COCO_val2014_000000303099.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "792",
+      "question_id": "793",
+      "question": "Is there a bottle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000303099",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00793",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000303099",
+    "image_path": "data/images/COCO_val2014_000000303099.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "793",
+      "question_id": "794",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000303099",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00794",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000303099",
+    "image_path": "data/images/COCO_val2014_000000303099.jpg",
+    "question": "Is there a cat in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "794",
+      "question_id": "795",
+      "question": "Is there a cat in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000303099",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00795",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000303099",
+    "image_path": "data/images/COCO_val2014_000000303099.jpg",
+    "question": "Is there a couch in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "795",
+      "question_id": "796",
+      "question": "Is there a couch in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000303099",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00796",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000303099",
+    "image_path": "data/images/COCO_val2014_000000303099.jpg",
+    "question": "Is there a toilet in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "796",
+      "question_id": "797",
+      "question": "Is there a toilet in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000303099",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00797",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000303099",
+    "image_path": "data/images/COCO_val2014_000000303099.jpg",
+    "question": "Is there a sink in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "797",
+      "question_id": "798",
+      "question": "Is there a sink in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000303099",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00264",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000454642",
+    "image_path": "data/images/COCO_val2014_000000454642.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "264",
+      "question_id": "265",
+      "question": "Is there a truck in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000454642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00265",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000454642",
+    "image_path": "data/images/COCO_val2014_000000454642.jpg",
+    "question": "Is there a traffic light in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "265",
+      "question_id": "266",
+      "question": "Is there a traffic light in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000454642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00266",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000454642",
+    "image_path": "data/images/COCO_val2014_000000454642.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "266",
+      "question_id": "267",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000454642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00267",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000454642",
+    "image_path": "data/images/COCO_val2014_000000454642.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "267",
+      "question_id": "268",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000454642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00268",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000454642",
+    "image_path": "data/images/COCO_val2014_000000454642.jpg",
+    "question": "Is there a motorcycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "268",
+      "question_id": "269",
+      "question": "Is there a motorcycle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000454642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00269",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000454642",
+    "image_path": "data/images/COCO_val2014_000000454642.jpg",
+    "question": "Is there a bicycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "269",
+      "question_id": "270",
+      "question": "Is there a bicycle in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000454642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00216",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000498759",
+    "image_path": "data/images/COCO_val2014_000000498759.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "216",
+      "question_id": "217",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000498759",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00217",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000498759",
+    "image_path": "data/images/COCO_val2014_000000498759.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "217",
+      "question_id": "218",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000498759",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00218",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000498759",
+    "image_path": "data/images/COCO_val2014_000000498759.jpg",
+    "question": "Is there a skateboard in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "218",
+      "question_id": "219",
+      "question": "Is there a skateboard in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000498759",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00219",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000498759",
+    "image_path": "data/images/COCO_val2014_000000498759.jpg",
+    "question": "Is there a bicycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "219",
+      "question_id": "220",
+      "question": "Is there a bicycle in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000498759",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00220",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000498759",
+    "image_path": "data/images/COCO_val2014_000000498759.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "220",
+      "question_id": "221",
+      "question": "Is there a car in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000498759",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00221",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000498759",
+    "image_path": "data/images/COCO_val2014_000000498759.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "221",
+      "question_id": "222",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000498759",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00870",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000424642",
+    "image_path": "data/images/COCO_val2014_000000424642.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "870",
+      "question_id": "871",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000424642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00871",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000424642",
+    "image_path": "data/images/COCO_val2014_000000424642.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "871",
+      "question_id": "872",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000424642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00872",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000424642",
+    "image_path": "data/images/COCO_val2014_000000424642.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "872",
+      "question_id": "873",
+      "question": "Is there a bottle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000424642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00873",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000424642",
+    "image_path": "data/images/COCO_val2014_000000424642.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "873",
+      "question_id": "874",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000424642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00874",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000424642",
+    "image_path": "data/images/COCO_val2014_000000424642.jpg",
+    "question": "Is there a frisbee in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "874",
+      "question_id": "875",
+      "question": "Is there a frisbee in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000424642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00875",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000424642",
+    "image_path": "data/images/COCO_val2014_000000424642.jpg",
+    "question": "Is there a dog in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "875",
+      "question_id": "876",
+      "question": "Is there a dog in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000424642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01008",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000273450",
+    "image_path": "data/images/COCO_val2014_000000273450.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1008",
+      "question_id": "1009",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000273450",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01009",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000273450",
+    "image_path": "data/images/COCO_val2014_000000273450.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1009",
+      "question_id": "1010",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000273450",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01010",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000273450",
+    "image_path": "data/images/COCO_val2014_000000273450.jpg",
+    "question": "Is there an orange in the imange?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1010",
+      "question_id": "1011",
+      "question": "Is there an orange in the imange?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000273450",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01011",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000273450",
+    "image_path": "data/images/COCO_val2014_000000273450.jpg",
+    "question": "Is there a bowl in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1011",
+      "question_id": "1012",
+      "question": "Is there a bowl in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000273450",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01012",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000273450",
+    "image_path": "data/images/COCO_val2014_000000273450.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1012",
+      "question_id": "1013",
+      "question": "Is there a car in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000273450",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01013",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000273450",
+    "image_path": "data/images/COCO_val2014_000000273450.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1013",
+      "question_id": "1014",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000273450",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01206",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000124930",
+    "image_path": "data/images/COCO_val2014_000000124930.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1206",
+      "question_id": "1207",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000124930",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01207",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000124930",
+    "image_path": "data/images/COCO_val2014_000000124930.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1207",
+      "question_id": "1208",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000124930",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01208",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000124930",
+    "image_path": "data/images/COCO_val2014_000000124930.jpg",
+    "question": "Is there a bowl in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1208",
+      "question_id": "1209",
+      "question": "Is there a bowl in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000124930",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01209",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000124930",
+    "image_path": "data/images/COCO_val2014_000000124930.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1209",
+      "question_id": "1210",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000124930",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01210",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000124930",
+    "image_path": "data/images/COCO_val2014_000000124930.jpg",
+    "question": "Is there a spoon in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1210",
+      "question_id": "1211",
+      "question": "Is there a spoon in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000124930",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01211",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000124930",
+    "image_path": "data/images/COCO_val2014_000000124930.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1211",
+      "question_id": "1212",
+      "question": "Is there a bottle in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000124930",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01224",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377401",
+    "image_path": "data/images/COCO_val2014_000000377401.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1224",
+      "question_id": "1225",
+      "question": "Is there a truck in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000377401",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01225",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377401",
+    "image_path": "data/images/COCO_val2014_000000377401.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1225",
+      "question_id": "1226",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000377401",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01226",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377401",
+    "image_path": "data/images/COCO_val2014_000000377401.jpg",
+    "question": "Is there a clock in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1226",
+      "question_id": "1227",
+      "question": "Is there a clock in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000377401",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01227",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377401",
+    "image_path": "data/images/COCO_val2014_000000377401.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1227",
+      "question_id": "1228",
+      "question": "Is there a chair in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000377401",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01228",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377401",
+    "image_path": "data/images/COCO_val2014_000000377401.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1228",
+      "question_id": "1229",
+      "question": "Is there a car in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000377401",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01229",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377401",
+    "image_path": "data/images/COCO_val2014_000000377401.jpg",
+    "question": "Is there a bus in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1229",
+      "question_id": "1230",
+      "question": "Is there a bus in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000377401",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01638",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000259755",
+    "image_path": "data/images/COCO_val2014_000000259755.jpg",
+    "question": "Is there a baseball glove in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1638",
+      "question_id": "1639",
+      "question": "Is there a baseball glove in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000259755",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01639",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000259755",
+    "image_path": "data/images/COCO_val2014_000000259755.jpg",
+    "question": "Is there a baseball bat in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1639",
+      "question_id": "1640",
+      "question": "Is there a baseball bat in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000259755",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01640",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000259755",
+    "image_path": "data/images/COCO_val2014_000000259755.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1640",
+      "question_id": "1641",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000259755",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01641",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000259755",
+    "image_path": "data/images/COCO_val2014_000000259755.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1641",
+      "question_id": "1642",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000259755",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01642",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000259755",
+    "image_path": "data/images/COCO_val2014_000000259755.jpg",
+    "question": "Is there a sports ball in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1642",
+      "question_id": "1643",
+      "question": "Is there a sports ball in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000259755",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01643",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000259755",
+    "image_path": "data/images/COCO_val2014_000000259755.jpg",
+    "question": "Is there a tennis racket in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1643",
+      "question_id": "1644",
+      "question": "Is there a tennis racket in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000259755",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00660",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000245642",
+    "image_path": "data/images/COCO_val2014_000000245642.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "660",
+      "question_id": "661",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000245642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00661",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000245642",
+    "image_path": "data/images/COCO_val2014_000000245642.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "661",
+      "question_id": "662",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000245642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00662",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000245642",
+    "image_path": "data/images/COCO_val2014_000000245642.jpg",
+    "question": "Is there a bicycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "662",
+      "question_id": "663",
+      "question": "Is there a bicycle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000245642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00663",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000245642",
+    "image_path": "data/images/COCO_val2014_000000245642.jpg",
+    "question": "Is there a motorcycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "663",
+      "question_id": "664",
+      "question": "Is there a motorcycle in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000245642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00664",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000245642",
+    "image_path": "data/images/COCO_val2014_000000245642.jpg",
+    "question": "Is there a sheep in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "664",
+      "question_id": "665",
+      "question": "Is there a sheep in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000245642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00665",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000245642",
+    "image_path": "data/images/COCO_val2014_000000245642.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "665",
+      "question_id": "666",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000245642",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01428",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000017379",
+    "image_path": "data/images/COCO_val2014_000000017379.jpg",
+    "question": "Is there a tv in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1428",
+      "question_id": "1429",
+      "question": "Is there a tv in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000017379",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01429",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000017379",
+    "image_path": "data/images/COCO_val2014_000000017379.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1429",
+      "question_id": "1430",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000017379",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01430",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000017379",
+    "image_path": "data/images/COCO_val2014_000000017379.jpg",
+    "question": "Is there a sink in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1430",
+      "question_id": "1431",
+      "question": "Is there a sink in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000017379",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01431",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000017379",
+    "image_path": "data/images/COCO_val2014_000000017379.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1431",
+      "question_id": "1432",
+      "question": "Is there a bottle in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000017379",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01432",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000017379",
+    "image_path": "data/images/COCO_val2014_000000017379.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1432",
+      "question_id": "1433",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000017379",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01433",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000017379",
+    "image_path": "data/images/COCO_val2014_000000017379.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1433",
+      "question_id": "1434",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000017379",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00102",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000131115",
+    "image_path": "data/images/COCO_val2014_000000131115.jpg",
+    "question": "Is there a baseball glove in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "102",
+      "question_id": "103",
+      "question": "Is there a baseball glove in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000131115",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00103",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000131115",
+    "image_path": "data/images/COCO_val2014_000000131115.jpg",
+    "question": "Is there a sports ball in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "103",
+      "question_id": "104",
+      "question": "Is there a sports ball in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000131115",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00104",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000131115",
+    "image_path": "data/images/COCO_val2014_000000131115.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "104",
+      "question_id": "105",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000131115",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00105",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000131115",
+    "image_path": "data/images/COCO_val2014_000000131115.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "105",
+      "question_id": "106",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000131115",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00106",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000131115",
+    "image_path": "data/images/COCO_val2014_000000131115.jpg",
+    "question": "Is there a baseball bat in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "106",
+      "question_id": "107",
+      "question": "Is there a baseball bat in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000131115",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00107",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000131115",
+    "image_path": "data/images/COCO_val2014_000000131115.jpg",
+    "question": "Is there a bench in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "107",
+      "question_id": "108",
+      "question": "Is there a bench in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000131115",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01350",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000025972",
+    "image_path": "data/images/COCO_val2014_000000025972.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1350",
+      "question_id": "1351",
+      "question": "Is there a truck in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000025972",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01351",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000025972",
+    "image_path": "data/images/COCO_val2014_000000025972.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1351",
+      "question_id": "1352",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000025972",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01352",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000025972",
+    "image_path": "data/images/COCO_val2014_000000025972.jpg",
+    "question": "Is there a couch in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1352",
+      "question_id": "1353",
+      "question": "Is there a couch in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000025972",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01353",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000025972",
+    "image_path": "data/images/COCO_val2014_000000025972.jpg",
+    "question": "Is there a tv in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1353",
+      "question_id": "1354",
+      "question": "Is there a tv in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000025972",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01354",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000025972",
+    "image_path": "data/images/COCO_val2014_000000025972.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1354",
+      "question_id": "1355",
+      "question": "Is there a car in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000025972",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01355",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000025972",
+    "image_path": "data/images/COCO_val2014_000000025972.jpg",
+    "question": "Is there a bus in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1355",
+      "question_id": "1356",
+      "question": "Is there a bus in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000025972",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00150",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000297078",
+    "image_path": "data/images/COCO_val2014_000000297078.jpg",
+    "question": "Is there a backpack in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "150",
+      "question_id": "151",
+      "question": "Is there a backpack in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000297078",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00151",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000297078",
+    "image_path": "data/images/COCO_val2014_000000297078.jpg",
+    "question": "Is there a handbag in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "151",
+      "question_id": "152",
+      "question": "Is there a handbag in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000297078",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00152",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000297078",
+    "image_path": "data/images/COCO_val2014_000000297078.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "152",
+      "question_id": "153",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000297078",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00153",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000297078",
+    "image_path": "data/images/COCO_val2014_000000297078.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "153",
+      "question_id": "154",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000297078",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00154",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000297078",
+    "image_path": "data/images/COCO_val2014_000000297078.jpg",
+    "question": "Is there a skis in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "154",
+      "question_id": "155",
+      "question": "Is there a skis in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000297078",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00155",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000297078",
+    "image_path": "data/images/COCO_val2014_000000297078.jpg",
+    "question": "Is there a snowboard in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "155",
+      "question_id": "156",
+      "question": "Is there a snowboard in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000297078",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00882",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000087435",
+    "image_path": "data/images/COCO_val2014_000000087435.jpg",
+    "question": "Is there a motorcycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "882",
+      "question_id": "883",
+      "question": "Is there a motorcycle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000087435",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00883",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000087435",
+    "image_path": "data/images/COCO_val2014_000000087435.jpg",
+    "question": "Is there a bicycle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "883",
+      "question_id": "884",
+      "question": "Is there a bicycle in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000087435",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00884",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000087435",
+    "image_path": "data/images/COCO_val2014_000000087435.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "884",
+      "question_id": "885",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000087435",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00885",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000087435",
+    "image_path": "data/images/COCO_val2014_000000087435.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "885",
+      "question_id": "886",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000087435",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00886",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000087435",
+    "image_path": "data/images/COCO_val2014_000000087435.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "886",
+      "question_id": "887",
+      "question": "Is there a car in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000087435",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00887",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000087435",
+    "image_path": "data/images/COCO_val2014_000000087435.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "887",
+      "question_id": "888",
+      "question": "Is there a truck in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000087435",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01314",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000526368",
+    "image_path": "data/images/COCO_val2014_000000526368.jpg",
     "question": "Is there a laptop in the image?",
     "ground_truth_answers": [
-      "no"
+      "yes"
     ],
     "is_hallucination_gt": 0,
     "task_type": "binary_vqa",
     "metadata": {
-      "category": "museum",
-      "sample_idx": 16
+      "id": "1314",
+      "question_id": "1315",
+      "question": "Is there a laptop in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000526368",
+      "category": "adversarial"
     }
   },
   {
-    "id": "pope_000017",
+    "id": "pope_01315",
     "dataset": "pope",
-    "image_id": "img_pope_00007",
-    "image_path": "data/images/img_pope_00007.jpg",
-    "question": "Is there a chair in the image?",
+    "image_id": "COCO_val2014_000000526368",
+    "image_path": "data/images/COCO_val2014_000000526368.jpg",
+    "question": "Is there a tv in the image?",
     "ground_truth_answers": [
-      "no"
+      "yes"
     ],
     "is_hallucination_gt": 0,
     "task_type": "binary_vqa",
     "metadata": {
-      "category": "street",
-      "sample_idx": 17
+      "id": "1315",
+      "question_id": "1316",
+      "question": "Is there a tv in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000526368",
+      "category": "adversarial"
     }
   },
   {
-    "id": "pope_000036",
+    "id": "pope_01316",
     "dataset": "pope",
-    "image_id": "img_pope_00007",
-    "image_path": "data/images/img_pope_00007.jpg",
-    "question": "Is there a chair in the image?",
+    "image_id": "COCO_val2014_000000526368",
+    "image_path": "data/images/COCO_val2014_000000526368.jpg",
+    "question": "Is there a dining table in the image?",
     "ground_truth_answers": [
-      "no"
+      "yes"
     ],
-    "is_hallucination_gt": 1,
+    "is_hallucination_gt": 0,
     "task_type": "binary_vqa",
     "metadata": {
-      "category": "wildlife",
-      "sample_idx": 36
+      "id": "1316",
+      "question_id": "1317",
+      "question": "Is there a dining table in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000526368",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01317",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000526368",
+    "image_path": "data/images/COCO_val2014_000000526368.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1317",
+      "question_id": "1318",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000526368",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01318",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000526368",
+    "image_path": "data/images/COCO_val2014_000000526368.jpg",
+    "question": "Is there a chair in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1318",
+      "question_id": "1319",
+      "question": "Is there a chair in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000526368",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01319",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000526368",
+    "image_path": "data/images/COCO_val2014_000000526368.jpg",
+    "question": "Is there a couch in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1319",
+      "question_id": "1320",
+      "question": "Is there a couch in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000526368",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00996",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000468934",
+    "image_path": "data/images/COCO_val2014_000000468934.jpg",
+    "question": "Is there a banana in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "996",
+      "question_id": "997",
+      "question": "Is there a banana in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000468934",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00997",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000468934",
+    "image_path": "data/images/COCO_val2014_000000468934.jpg",
+    "question": "Is there a bowl in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "997",
+      "question_id": "998",
+      "question": "Is there a bowl in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000468934",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00998",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000468934",
+    "image_path": "data/images/COCO_val2014_000000468934.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "998",
+      "question_id": "999",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000468934",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_00999",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000468934",
+    "image_path": "data/images/COCO_val2014_000000468934.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "999",
+      "question_id": "1000",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000468934",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01000",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000468934",
+    "image_path": "data/images/COCO_val2014_000000468934.jpg",
+    "question": "Is there a fork in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1000",
+      "question_id": "1001",
+      "question": "Is there a fork in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000468934",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01001",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000468934",
+    "image_path": "data/images/COCO_val2014_000000468934.jpg",
+    "question": "Is there a cup in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1001",
+      "question_id": "1002",
+      "question": "Is there a cup in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000468934",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01218",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377879",
+    "image_path": "data/images/COCO_val2014_000000377879.jpg",
+    "question": "Is there a truck in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1218",
+      "question_id": "1219",
+      "question": "Is there a truck in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000377879",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01219",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377879",
+    "image_path": "data/images/COCO_val2014_000000377879.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1219",
+      "question_id": "1220",
+      "question": "Is there a person in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000377879",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01220",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377879",
+    "image_path": "data/images/COCO_val2014_000000377879.jpg",
+    "question": "Is there a train in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1220",
+      "question_id": "1221",
+      "question": "Is there a train in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000377879",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01221",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377879",
+    "image_path": "data/images/COCO_val2014_000000377879.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1221",
+      "question_id": "1222",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000377879",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01222",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377879",
+    "image_path": "data/images/COCO_val2014_000000377879.jpg",
+    "question": "Is there a bed in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1222",
+      "question_id": "1223",
+      "question": "Is there a bed in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000377879",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01223",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000377879",
+    "image_path": "data/images/COCO_val2014_000000377879.jpg",
+    "question": "Is there a book in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1223",
+      "question_id": "1224",
+      "question": "Is there a book in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000377879",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01932",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000505335",
+    "image_path": "data/images/COCO_val2014_000000505335.jpg",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1932",
+      "question_id": "1933",
+      "question": "Is there a person in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000505335",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01933",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000505335",
+    "image_path": "data/images/COCO_val2014_000000505335.jpg",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1933",
+      "question_id": "1934",
+      "question": "Is there a car in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000505335",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01934",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000505335",
+    "image_path": "data/images/COCO_val2014_000000505335.jpg",
+    "question": "Is there a bottle in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1934",
+      "question_id": "1935",
+      "question": "Is there a bottle in the image?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000505335",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01935",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000505335",
+    "image_path": "data/images/COCO_val2014_000000505335.jpg",
+    "question": "Is there a dining table in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1935",
+      "question_id": "1936",
+      "question": "Is there a dining table in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000505335",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01936",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000505335",
+    "image_path": "data/images/COCO_val2014_000000505335.jpg",
+    "question": "Is there an umbrella in the imange?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1936",
+      "question_id": "1937",
+      "question": "Is there an umbrella in the imange?",
+      "answer": "yes",
+      "image_source": "COCO_val2014_000000505335",
+      "category": "adversarial"
+    }
+  },
+  {
+    "id": "pope_01937",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000505335",
+    "image_path": "data/images/COCO_val2014_000000505335.jpg",
+    "question": "Is there a handbag in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "is_hallucination_gt": 0,
+    "task_type": "binary_vqa",
+    "metadata": {
+      "id": "1937",
+      "question_id": "1938",
+      "question": "Is there a handbag in the image?",
+      "answer": "no",
+      "image_source": "COCO_val2014_000000505335",
+      "category": "adversarial"
     }
   }
 ]

@@ -52,8 +52,8 @@ class XMCACombiner:
                     random_state=self.random_state,
                     verbose=-1
                 )
-            except ImportError:
-                logger.info("LightGBM not installed, trying XGBoost...")
+            except (ImportError, OSError, Exception) as e:
+                logger.info(f"LightGBM unavailable ({e}), trying XGBoost...")
         if self.model_type == "xgboost" or self.classifier is None:
             try:
                 import xgboost as xgb
@@ -66,8 +66,8 @@ class XMCACombiner:
                     random_state=self.random_state,
                     eval_metric="logloss"
                 )
-            except ImportError:
-                logger.info("XGBoost not installed, using calibrated LogisticRegression fallback.")
+            except (ImportError, OSError, Exception) as e:
+                logger.info(f"XGBoost unavailable ({e}), using calibrated LogisticRegression fallback.")
 
         from sklearn.linear_model import LogisticRegression
         return LogisticRegression(random_state=self.random_state, max_iter=300, C=1.0)
