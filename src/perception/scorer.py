@@ -76,6 +76,8 @@ class PerceptionScorer:
                     text=claims,
                     images=crops,
                     padding="max_length",
+                    truncation=True,
+                    max_length=64,
                     return_tensors="pt"
                 )
                 if torch.cuda.is_available():

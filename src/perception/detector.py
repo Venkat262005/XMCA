@@ -60,7 +60,19 @@ class OwlViTDetector:
         if self._model is not None and self._processor is not None and query_labels:
             import torch
             try:
-                inputs = self._processor(text=[query_labels], images=image, return_tensors="pt")
+                # Truncate and clean query labels for OWL-ViT (max 16 tokens for positional embeddings)
+                clean_labels = [str(l).strip()[:80] for l in query_labels if str(l).strip()]
+                if not clean_labels:
+                    clean_labels = ["object"]
+
+                inputs = self._processor(
+                    text=[clean_labels],
+                    images=image,
+                    padding=True,
+                    truncation=True,
+                    max_length=16,
+                    return_tensors="pt"
+                )
                 if torch.cuda.is_available():
                     inputs = {k: v.to("cuda") for k, v in inputs.items()}
                 with torch.no_grad():
@@ -74,11 +86,11 @@ class OwlViTDetector:
                         outputs=outputs,
                         target_sizes=target_sizes,
                         threshold=self.box_threshold,
-                        text_labels=[query_labels]
+                        text_labels=[clean_labels]
                     )[0]
                     boxes = results["boxes"].cpu().numpy().tolist()
                     scores = results["scores"].cpu().numpy().tolist()
-                    labels = results.get("text_labels", [query_labels[idx] for idx in results["labels"].cpu().numpy().tolist() if idx < len(query_labels)])
+                    labels = results.get("text_labels", [clean_labels[idx] for idx in results["labels"].cpu().numpy().tolist() if idx < len(clean_labels)])
                 elif hasattr(self._processor, "post_process_object_detection"):
                     results = self._processor.post_process_object_detection(
                         outputs=outputs,
@@ -88,7 +100,7 @@ class OwlViTDetector:
                     boxes = results["boxes"].cpu().numpy().tolist()
                     scores = results["scores"].cpu().numpy().tolist()
                     labels_idx = results["labels"].cpu().numpy().tolist()
-                    labels = [query_labels[idx] for idx in labels_idx if idx < len(query_labels)]
+                    labels = [clean_labels[idx] for idx in labels_idx if idx < len(clean_labels)]
                 elif hasattr(self._processor, "image_processor") and hasattr(self._processor.image_processor, "post_process_object_detection"):
                     results = self._processor.image_processor.post_process_object_detection(
                         outputs=outputs,
@@ -98,7 +110,7 @@ class OwlViTDetector:
                     boxes = results["boxes"].cpu().numpy().tolist()
                     scores = results["scores"].cpu().numpy().tolist()
                     labels_idx = results["labels"].cpu().numpy().tolist()
-                    labels = [query_labels[idx] for idx in labels_idx if idx < len(query_labels)]
+                    labels = [clean_labels[idx] for idx in labels_idx if idx < len(clean_labels)]
                 else:
                     boxes, labels, scores = [], [], []
 
