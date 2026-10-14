@@ -59,19 +59,30 @@ def generate_ablation_table_latex(
     ablation_results: List[Dict[str, Any]],
     output_path: str | Path
 ) -> str:
-    """Generate publication Table 2 (Ablation Study) in LaTeX."""
+    """Generate publication Table 2 (Ablation Study) in LaTeX with DeLong p-values."""
+    import numpy as np
+    from src.evaluation.delong import compute_delong_test
+
     out_file = Path(output_path)
     out_file.parent.mkdir(parents=True, exist_ok=True)
 
+    full_model_entry = next((r for r in ablation_results if r.get("ablation") == "full_model"), None)
+    has_delong = (
+        full_model_entry is not None
+        and "test_probs" in full_model_entry
+        and "y_test" in full_model_entry
+    )
+
+    col_spec = "lcccccc" + ("c" if has_delong else "")
     lines = [
         r"\begin{table*}[t]",
         r"\centering",
         r"\small",
-        r"\caption{\textbf{Ablation Study across 5 Random Seeds.} Evaluating marginal contribution of Perception ($S_P$), Retrieval ($S_R$), and Utilization ($S_U$), comparing learned isotonic fusion vs fixed weighting, text-only utilization, and heuristic minimum baseline.}",
+        r"\caption{\textbf{Ablation Study across 5 Random Seeds.} Evaluating marginal contribution of Perception ($S_P$), Retrieval ($S_R$), and Utilization ($S_U$), comparing learned isotonic fusion vs fixed weighting, text-only utilization, and heuristic minimum baseline with DeLong test for paired AUROC significance vs. Full Model.}",
         r"\label{tab:ablations}",
-        r"\begin{tabular}{lcccccc}",
+        rf"\begin{{tabular}}{{{col_spec}}}",
         r"\toprule",
-        r"\textbf{Ablation Variant} & \textbf{AUROC} $\uparrow$ & \textbf{AUPRC} $\uparrow$ & \textbf{F1} $\uparrow$ & \textbf{Precision} $\uparrow$ & \textbf{Recall} $\uparrow$ & \textbf{ECE} $\downarrow$ \\",
+        r"\textbf{Ablation Variant} & \textbf{AUROC} $\uparrow$ & \textbf{AUPRC} $\uparrow$ & \textbf{F1} $\uparrow$ & \textbf{Precision} $\uparrow$ & \textbf{Recall} $\uparrow$ & \textbf{ECE} $\downarrow$" + (r" & \textbf{DeLong $p$-val} \\" if has_delong else r" \\"),
         r"\midrule",
     ]
 
@@ -83,7 +94,29 @@ def generate_ablation_table_latex(
         prec_str = f"{r.get('precision_mean', 0.0):.3f} $\\pm$ {r.get('precision_std', 0.0):.3f}"
         rec_str = f"{r.get('recall_mean', 0.0):.3f} $\\pm$ {r.get('recall_std', 0.0):.3f}"
         ece_str = f"{r.get('ece_mean', 0.0):.3f} $\\pm$ {r.get('ece_std', 0.0):.3f}"
-        lines.append(f"{name} & {auroc_str} & {auprc_str} & {f1_str} & {prec_str} & {rec_str} & {ece_str} \\\\")
+
+        row_str = f"{name} & {auroc_str} & {auprc_str} & {f1_str} & {prec_str} & {rec_str} & {ece_str}"
+
+        if has_delong:
+            if r.get("ablation") == "full_model":
+                delong_str = "---"
+            elif "test_probs" in r and len(r["test_probs"]) == len(full_model_entry["test_probs"]):
+                y_true = np.asarray(full_model_entry["y_test"])
+                p_full = np.asarray(full_model_entry["test_probs"])
+                p_cur = np.asarray(r["test_probs"])
+                d_res = compute_delong_test(y_true, p_full, p_cur)
+                pval = d_res["p_value"]
+                if pval < 0.001:
+                    delong_str = "$p < 0.001$*"
+                elif pval < 0.05:
+                    delong_str = f"${pval:.3f}$*"
+                else:
+                    delong_str = f"${pval:.3f}$"
+            else:
+                delong_str = "N/A"
+            row_str += f" & {delong_str}"
+
+        lines.append(row_str + r" \\")
 
     lines.extend([
         r"\bottomrule",

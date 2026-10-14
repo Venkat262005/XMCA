@@ -74,5 +74,7 @@ def run_ablation_experiment(
     first_seed_probs = test_probs
     ci_results = compute_bootstrap_confidence_intervals(y_test, first_seed_probs, threshold=thresh)
     aggregated["bootstrap_95_ci"] = ci_results
+    aggregated["test_probs"] = first_seed_probs.tolist()
+    aggregated["y_test"] = y_test.tolist()
 
     return aggregated
