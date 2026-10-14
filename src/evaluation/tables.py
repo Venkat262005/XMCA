@@ -1,7 +1,8 @@
 """Publication-grade LaTeX and Markdown table generators for research manuscripts."""
 
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
+import numpy as np
 import pandas as pd
 
 
@@ -129,3 +130,75 @@ def generate_ablation_table_latex(
         f.write(latex_code)
 
     return latex_code
+
+
+def generate_per_dataset_table_latex(
+    test_df: pd.DataFrame,
+    test_probs: np.ndarray,
+    threshold: float,
+    output_path: str | Path
+) -> Tuple[str, Dict[str, Any]]:
+    """Generate publication Table 3 (Per-Dataset Diagnostic Performance) in LaTeX."""
+    from src.evaluation.metrics import compute_all_metrics
+
+    out_file = Path(output_path)
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+
+    test_df = test_df.copy()
+    test_df["predicted_prob"] = test_probs
+    test_df["predicted_label"] = (test_probs >= threshold).astype(int)
+
+    dataset_col = "dataset" if "dataset" in test_df.columns else None
+    if not dataset_col:
+        return "", {}
+
+    datasets = sorted(test_df["dataset"].unique())
+    per_dataset_metrics = {}
+
+    lines = [
+        r"\begin{table*}[t]",
+        r"\centering",
+        r"\small",
+        r"\caption{\textbf{Per-Dataset Diagnostic Performance on Held-Out Test Set.} Evaluating XMCA consistency across distinct hallucination modalities: Object Existence (POPE), Visual Reasoning (A-OKVQA), and Knowledge Retrieval (InfoSeek / FaithScore).}",
+        r"\label{tab:per_dataset_results}",
+        r"\begin{tabular}{lcccccc}",
+        r"\toprule",
+        r"\textbf{Dataset} & \textbf{Samples ($N$)} & \textbf{AUROC} $\uparrow$ & \textbf{AUPRC} $\uparrow$ & \textbf{F1} $\uparrow$ & \textbf{ECE} $\downarrow$ & \textbf{Dominant Proxy Failure} \\",
+        r"\midrule",
+    ]
+
+    for ds in datasets:
+        sub = test_df[test_df["dataset"] == ds]
+        y_true = sub["target"].values if "target" in sub.columns else sub["is_hallucination_gt"].values
+        y_prob = sub["predicted_prob"].values
+        m = compute_all_metrics(y_true, y_prob, threshold=threshold)
+
+        dominant_cause = "N/A"
+        if "proxy_attribution" in sub.columns:
+            val_counts = sub["proxy_attribution"].value_counts()
+            if not val_counts.empty:
+                dominant_cause = val_counts.index[0].replace("_proxy_failure", "").replace("_failure", "").title()
+
+        per_dataset_metrics[ds] = {
+            "n_samples": len(sub),
+            "metrics": m,
+            "dominant_proxy_failure": dominant_cause
+        }
+
+        ds_name = ds.replace("_", "-").upper()
+        lines.append(
+            f"{ds_name} & {len(sub)} & {m['auroc']:.4f} & {m['auprc']:.4f} & {m['f1']:.4f} & {m['ece']:.4f} & {dominant_cause} \\\\"
+        )
+
+    lines.extend([
+        r"\bottomrule",
+        r"\end{tabular}",
+        r"\end{table*}",
+    ])
+
+    latex_code = "\n".join(lines)
+    with open(out_file, "w", encoding="utf-8") as f:
+        f.write(latex_code)
+
+    return latex_code, per_dataset_metrics
+

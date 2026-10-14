@@ -875,7 +875,7 @@ plot_reliability_diagram(y_test, test_probs, reports_dir / "reliability_diagram.
 plot_roc_pr_curves(y_test, test_probs, reports_dir / "roc_pr_curves.png")
 
 # Generate publication-grade LaTeX tables for research manuscript
-from src.evaluation.tables import generate_main_results_table_latex, generate_ablation_table_latex
+from src.evaluation.tables import generate_main_results_table_latex, generate_ablation_table_latex, generate_per_dataset_table_latex
 latex_t1 = generate_main_results_table_latex(test_metrics, ci_metrics, reports_dir / "table_1_main_results.tex")
 
 # Load ablation results if available and export LaTeX Table 2
@@ -885,12 +885,16 @@ if abl_file.exists():
         abl_data = json.load(f)
     latex_t2 = generate_ablation_table_latex(abl_data, reports_dir / "table_2_ablation_study.tex")
 
+# Generate Table 3: Per-Dataset Diagnostic Breakdown
+latex_t3, per_dataset_metrics = generate_per_dataset_table_latex(test_df, test_probs, threshold=threshold, output_path=reports_dir / "table_3_per_dataset.tex")
+
 # Proxy failure attribution breakdown
 attr_counts = test_df["proxy_attribution"].value_counts().to_dict()
 
 final_report = {
     "held_out_test_metrics": test_metrics,
     "bootstrap_95_ci": ci_metrics,
+    "per_dataset_breakdown": per_dataset_metrics,
     "proxy_failure_attribution_counts": attr_counts,
     "claim_boundary": config["project"]["claim_boundary"]
 }
@@ -905,6 +909,9 @@ for k, v in test_metrics.items():
     print(f"  {k.upper():<12}: {v:.4f}{ci_str}")
 print("\\nProxy Failure Attribution:", attr_counts)
 print("LaTeX Table 1 generated at: artifacts/reports/table_1_main_results.tex")
+if abl_file.exists():
+    print("LaTeX Table 2 generated at: artifacts/reports/table_2_ablation_study.tex")
+print("LaTeX Table 3 generated at: artifacts/reports/table_3_per_dataset.tex")
 print("====================================================")
 """)
     ]

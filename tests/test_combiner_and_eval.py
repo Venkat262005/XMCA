@@ -70,3 +70,21 @@ def test_combiner_fit_and_ablation():
     assert "auroc_mean" in res
     assert 0.0 <= res["auroc_mean"] <= 1.0
     assert "ece_mean" in res
+
+
+def test_per_dataset_table_latex(tmp_path):
+    import pandas as pd
+    from src.evaluation.tables import generate_per_dataset_table_latex
+    df = pd.DataFrame([
+        {"id": "p1", "dataset": "pope", "target": 1, "proxy_attribution": "perception_proxy_failure"},
+        {"id": "p2", "dataset": "pope", "target": 0, "proxy_attribution": "faithful"},
+        {"id": "i1", "dataset": "infoseek", "target": 1, "proxy_attribution": "retrieval_proxy_failure"},
+        {"id": "i2", "dataset": "infoseek", "target": 0, "proxy_attribution": "faithful"},
+    ])
+    probs = np.array([0.9, 0.1, 0.8, 0.2])
+    latex, metrics = generate_per_dataset_table_latex(df, probs, threshold=0.5, output_path=tmp_path / "tab3.tex")
+    assert "POPE" in latex
+    assert "INFOSEEK" in latex
+    assert "pope" in metrics
+    assert "infoseek" in metrics
+    assert (tmp_path / "tab3.tex").exists()
