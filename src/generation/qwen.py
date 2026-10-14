@@ -108,7 +108,7 @@ class Qwen2VLGenerator:
                     )
                 # Trim prompt tokens
                 trimmed_ids = [
-                    out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+                    out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs["input_ids"], generated_ids)
                 ]
                 output_text = self._processor.batch_decode(
                     trimmed_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False
@@ -136,6 +136,9 @@ class Qwen2VLGenerator:
 
         total_remaining = len(remaining)
         print(f"[{prefix}] Total items: {len(records)}, Remaining to generate: {total_remaining} (shard size: {shard_size})", flush=True)
+
+        shard_records = []
+        shard_idx = len(list(Path(output_dir).glob(f"{prefix}_*.parquet")))
 
         for i, item in enumerate(remaining, 1):
             item_id = str(item["id"])

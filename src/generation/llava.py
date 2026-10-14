@@ -89,7 +89,7 @@ class LLaVAOneVisionGenerator:
                         do_sample=False if self.temperature < 0.05 else True,
                         temperature=max(self.temperature, 0.01)
                     )
-                trimmed_ids = output_ids[0][inputs.input_ids.shape[1]:]
+                trimmed_ids = output_ids[0][inputs["input_ids"].shape[1]:]
                 output_text = self._processor.decode(trimmed_ids, skip_special_tokens=True)
                 return output_text.strip()
             except Exception as e:
@@ -113,6 +113,9 @@ class LLaVAOneVisionGenerator:
 
         total_remaining = len(remaining)
         print(f"[{prefix}] Total items: {len(records)}, Remaining to generate (LLaVA): {total_remaining} (shard size: {shard_size})", flush=True)
+
+        shard_records = []
+        shard_idx = len(list(Path(output_dir).glob(f"{prefix}_*.parquet")))
 
         for i, item in enumerate(remaining, 1):
             item_id = str(item["id"])
