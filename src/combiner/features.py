@@ -24,7 +24,12 @@ FEATURE_COLUMNS = [
     "is_retrieval_lowest",
     "is_utilization_lowest",
     "evidence_count",
-    "claim_count"
+    "claim_count",
+    "geometric_mean",
+    "cross_modal_tension",
+    "knowledge_visual_gap",
+    "deficit_spread",
+    "min_to_max_ratio"
 ]
 
 CAUSE_CLASSES = [
@@ -80,6 +85,14 @@ def extract_combiner_features(
     is_r_low = 1.0 if (feat_sr <= min(feat_sp, feat_su) and ablation != "no_retrieval") else 0.0
     is_u_low = 1.0 if (feat_su <= min(feat_sp, feat_sr) and ablation != "no_utilization") else 0.0
 
+    # Shift 1: Conjunctive consistency, cross-modal tension, and deficit spread
+    active_deficits = [1.0 - s for s in active_scores]
+    geom_mean = float(np.prod(active_scores) ** (1.0 / len(active_scores))) if active_scores else 0.0
+    tension_pu = abs(feat_sp - feat_su)
+    tension_pr = abs(feat_sp - feat_sr)
+    def_spread = float(np.max(active_deficits) - np.min(active_deficits)) if len(active_deficits) > 1 else 0.0
+    min_max_ratio = float(min_s / (max_s + eps))
+
     features = {
         "s_p": feat_sp,
         "s_r": feat_sr,
@@ -100,7 +113,12 @@ def extract_combiner_features(
         "is_retrieval_lowest": is_r_low,
         "is_utilization_lowest": is_u_low,
         "evidence_count": float(evidence_count),
-        "claim_count": float(claim_count)
+        "claim_count": float(claim_count),
+        "geometric_mean": float(np.clip(geom_mean, 0.0, 1.0)),
+        "cross_modal_tension": float(np.clip(tension_pu, 0.0, 1.0)),
+        "knowledge_visual_gap": float(np.clip(tension_pr, 0.0, 1.0)),
+        "deficit_spread": float(np.clip(def_spread, 0.0, 1.0)),
+        "min_to_max_ratio": float(np.clip(min_max_ratio, 0.0, 1.0))
     }
 
     return features
