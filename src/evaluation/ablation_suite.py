@@ -63,8 +63,12 @@ def run_ablation_experiment(
     aggregated: Dict[str, Any] = {"ablation": ablation_name, "seeds_evaluated": len(seeds)}
     for m in ["auroc", "auprc", "f1", "precision", "recall", "ece"]:
         vals = [sm[m] for sm in seed_metrics]
-        aggregated[f"{m}_mean"] = float(np.mean(vals))
-        aggregated[f"{m}_std"] = float(np.std(vals))
+        mean_val = float(np.mean(vals))
+        std_val = float(np.std(vals))
+        aggregated[f"{m}_mean"] = mean_val
+        aggregated[f"{m}_std"] = std_val
+        aggregated[f"mean_{m}"] = mean_val
+        aggregated[f"std_{m}"] = std_val
 
     # Compute bootstrap CI on the representative first seed run
     first_seed_probs = test_probs

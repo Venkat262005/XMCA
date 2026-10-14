@@ -83,10 +83,10 @@ class XMCACombiner:
         using isotonic regression on validation split.
         Strict rule: Never use test split for calibration!
         """
-        X_train = train_df[self.feature_columns].values
+        X_train = train_df[self.feature_columns]
         y_train = train_df[target_col].values
 
-        X_val = val_df[self.feature_columns].values
+        X_val = val_df[self.feature_columns]
         y_val = val_df[target_col].values
 
         self.classifier = self._init_base_classifier()
@@ -115,7 +115,7 @@ class XMCACombiner:
         if baseline_min_rule or not self.is_fitted:
             return deficit_probs
 
-        X = df[self.feature_columns].values
+        X = df[self.feature_columns]
         raw_probs = self.classifier.predict_proba(X)[:, 1]
 
         if self.calibrator is not None:
