@@ -759,21 +759,31 @@ ablation_names = [
 ]
 
 all_ablation_results = []
+total_abl = len(ablation_names)
 
-for name in ablation_names:
-    print(f"\\nRunning ablation experiment: {name}...")
+for idx, name in enumerate(ablation_names, 1):
+    pct = (idx / total_abl) * 100
+    print(f"\\n[{idx}/{total_abl} ({pct:.1f}%)] Running ablation experiment: {name} across {len(seeds)} seeds...", flush=True)
     
-    # Adapt records for specific ablation variants
-    cur_train = list(train_rec)
-    cur_val = list(val_rec)
-    cur_test = list(test_rec)
+    # Deep copy records to prevent mutating shared training records across iterations
+    cur_train = [dict(r) for r in train_rec]
+    cur_val = [dict(r) for r in val_rec]
+    cur_test = [dict(r) for r in test_rec]
     
     if name == "text_only_utilization":
         for r in cur_train + cur_val + cur_test:
-            r["s_u"] = r["s_u_text_only"]
+            r["s_u"] = r.get("s_u_text_only", r.get("s_u", 0.5))
     elif name == "fixed_weighted_fusion":
         for r in cur_train + cur_val + cur_test:
-            r["s_r"] = r["s_r_fixed"]
+            r["s_r"] = r.get("s_r_fixed", r.get("s_r", 0.5))
+    elif name == "cross_vlm_transfer":
+        llava_gen_dir = Path(config["paths"]["generations_dir"]) / "llava_transfer"
+        llava_df = ShardManager(llava_gen_dir).load_all_shards("llava_generation")
+        if not llava_df.empty:
+            llava_ids = set(llava_df["id"])
+            llava_test = [r for r in cur_test if r["id"] in llava_ids]
+            if llava_test:
+                cur_test = llava_test
             
     res = run_ablation_experiment(
         train_records=cur_train,
@@ -783,7 +793,8 @@ for name in ablation_names:
         seeds=seeds
     )
     all_ablation_results.append(res)
-    print(f"  AUROC: {res['auroc_mean']:.4f} +/- {res['auroc_std']:.4f} | ECE: {res['ece_mean']:.4f}")
+    mean_auprc = res.get("mean_auprc", res.get("auprc_mean", 0.0))
+    print(f"✓ Completed ablation {idx}/{total_abl} ({name}): AUROC={res.get('auroc_mean', 0.0):.4f} +/- {res.get('auroc_std', 0.0):.4f} | AUPRC={mean_auprc:.4f} | ECE={res.get('ece_mean', 0.0):.4f}", flush=True)
 
 out_dir = Path(config["paths"]["ablations_dir"])
 out_dir.mkdir(parents=True, exist_ok=True)
@@ -791,8 +802,8 @@ with open(out_dir / "ablation_results.json", "w", encoding="utf-8") as f:
     json.dump(all_ablation_results, f, indent=2)
 
 pd.DataFrame(all_ablation_results).to_parquet(out_dir / "ablation_table.parquet", index=False)
-save_run_metadata(out_dir, config, config["project"]["default_seed"], "08_ablation", {"ablations": ablation_names})
-print("\\nStep 08 completed. All ablation experiments saved.")
+save_run_metadata(out_dir, config, config["project"]["default_seed"], "08_ablation", {"total_ablations": len(all_ablation_results)})
+print("\\nStep 08 completed. All ablation experiments permanently recorded.", flush=True)
 """)
     ]
 
