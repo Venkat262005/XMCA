@@ -122,12 +122,9 @@ class XMCACombiner:
             calibrated = self.calibrator.predict(raw_probs)
             model_probs = np.clip(calibrated, 0.0, 1.0)
         else:
-            model_probs = raw_probs
+            model_probs = np.clip(raw_probs, 0.0, 1.0)
 
-        # Blend learned calibration with domain consistency constraint
-        # (Guarantees that severe consistency collapse min(S) < 0.25 flags hallucination)
-        final_probs = np.maximum(model_probs, np.where(min_scores < 0.30, deficit_probs, model_probs))
-        return np.clip(final_probs, 0.0, 1.0)
+        return model_probs
 
     def diagnose_dataframe(
         self,
