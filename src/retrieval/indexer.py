@@ -36,24 +36,40 @@ class DenseRetriever:
             logger.info(f"Transformers dense model unavailable ({e}). Using deterministic projection.")
             self._encoder = None
 
-    def encode(self, texts: List[str]) -> np.ndarray:
-        """Encode strings into normalized embeddings."""
+    def encode(self, texts: List[str], batch_size: int = 64) -> np.ndarray:
+        """Encode strings into normalized embeddings with batching and progress reporting."""
         self._init_model()
         if self._encoder is not None and self._tokenizer is not None:
             import torch
+            all_embeddings = []
+            total = len(texts)
+            show_progress = total > 50
+
             with torch.no_grad():
-                inputs = self._tokenizer(texts, padding=True, truncation=True, max_length=256, return_tensors="pt")
-                if torch.cuda.is_available():
-                    inputs = {k: v.to("cuda") for k, v in inputs.items()}
-                outputs = self._encoder(**inputs)
-                # Mean pooling
-                mask = inputs["attention_mask"].unsqueeze(-1)
-                embeddings = (outputs.last_hidden_state * mask).sum(dim=1) / mask.sum(dim=1).clamp(min=1e-9)
-                embeddings = torch.nn.functional.normalize(embeddings, p=2, dim=1)
-                return embeddings.cpu().numpy().astype(np.float32)
+                for start_idx in range(0, total, batch_size):
+                    batch_texts = texts[start_idx : start_idx + batch_size]
+                    inputs = self._tokenizer(batch_texts, padding=True, truncation=True, max_length=256, return_tensors="pt")
+                    if torch.cuda.is_available():
+                        inputs = {k: v.to("cuda") for k, v in inputs.items()}
+                    outputs = self._encoder(**inputs)
+                    # Mean pooling
+                    mask = inputs["attention_mask"].unsqueeze(-1)
+                    embeddings = (outputs.last_hidden_state * mask).sum(dim=1) / mask.sum(dim=1).clamp(min=1e-9)
+                    embeddings = torch.nn.functional.normalize(embeddings, p=2, dim=1)
+                    all_embeddings.append(embeddings.cpu().numpy().astype(np.float32))
+
+                    if show_progress:
+                        current = min(start_idx + batch_size, total)
+                        if current % 100 == 0 or current == total:
+                            pct = (current / total) * 100
+                            print(f"[DenseRetriever] Encoded {current}/{total} texts ({pct:.1f}%)...", flush=True)
+
+            return np.vstack(all_embeddings)
 
         # High-quality deterministic fallback embedding using hashing trick
-        embeddings = np.zeros((len(texts), self.dimension), dtype=np.float32)
+        total = len(texts)
+        show_progress = total > 50
+        embeddings = np.zeros((total, self.dimension), dtype=np.float32)
         for i, text in enumerate(texts):
             words = text.lower().split()
             vec = np.zeros(self.dimension, dtype=np.float32)
@@ -66,6 +82,9 @@ class DenseRetriever:
             else:
                 vec[0] = 1.0
             embeddings[i] = vec
+            if show_progress and ((i + 1) % 200 == 0 or (i + 1) == total):
+                print(f"[DenseRetriever] Encoded {i + 1}/{total} texts ({(i+1)/total*100:.1f}%)...", flush=True)
+
         return embeddings
 
     def build_index(self, corpus_docs: List[Dict[str, Any]]) -> None:

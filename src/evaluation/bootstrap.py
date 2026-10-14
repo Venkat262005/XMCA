@@ -35,7 +35,7 @@ def compute_bootstrap_confidence_intervals(
         "ece": []
     }
 
-    for _ in range(n_bootstraps):
+    for b in range(n_bootstraps):
         boot_idx = rng.randint(0, n, size=n)
         b_true = y_true[boot_idx]
         b_prob = y_prob[boot_idx]
@@ -47,6 +47,9 @@ def compute_bootstrap_confidence_intervals(
         b_metrics = compute_all_metrics(b_true, b_prob, threshold=threshold)
         for k in metric_samples:
             metric_samples[k].append(b_metrics[k])
+
+        if (b + 1) % 200 == 0 or (b + 1) == n_bootstraps:
+            print(f"[Bootstrap CI] {b + 1}/{n_bootstraps} done ({(b + 1)/n_bootstraps*100:.1f}%)", flush=True)
 
     results: Dict[str, Dict[str, float]] = {}
     for k, values in metric_samples.items():

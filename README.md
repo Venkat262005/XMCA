@@ -30,7 +30,7 @@ In strict adherence to research integrity standards:
 
 ## 📊 Datasets & Splits
 
-Four datasets are supported with a **strict maximum cap of 2,000 examples** per dataset:
+Four datasets are supported with a **strict maximum cap of 1,000 examples** per dataset (takes 1,000 if available, else however many exist):
 - **POPE**: Object hallucination and perception evaluation.
 - **FaithScore / LLaVA-1k subset**: Free-form image-grounded faithfulness.
 - **A-OKVQA**: Knowledge-based visual question answering with retrieval.

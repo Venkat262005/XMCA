@@ -24,7 +24,7 @@ paths:
   kaggle_working_base: "/kaggle/working"
 
 datasets:
-  strict_max_per_dataset: 2000
+  strict_max_per_dataset: 1000
   split_ratios:
     train: 0.70
     val: 0.10
@@ -34,22 +34,22 @@ datasets:
     pope:
       name: "POPE"
       purpose: "Object hallucination and perception evaluation"
-      max_samples: 2000
+      max_samples: 1000
       task_type: "binary_vqa"
     faithscore:
       name: "FaithScore_LLaVA1k"
       purpose: "Free-form image-grounded faithfulness"
-      max_samples: 2000
+      max_samples: 1000
       task_type: "free_form"
     aokvqa:
       name: "A-OKVQA"
       purpose: "Knowledge-based visual question answering with retrieval"
-      max_samples: 2000
+      max_samples: 1000
       task_type: "knowledge_vqa"
     infoseek:
       name: "InfoSeek"
       purpose: "Entity-centric retrieval question answering"
-      max_samples: 2000
+      max_samples: 1000
       task_type: "entity_qa"
 
 execution:

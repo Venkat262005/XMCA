@@ -134,10 +134,10 @@ class Qwen2VLGenerator:
         remaining = shard_mgr.get_remaining_items(records, id_key="id")
         logger.info(f"Total: {len(records)}, Remaining to generate: {len(remaining)}")
 
-        shard_records = []
-        shard_idx = len(list(Path(output_dir).glob(f"{prefix}_*.parquet")))
+        total_remaining = len(remaining)
+        print(f"[{prefix}] Total items: {len(records)}, Remaining to generate: {total_remaining} (shard size: {shard_size})", flush=True)
 
-        for item in remaining:
+        for i, item in enumerate(remaining, 1):
             item_id = str(item["id"])
             retrieved = evidence_map.get(item_id, [])
             answer = self.generate_single(
@@ -159,14 +159,19 @@ class Qwen2VLGenerator:
 
             shard_records.append(gen_out)
 
+            # Periodic progress output (e.g. 200/1000 done)
+            if i % 25 == 0 or i == total_remaining:
+                pct = (i / total_remaining) * 100
+                print(f"[Qwen2-VL] {i}/{total_remaining} done ({pct:.1f}%) [Shard {shard_idx}]", flush=True)
+
             if len(shard_records) >= shard_size:
                 shard_mgr.save_shard(shard_idx, shard_records, prefix=prefix)
-                logger.info(f"Saved {prefix} shard {shard_idx:04d} ({len(shard_records)} items).")
+                print(f"✓ Saved {prefix} shard {shard_idx:04d} ({len(shard_records)} items saved, {i}/{total_remaining} total done).", flush=True)
                 shard_records = []
                 shard_idx += 1
 
         if shard_records:
             shard_mgr.save_shard(shard_idx, shard_records, prefix=prefix)
-            logger.info(f"Saved final {prefix} shard {shard_idx:04d} ({len(shard_records)} items).")
+            print(f"✓ Saved final {prefix} shard {shard_idx:04d} ({len(shard_records)} items saved, {total_remaining}/{total_remaining} total done).", flush=True)
 
         return Path(output_dir)

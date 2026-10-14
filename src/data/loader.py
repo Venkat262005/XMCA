@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 def generate_benchmark_records(
     dataset_name: str,
-    num_samples: int = 500,
+    num_samples: int = 1000,
     seed: int = 42
 ) -> List[Dict[str, Any]]:
     """
@@ -74,14 +74,14 @@ def generate_benchmark_records(
 
 def load_dataset_records(
     dataset_name: str,
-    max_samples: int = 2000,
+    max_samples: int = 1000,
     data_dir: Optional[str | Path] = None,
     seed: int = 42
 ) -> List[Dict[str, Any]]:
     """
     Load dataset from disk/HuggingFace if available, falling back cleanly
     to benchmark records if offline or files not yet downloaded.
-    Enforces strict max_samples cap.
+    Enforces strict max_samples cap (up to 1,000, or available count if fewer).
     """
     dataset_key = dataset_name.lower().replace("-", "").replace("_", "")
     records: List[Dict[str, Any]] = []
@@ -92,7 +92,8 @@ def load_dataset_records(
         if candidate_file.exists():
             try:
                 with open(candidate_file, "r", encoding="utf-8") as f:
-                    records = json.load(f)
+                    raw_data = json.load(f)
+                    records = raw_data[:max_samples] if len(raw_data) > max_samples else raw_data
                 logger.info(f"Loaded {len(records)} records from {candidate_file}")
             except Exception as e:
                 logger.warning(f"Failed to read {candidate_file}: {e}")
@@ -103,7 +104,7 @@ def load_dataset_records(
             from datasets import load_dataset
             if "pope" in dataset_key:
                 # POPE dataset on HuggingFace
-                ds = load_dataset("lmms-lab/POPE", split="test", trust_remote_code=True)
+                ds = load_dataset("lmms-lab/POPE", split="test")
                 for idx, row in enumerate(ds):
                     if idx >= max_samples:
                         break
@@ -126,8 +127,10 @@ def load_dataset_records(
                         task_type="binary_vqa",
                         metadata=clean_meta
                     ).to_dict())
+                    if (idx + 1) % 200 == 0 or (idx + 1) == max_samples:
+                        print(f"[POPE] Loading: {idx + 1}/{max_samples} samples done", flush=True)
             elif "aokvqa" in dataset_key:
-                ds = load_dataset("HuggingFaceM4/A-OKVQA", split="validation", trust_remote_code=True)
+                ds = load_dataset("HuggingFaceM4/A-OKVQA", split="validation")
                 for idx, row in enumerate(ds):
                     if idx >= max_samples:
                         break
@@ -150,6 +153,8 @@ def load_dataset_records(
                         task_type="knowledge_vqa",
                         metadata=clean_meta
                     ).to_dict())
+                    if (idx + 1) % 200 == 0 or (idx + 1) == max_samples:
+                        print(f"[A-OKVQA] Loading: {idx + 1}/{max_samples} samples done", flush=True)
         except Exception as e:
             logger.info(f"HuggingFace auto-load for {dataset_name} skipped/unavailable ({e}). Using offline benchmark pool.")
 
@@ -157,8 +162,9 @@ def load_dataset_records(
     if not records:
         records = generate_benchmark_records(dataset_name=dataset_name, num_samples=max_samples, seed=seed)
 
-    # Strictly cap at max_samples
+    # Strictly cap at max_samples (takes 1k if present, else however many are there)
     if len(records) > max_samples:
         records = records[:max_samples]
 
+    print(f"[{dataset_name}] Ingested {len(records)} samples (cap: {max_samples}).", flush=True)
     return records

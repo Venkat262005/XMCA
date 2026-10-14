@@ -52,7 +52,17 @@ def execute_notebook(notebook_path: Path, timeout: int = 1800) -> bool:
         os.environ["PYTHONPATH"] = f"{PROJECT_ROOT}:{os.environ.get('PYTHONPATH', '')}"
 
         effective_timeout = None if (timeout is None or timeout <= 0) else timeout
-        client = NotebookClient(
+
+        class LiveNotebookClient(NotebookClient):
+            def output(self, outs, msg, display_id, cell_index):
+                super().output(outs, msg, display_id, cell_index)
+                if msg.get("header", {}).get("msg_type") == "stream":
+                    text = msg.get("content", {}).get("text", "")
+                    if text:
+                        sys.stdout.write(text)
+                        sys.stdout.flush()
+
+        client = LiveNotebookClient(
             nb,
             timeout=effective_timeout,
             kernel_name="python3",
