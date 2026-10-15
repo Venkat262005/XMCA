@@ -1,6 +1,5 @@
-"""Script to programmatically generate the 10 Kaggle-ready Jupyter Notebooks for XMCA-Net-Lite."""
-
 import json
+import uuid
 from pathlib import Path
 
 NOTEBOOKS_DIR = Path(__file__).resolve().parent.parent / "notebooks"
@@ -34,6 +33,7 @@ def make_notebook(cells):
 def md_cell(text):
     return {
         "cell_type": "markdown",
+        "id": uuid.uuid4().hex[:8],
         "metadata": {},
         "source": [line + "\n" for line in text.strip().split("\n")]
     }
@@ -42,6 +42,7 @@ def md_cell(text):
 def code_cell(code):
     return {
         "cell_type": "code",
+        "id": uuid.uuid4().hex[:8],
         "execution_count": None,
         "metadata": {},
         "outputs": [],
@@ -476,7 +477,7 @@ Tracks and saves:
 - `checkpoint-best-auprc`
 - `checkpoint-best-ece`
 """),
-        code_cell("""import sys
+        code_cell("""import sys, json
 from pathlib import Path
 PROJECT_ROOT = Path("/kaggle/working/xmca") if Path("/kaggle/working").exists() else Path.cwd().resolve().parent
 if str(PROJECT_ROOT) not in sys.path:
