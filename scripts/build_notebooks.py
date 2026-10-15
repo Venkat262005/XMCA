@@ -495,6 +495,7 @@ seed = config["project"]["default_seed"]
 set_seed(seed)
 """),
         code_cell("""# Construct NLI pairs from training split for LoRA fine-tuning
+import json
 splits_dir = Path(config["paths"]["splits_dir"])
 train_pairs = []
 val_pairs = []
