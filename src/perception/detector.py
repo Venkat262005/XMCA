@@ -32,8 +32,8 @@ class OwlViTDetector:
         try:
             import torch
             from transformers import OwlViTForObjectDetection, OwlViTProcessor
-            self._processor = OwlViTProcessor.from_pretrained(self.model_id)
-            self._model = OwlViTForObjectDetection.from_pretrained(self.model_id)
+            self._processor = OwlViTProcessor.from_pretrained(self.model_id, local_files_only=True)
+            self._model = OwlViTForObjectDetection.from_pretrained(self.model_id, local_files_only=True)
             if torch.cuda.is_available():
                 self._model = self._model.to("cuda")
             self._model.eval()

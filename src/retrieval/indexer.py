@@ -28,8 +28,9 @@ class DenseRetriever:
         try:
             from transformers import AutoModel, AutoTokenizer
             import torch
-            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-            self._encoder = AutoModel.from_pretrained(self.model_id)
+            is_local = self.model_id.startswith("/")
+            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id, local_files_only=not is_local)
+            self._encoder = AutoModel.from_pretrained(self.model_id, local_files_only=not is_local)
             if torch.cuda.is_available():
                 self._encoder = self._encoder.to("cuda")
             self._encoder.eval()

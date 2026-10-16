@@ -22,8 +22,8 @@ class MiniLMReranker:
         try:
             from transformers import AutoModelForSequenceClassification, AutoTokenizer
             import torch
-            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-            self._model = AutoModelForSequenceClassification.from_pretrained(self.model_id)
+            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id, local_files_only=True)
+            self._model = AutoModelForSequenceClassification.from_pretrained(self.model_id, local_files_only=True)
             if torch.cuda.is_available():
                 self._model = self._model.to("cuda")
             self._model.eval()

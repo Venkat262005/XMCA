@@ -53,6 +53,13 @@ def extract_combiner_features(
     Extract comprehensive non-linear feature dictionary for a single sample.
     Supports feature masking for ablation studies.
     """
+    if ablation != "no_perception" and s_p is None:
+        raise ValueError("Cannot extract combiner features: s_p is None/unavailable.")
+    if ablation != "no_retrieval" and s_r is None:
+        raise ValueError("Cannot extract combiner features: s_r is None/unavailable.")
+    if ablation != "no_utilization" and s_u is None:
+        raise ValueError("Cannot extract combiner features: s_u is None/unavailable.")
+
     feat_sp = 0.0 if ablation == "no_perception" else float(np.clip(s_p, 0.0, 1.0))
     feat_sr = 0.0 if ablation == "no_retrieval" else float(np.clip(s_r, 0.0, 1.0))
     feat_su = 0.0 if ablation == "no_utilization" else float(np.clip(s_u, 0.0, 1.0))

@@ -57,21 +57,19 @@ class Qwen2VLGenerator:
                     bnb_4bit_use_double_quant=True,
                 )
 
-            device = "cuda" if torch.cuda.is_available() else ("mps" if hasattr(torch.backends, "mps") and torch.backends.mps.is_available() else "cpu")
+            device = "cuda" if torch.cuda.is_available() else "cpu"
             self._device = device
-            self._processor = AutoProcessor.from_pretrained(self.model_id)
-            if device == "mps":
-                self._model = Qwen2VLForConditionalGeneration.from_pretrained(
-                    self.model_id,
-                    torch_dtype=torch.float16,
-                ).to("mps")
-            else:
-                self._model = Qwen2VLForConditionalGeneration.from_pretrained(
-                    self.model_id,
-                    quantization_config=bnb_config,
-                    device_map="auto" if device == "cuda" else "cpu",
-                    torch_dtype=torch.float16 if device == "cuda" else torch.float32,
-                )
+            self._processor = AutoProcessor.from_pretrained(self.model_id, local_files_only=True)
+            self._model = Qwen2VLForConditionalGeneration.from_pretrained(
+                self.model_id,
+                quantization_config=bnb_config,
+                device_map="auto" if device == "cuda" else None,
+                torch_dtype=torch.float16,
+                low_cpu_mem_usage=True,
+                local_files_only=True,
+            )
+            if device != "cuda":
+                self._model.to(device)
             self._model.eval()
             logger.info(f"Loaded {self.model_id} successfully on {device}.")
         except Exception as e:
@@ -111,8 +109,8 @@ class Qwen2VLGenerator:
                     return_tensors="pt"
                 )
                 target_dev = getattr(self, "_device", "cuda" if torch.cuda.is_available() else "cpu")
-                if target_dev in ("cuda", "mps"):
-                    inputs = {k: v.to(target_dev) for k, v in inputs.items()}
+                if target_dev == "cuda":
+                    inputs = {k: v.to("cuda") for k, v in inputs.items()}
 
                 with torch.no_grad():
                     generated_ids = self._model.generate(

@@ -8,6 +8,61 @@ import numpy as np
 logger = logging.getLogger(__name__)
 
 
+def validate_and_resolve_nli_mapping(config: Any, num_logits: int) -> Dict[int, str]:
+    """
+    Safely validate and resolve id2label mapping for 3-class NLI.
+    Verifies that:
+    1. config.id2label exists and is a valid dictionary.
+    2. Exactly one recognized label exists for 'entailment', 'neutral', and 'contradiction'.
+    3. All logits indices 0..num_logits-1 are covered.
+    4. No duplicate, missing, or unknown classes exist.
+    """
+    raw_id2label = getattr(config, "id2label", None)
+    if not raw_id2label or not isinstance(raw_id2label, dict):
+        raise ValueError("Model configuration missing valid 'id2label' dictionary.")
+
+    resolved: Dict[int, str] = {}
+    label_to_index: Dict[str, int] = {}
+    STANDARD_LABELS = {"entailment", "neutral", "contradiction"}
+
+    for raw_k, raw_v in raw_id2label.items():
+        try:
+            idx = int(raw_k)
+        except (ValueError, TypeError):
+            raise ValueError(f"Invalid non-integer label index in id2label: {raw_k}")
+
+        lbl_str = str(raw_v).strip().lower()
+        if "entail" in lbl_str:
+            norm_lbl = "entailment"
+        elif "contra" in lbl_str:
+            norm_lbl = "contradiction"
+        elif "neut" in lbl_str:
+            norm_lbl = "neutral"
+        else:
+            raise ValueError(f"Unrecognized NLI class label '{raw_v}' at index {idx}.")
+
+        if norm_lbl in label_to_index:
+            raise ValueError(
+                f"Duplicate class mapping detected: '{norm_lbl}' mapped to both index "
+                f"{label_to_index[norm_lbl]} and index {idx}."
+            )
+        label_to_index[norm_lbl] = idx
+        resolved[idx] = norm_lbl
+
+    missing = STANDARD_LABELS - set(label_to_index.keys())
+    if missing:
+        raise ValueError(f"Incomplete NLI label mapping: missing required classes {missing}.")
+
+    if num_logits != len(resolved):
+        raise ValueError(f"Logits dimension ({num_logits}) does not match id2label mapping size ({len(resolved)}).")
+
+    for i in range(num_logits):
+        if i not in resolved:
+            raise ValueError(f"Output logit index {i} not covered in resolved id2label mapping.")
+
+    return resolved
+
+
 class DeBERTaNLIEngine:
     """Natural Language Inference engine with optional PEFT LoRA training/inference."""
 
@@ -37,8 +92,8 @@ class DeBERTaNLIEngine:
         try:
             import torch
             from transformers import AutoModelForSequenceClassification, AutoTokenizer
-            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-            self._model = AutoModelForSequenceClassification.from_pretrained(self.model_id)
+            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id, local_files_only=True)
+            self._model = AutoModelForSequenceClassification.from_pretrained(self.model_id, local_files_only=True)
 
             if self.use_lora:
                 try:
@@ -96,17 +151,25 @@ class DeBERTaNLIEngine:
 
                 with torch.no_grad():
                     logits = self._model(**inputs).logits
+                    num_classes = logits.shape[-1]
+                    id2label = validate_and_resolve_nli_mapping(self._model.config, num_classes)
                     probs = torch.softmax(logits, dim=-1).cpu().numpy()
 
                 results = []
-                # Typical DeBERTa MNLI mapping: 0 -> contradiction, 1 -> neutral, 2 -> entailment
-                for p in probs:
-                    entail = float(p[-1]) if len(p) >= 3 else float(p[0])
-                    contra = float(p[0]) if len(p) >= 3 else float(1.0 - entail)
+                for p_vec in probs:
+                    # Validate probability vector properties
+                    if not all(np.isfinite(p_vec)):
+                        raise ValueError(f"Non-finite probabilities detected in NLI output: {p_vec}")
+                    if any(v < -1e-5 or v > 1.0 + 1e-5 for v in p_vec):
+                        raise ValueError(f"Probabilities out of valid [0, 1] range: {p_vec}")
+                    if abs(float(np.sum(p_vec)) - 1.0) > 1e-3:
+                        raise ValueError(f"Probabilities do not sum to 1.0 (sum={np.sum(p_vec):.6f})")
+
+                    label_probs = {id2label[i]: float(np.clip(p_vec[i], 0.0, 1.0)) for i in range(len(p_vec))}
                     results.append({
-                        "entailment": entail,
-                        "neutral": float(p[1]) if len(p) >= 3 else 0.0,
-                        "contradiction": contra
+                        "entailment": label_probs["entailment"],
+                        "neutral": label_probs["neutral"],
+                        "contradiction": label_probs["contradiction"]
                     })
                 return results
             except Exception as e:

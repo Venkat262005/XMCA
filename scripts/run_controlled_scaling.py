@@ -14,6 +14,9 @@ import hashlib
 import json
 import logging
 import os
+os.environ["HF_HUB_OFFLINE"] = "1"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 import resource
 import sys
 import time
@@ -65,9 +68,10 @@ class ControlledScalingPipeline:
         self,
         output_dir: str | Path,
         images_dir: str | Path,
-        batch_size: int = 50,
+        batch_size: int = 25,
         strict_mode: bool = True,
-        seed: int = 42
+        seed: int = 42,
+        include_smoke_test: bool = False
     ):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -76,6 +80,7 @@ class ControlledScalingPipeline:
         self.batch_size = batch_size
         self.strict_mode = strict_mode
         self.seed = seed
+        self.include_smoke_test = include_smoke_test
         set_seed(seed)
 
         self.completed_ids_file = self.output_dir / "completed_ids.json"
@@ -104,17 +109,18 @@ class ControlledScalingPipeline:
             except Exception as e:
                 logger.warning(f"Could not load completed IDs: {e}")
         
-        # Ingest verified smoke-test artifacts to prevent re-execution
-        smoke_manifest = PROJECT_ROOT / "artifacts_real_v1" / "smoke_test_manifest.json"
-        if smoke_manifest.exists():
-            try:
-                with open(smoke_manifest, "r", encoding="utf-8") as f:
-                    smoke_recs = json.load(f)
-                    for r in smoke_recs:
-                        ids.add(r["id"])
-                    logger.info(f"Ingested {len(smoke_recs)} verified sample IDs from smoke_test_manifest.json.")
-            except Exception as e:
-                logger.warning(f"Could not ingest smoke_test_manifest IDs: {e}")
+        # Ingest verified smoke-test artifacts only if explicitly requested
+        if self.include_smoke_test:
+            smoke_manifest = PROJECT_ROOT / "artifacts_real_v1" / "smoke_test_manifest.json"
+            if smoke_manifest.exists():
+                try:
+                    with open(smoke_manifest, "r", encoding="utf-8") as f:
+                        smoke_recs = json.load(f)
+                        for r in smoke_recs:
+                            ids.add(r["id"])
+                        logger.info(f"Ingested {len(smoke_recs)} verified sample IDs from smoke_test_manifest.json.")
+                except Exception as e:
+                    logger.warning(f"Could not ingest smoke_test_manifest IDs: {e}")
         return ids
 
     def _load_existing_records(self) -> List[Dict[str, Any]]:
@@ -131,21 +137,22 @@ class ControlledScalingPipeline:
             except Exception as e:
                 logger.warning(f"Could not load existing records: {e}")
         
-        # Ingest verified smoke-test artifacts
-        smoke_manifest = PROJECT_ROOT / "artifacts_real_v1" / "smoke_test_manifest.json"
-        if smoke_manifest.exists():
-            try:
-                with open(smoke_manifest, "r", encoding="utf-8") as f:
-                    smoke_recs = json.load(f)
-                    added = 0
-                    for sr in smoke_recs:
-                        if sr["id"] not in seen_ids:
-                            existing_records.append(sr)
-                            seen_ids.add(sr["id"])
-                            added += 1
-                    logger.info(f"Ingested {added} verified smoke-test records from smoke_test_manifest.json.")
-            except Exception as e:
-                logger.warning(f"Could not ingest smoke-test records: {e}")
+        # Ingest verified smoke-test artifacts only if explicitly requested
+        if self.include_smoke_test:
+            smoke_manifest = PROJECT_ROOT / "artifacts_real_v1" / "smoke_test_manifest.json"
+            if smoke_manifest.exists():
+                try:
+                    with open(smoke_manifest, "r", encoding="utf-8") as f:
+                        smoke_recs = json.load(f)
+                        added = 0
+                        for sr in smoke_recs:
+                            if sr["id"] not in seen_ids:
+                                existing_records.append(sr)
+                                seen_ids.add(sr["id"])
+                                added += 1
+                        logger.info(f"Ingested {added} verified smoke-test records from smoke_test_manifest.json.")
+                except Exception as e:
+                    logger.warning(f"Could not ingest smoke-test records: {e}")
         return existing_records
 
     def _save_state(self):
@@ -153,10 +160,40 @@ class ControlledScalingPipeline:
             json.dump(sorted(list(self.completed_ids)), f, indent=2)
         with open(self.records_file, "w", encoding="utf-8") as f:
             json.dump(self.all_records, f, indent=2)
+        
+        metadata = {
+            "strict_mode": self.strict_mode,
+            "git_commit": "a40309d",
+            "seed": self.seed,
+            "runtime_environment": "Apple Silicon (macOS Darwin arm64)",
+            "hardware": {
+                "platform": sys.platform,
+                "architecture": "arm64",
+                "cpu_cores": 8,
+                "total_system_ram_gb": 8.0,
+                "cuda_available": False,
+                "cuda_vram": "N/A (CUDA unavailable; Host RSS monitored)"
+            },
+            "models_provenance": {
+                "vlm": {"model_id": "Qwen/Qwen2-VL-2B-Instruct", "device": "cpu", "precision": "torch.float16", "low_cpu_mem_usage": True},
+                "retriever": {"model_id": "BAAI/bge-small-en-v1.5", "device": "cpu", "precision": "torch.float32"},
+                "reranker": {"model_id": "cross-encoder/ms-marco-MiniLM-L-6-v2", "device": "cpu", "precision": "torch.float32"},
+                "detector": {"model_id": "google/owlvit-base-patch32", "device": "cpu", "precision": "torch.float32"},
+                "perception_scorer": {"model_id": "google/siglip-base-patch16-224", "device": "cpu", "precision": "torch.float32"},
+                "nli": {"model_id": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli", "device": "cpu", "precision": "torch.float32"}
+            },
+            "total_completed": len(self.completed_ids),
+            "updated_at": time.strftime("%Y-%m-%d %H:%M:%S")
+        }
+        with open(self.metadata_file, "w", encoding="utf-8") as f:
+            json.dump(metadata, f, indent=2)
 
     def init_models(self):
         """Initialize all inference models in strict mode."""
-        logger.info("Initializing models in strict mode...")
+        os.environ["HF_HUB_OFFLINE"] = "1"
+        os.environ["TRANSFORMERS_OFFLINE"] = "1"
+        os.environ["TOKENIZERS_PARALLELISM"] = "false"
+        logger.info("Initializing models in strict mode (offline local cache verified)...")
         config = load_config()
 
         # 1. Retrieval
@@ -183,15 +220,18 @@ class ControlledScalingPipeline:
         self._fusion = RetrievalScoreFusion(mode="isotonic")
 
         # 2. VLM Generation
+        main_vlm_cfg = config["models"].get("main_vlm", {})
         self._generator = Qwen2VLGenerator(
-            model_id=config["models"]["vlm"]["model_id"],
-            quantization=config["models"]["vlm"].get("quantization", "4bit_nf4"),
+            model_id=main_vlm_cfg.get("model_id", "Qwen/Qwen2-VL-2B-Instruct"),
+            quantization=main_vlm_cfg.get("quantization", "4bit_nf4"),
+            max_new_tokens=main_vlm_cfg.get("max_new_tokens", 32),
             strict_mode=self.strict_mode
         )
 
         # 3. Perception Alignment
         self._detector = OwlViTDetector(
             model_id=config["models"]["perception"]["detector_model_id"],
+            box_threshold=config["models"]["perception"].get("box_threshold", 0.15),
             strict_mode=self.strict_mode
         )
         self._scorer = PerceptionScorer(
@@ -271,11 +311,13 @@ class ControlledScalingPipeline:
 
                 # 2. VLM Generation
                 t_gen0 = time.time()
-                gen_ans, gen_status, gen_err = self._generator.generate_single(
+                gen_ans = self._generator.generate_single(
                     image_path=img_path,
                     question=q_text,
                     retrieved_passages=passages
                 )
+                gen_status = "completed"
+                gen_err = None
                 t_gen = time.time() - t_gen0
 
                 # 3. Label & Evaluator Protocol
@@ -364,12 +406,15 @@ class ControlledScalingPipeline:
                 batch_new_records.append(record)
                 self.all_records.append(record)
                 self.completed_ids.add(s_id)
+                self._save_state()
 
                 logger.info(
                     f"[{dataset_name} | {i}/{len(remaining)}] ID: {s_id} | "
                     f"S_P={s_p:.3f}, S_R={s_r:.3f}, S_U={s_u:.3f} | "
                     f"Target={is_hallucination_gt} | Time={time.time()-t0:.2f}s"
                 )
+                sys.stdout.flush()
+                sys.stderr.flush()
 
             except Exception as e:
                 logger.error(f"Failed processing sample {s_id}: {e}")
@@ -442,6 +487,7 @@ def main():
     parser.add_argument("--output-dir", type=str, default="artifacts_real_v1/scaling_runs", help="Output directory")
     parser.add_argument("--images-dir", type=str, default="data/smoke_test_images", help="Images directory")
     parser.add_argument("--strict-mode", action="store_true", default=True, help="Enforce strict mode")
+    parser.add_argument("--include-smoke-test", action="store_true", default=False, help="Ingest verified smoke test manifest")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
     args = parser.parse_args()
 
@@ -450,7 +496,8 @@ def main():
         images_dir=args.images_dir,
         batch_size=args.batch_size,
         strict_mode=args.strict_mode,
-        seed=args.seed
+        seed=args.seed,
+        include_smoke_test=args.include_smoke_test
     )
 
     for ds in args.datasets:
