@@ -16,11 +16,13 @@ class OwlViTDetector:
         self,
         model_id: str = "google/owlvit-base-patch32",
         box_threshold: float = 0.15,
-        text_threshold: float = 0.20
+        text_threshold: float = 0.20,
+        strict_mode: bool = False
     ):
         self.model_id = model_id
         self.box_threshold = box_threshold
         self.text_threshold = text_threshold
+        self.strict_mode = strict_mode
         self._processor = None
         self._model = None
 
@@ -37,6 +39,8 @@ class OwlViTDetector:
             self._model.eval()
             logger.info(f"Loaded {self.model_id} detector.")
         except Exception as e:
+            if self.strict_mode:
+                raise RuntimeError(f"FATAL in strict_mode: Failed to load {self.model_id}: {e}") from e
             logger.info(f"OWL-ViT detector unavailable ({e}). Using region generator fallback.")
             self._model = None
 
@@ -49,13 +53,14 @@ class OwlViTDetector:
         Detect visual regions corresponding to candidate query labels.
         Returns: (boxes, detected_labels, confidences)
         """
-        self._init_model()
-
-        # Load or create dummy image
-        if Path(image_path).exists():
-            image = Image.open(image_path).convert("RGB")
-        else:
+        if not Path(image_path).exists():
+            if self.strict_mode:
+                raise FileNotFoundError(f"FATAL in strict_mode: Image path not found: {image_path}")
             image = Image.new("RGB", (224, 224), color=(128, 128, 128))
+        else:
+            image = Image.open(image_path).convert("RGB")
+
+        self._init_model()
 
         if self._model is not None and self._processor is not None and query_labels:
             import torch
@@ -114,10 +119,14 @@ class OwlViTDetector:
                 else:
                     boxes, labels, scores = [], [], []
 
-                if boxes:
-                    return boxes, labels, scores
+                return boxes, labels, scores
             except Exception as e:
+                if self.strict_mode:
+                    raise RuntimeError(f"FATAL in strict_mode: OWL-ViT detection error: {e}") from e
                 logger.warning(f"OWL-ViT detection error ({e}). Using fallback grid.")
+
+        if self.strict_mode:
+            raise RuntimeError("FATAL in strict_mode: Cannot detect regions without genuine detector model.")
 
         # Fallback grid regions
         w, h = image.size

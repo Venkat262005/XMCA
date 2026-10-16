@@ -8,8 +8,9 @@ from src.utilization.nli import DeBERTaNLIEngine
 class UtilizationScorer:
     """Computes Utilization Consistency Score (S_U) in [0, 1]."""
 
-    def __init__(self, nli_engine: Optional[DeBERTaNLIEngine] = None):
-        self.nli_engine = nli_engine or DeBERTaNLIEngine()
+    def __init__(self, nli_engine: Optional[DeBERTaNLIEngine] = None, strict_mode: bool = False):
+        self.strict_mode = strict_mode
+        self.nli_engine = nli_engine or DeBERTaNLIEngine(strict_mode=strict_mode)
 
     def compute_s_u(
         self,

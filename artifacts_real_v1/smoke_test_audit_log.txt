@@ -1,0 +1,87 @@
+XMCA-NET 10-SAMPLE GENUINE SMOKE TEST AUDIT REPORT
+============================================================
+
+Total Execution Time: 604.29 seconds
+Samples Processed: 10 (5 POPE, 5 A-OKVQA)
+Strict Mode: True (zero mock fallbacks permitted)
+
+[pope_00000] Dataset: pope
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg (SHA-256: 7f15921bd95ac2f1...)
+  Question: Is there a snowboard in the image?
+  Generated Answer: 'Yes, there is a snowboard in the image.'
+  POPE Metrics: {'parsed_answer': 'yes', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': 0, 'omission_fn': 0, 'is_hallucination_gt': 0}
+  Consistency Scores: S_P=0.0011, S_R=0.2182, S_U=0.2208
+  25-Feature Vector Check: Valid and all finite
+
+[pope_00001] Dataset: pope
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg (SHA-256: 7f15921bd95ac2f1...)
+  Question: Is there a backpack in the image?
+  Generated Answer: 'No, there is no backpack in the image.'
+  POPE Metrics: {'parsed_answer': 'no', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': 0, 'omission_fn': 0, 'is_hallucination_gt': 0}
+  Consistency Scores: S_P=0.0, S_R=0.2301, S_U=0.0327
+  25-Feature Vector Check: Valid and all finite
+
+[pope_00002] Dataset: pope
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg (SHA-256: 7f15921bd95ac2f1...)
+  Question: Is there a person in the image?
+  Generated Answer: 'Yes, there is a person in the image.'
+  POPE Metrics: {'parsed_answer': 'yes', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': 0, 'omission_fn': 0, 'is_hallucination_gt': 0}
+  Consistency Scores: S_P=0.0, S_R=0.1931, S_U=0.0244
+  25-Feature Vector Check: Valid and all finite
+
+[pope_00003] Dataset: pope
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg (SHA-256: 7f15921bd95ac2f1...)
+  Question: Is there a car in the image?
+  Generated Answer: 'No, there is no car in the image.'
+  POPE Metrics: {'parsed_answer': 'no', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': 0, 'omission_fn': 0, 'is_hallucination_gt': 0}
+  Consistency Scores: S_P=0.0, S_R=0.2537, S_U=0.9994
+  25-Feature Vector Check: Valid and all finite
+
+[pope_00004] Dataset: pope
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg (SHA-256: 7f15921bd95ac2f1...)
+  Question: Is there a skis in the image?
+  Generated Answer: 'Yes'
+  POPE Metrics: {'parsed_answer': 'yes', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': 0, 'omission_fn': 0, 'is_hallucination_gt': 0}
+  Consistency Scores: S_P=0.3816, S_R=0.2383, S_U=0.0077
+  25-Feature Vector Check: Valid and all finite
+
+[aokvqa_00000] Dataset: aokvqa
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_0.jpg (SHA-256: 12f0a98779e74b1c...)
+  Question: What is in the motorcyclist's mouth?
+  Generated Answer: 'The motorcyclist is wearing sunglasses.'
+  POPE Metrics: {'parsed_answer': 'The motorcyclist is wearing sunglasses.', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': None, 'omission_fn': None, 'is_hallucination_gt': None}
+  Consistency Scores: S_P=0.428, S_R=0.2671, S_U=0.8585
+  25-Feature Vector Check: Valid and all finite
+
+[aokvqa_00001] Dataset: aokvqa
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_1.jpg (SHA-256: dc2f199496dc6d74...)
+  Question: Which number birthday is probably being celebrated?
+  Generated Answer: 'The number on the cake is 30, which suggests that the birthday being'
+  POPE Metrics: {'parsed_answer': 'The number on the cake is 30, which suggests that the birthday being', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': None, 'omission_fn': None, 'is_hallucination_gt': None}
+  Consistency Scores: S_P=0.0015, S_R=0.1983, S_U=0.0074
+  25-Feature Vector Check: Valid and all finite
+
+[aokvqa_00002] Dataset: aokvqa
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_2.jpg (SHA-256: 0d0bfb88353f5327...)
+  Question: What best describes the pool of water?
+  Generated Answer: 'The pool of water is a small, shallow, and reflective body of water.'
+  POPE Metrics: {'parsed_answer': 'The pool of water is a small, shallow, and reflective body of water.', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': None, 'omission_fn': None, 'is_hallucination_gt': None}
+  Consistency Scores: S_P=0.2327, S_R=0.2051, S_U=0.0018
+  25-Feature Vector Check: Valid and all finite
+
+[aokvqa_00003] Dataset: aokvqa
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_3.jpg (SHA-256: 20989dce3037a2db...)
+  Question: What is the white substance on top of the cupcakes?
+  Generated Answer: 'The white substance on top of the cupcakes is frosting.'
+  POPE Metrics: {'parsed_answer': 'The white substance on top of the cupcakes is frosting.', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': None, 'omission_fn': None, 'is_hallucination_gt': None}
+  Consistency Scores: S_P=0.0106, S_R=0.2014, S_U=0.0054
+  25-Feature Vector Check: Valid and all finite
+
+[aokvqa_00004] Dataset: aokvqa
+  Image: /Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_4.jpg (SHA-256: 1cfef31a3ce6e311...)
+  Question: What type of device is sitting next to the laptop?
+  Generated Answer: 'The device sitting next to the laptop is a Vodafone phone.'
+  POPE Metrics: {'parsed_answer': 'The device sitting next to the laptop is a Vodafone phone.', 'parse_status': 'success', 'is_correct': 1, 'hallucination_fp': None, 'omission_fn': None, 'is_hallucination_gt': None}
+  Consistency Scores: S_P=0.6994, S_R=0.3149, S_U=0.0293
+  25-Feature Vector Check: Valid and all finite
+

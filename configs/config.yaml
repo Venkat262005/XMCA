@@ -53,6 +53,7 @@ datasets:
       task_type: "entity_qa"
 
 execution:
+  strict_mode: true
   shard_size: 250
   completed_ids_filename: "completed_ids.json"
   use_4bit_quantization: true

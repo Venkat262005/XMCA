@@ -3,7 +3,7 @@
 import json
 import logging
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 import faiss
 import numpy as np
 
@@ -13,9 +13,10 @@ logger = logging.getLogger(__name__)
 class DenseRetriever:
     """FAISS-based dense retriever supporting BGE-small / E5 embeddings."""
 
-    def __init__(self, model_id: str = "BAAI/bge-small-en-v1.5", dimension: int = 384):
+    def __init__(self, model_id: str = "BAAI/bge-small-en-v1.5", dimension: int = 384, strict_mode: bool = False):
         self.model_id = model_id
         self.dimension = dimension
+        self.strict_mode = strict_mode
         self.index: faiss.IndexFlatIP | None = None
         self.corpus_docs: List[Dict[str, Any]] = []
         self._encoder = None
@@ -33,6 +34,8 @@ class DenseRetriever:
                 self._encoder = self._encoder.to("cuda")
             self._encoder.eval()
         except Exception as e:
+            if self.strict_mode:
+                raise RuntimeError(f"FATAL in strict_mode: Dense retriever model {self.model_id} failed to load: {e}") from e
             logger.info(f"Transformers dense model unavailable ({e}). Using deterministic projection.")
             self._encoder = None
 
@@ -66,6 +69,9 @@ class DenseRetriever:
 
             return np.vstack(all_embeddings)
 
+        if self.strict_mode:
+            raise RuntimeError("FATAL in strict_mode: Cannot encode passages without genuine dense encoder.")
+
         # High-quality deterministic fallback embedding using hashing trick
         total = len(texts)
         show_progress = total > 50
@@ -98,17 +104,29 @@ class DenseRetriever:
         self.index.add(embeddings)
         logger.info(f"FAISS index built with {self.index.ntotal} documents, dimension {self.dimension}.")
 
-    def search(self, query: str, top_k: int = 5) -> List[Tuple[Dict[str, Any], float]]:
-        """Retrieve top_k passages and their cosine similarity scores."""
+    def search(
+        self,
+        query: str,
+        top_k: int = 5,
+        exclude_source_id: Optional[str] = None
+    ) -> List[Tuple[Dict[str, Any], float]]:
+        """Retrieve top_k passages, optionally excluding documents with source_id == exclude_source_id."""
         if self.index is None or self.index.ntotal == 0:
             return []
         q_emb = self.encode([query])
-        scores, indices = self.index.search(q_emb, min(top_k, self.index.ntotal))
+        fetch_k = min(top_k * 3, self.index.ntotal) if exclude_source_id else min(top_k, self.index.ntotal)
+        scores, indices = self.index.search(q_emb, fetch_k)
 
         results = []
         for idx, score in zip(indices[0], scores[0]):
             if idx >= 0 and idx < len(self.corpus_docs):
-                results.append((self.corpus_docs[idx], float(score)))
+                doc = self.corpus_docs[idx]
+                if exclude_source_id and str(doc.get("source_id", "")).strip() == str(exclude_source_id).strip():
+                    # Strictly prevent self-answer retrieval
+                    continue
+                results.append((doc, float(score)))
+                if len(results) >= top_k:
+                    break
         return results
 
     def save(self, index_file: str | Path, meta_file: str | Path) -> None:

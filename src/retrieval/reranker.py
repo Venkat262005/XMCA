@@ -10,8 +10,9 @@ logger = logging.getLogger(__name__)
 class MiniLMReranker:
     """MiniLM Cross-Encoder reranker."""
 
-    def __init__(self, model_id: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"):
+    def __init__(self, model_id: str = "cross-encoder/ms-marco-MiniLM-L-6-v2", strict_mode: bool = False):
         self.model_id = model_id
+        self.strict_mode = strict_mode
         self._model = None
         self._tokenizer = None
 
@@ -27,6 +28,8 @@ class MiniLMReranker:
                 self._model = self._model.to("cuda")
             self._model.eval()
         except Exception as e:
+            if self.strict_mode:
+                raise RuntimeError(f"FATAL in strict_mode: Cross-encoder reranker {self.model_id} failed to load: {e}") from e
             logger.info(f"Transformers cross-encoder unavailable ({e}). Using semantic overlap scoring.")
             self._model = None
 
@@ -46,6 +49,9 @@ class MiniLMReranker:
                 logits = self._model(**inputs).logits.squeeze(-1)
                 probs = torch.sigmoid(logits).cpu().numpy().tolist()
                 return [float(p) for p in (probs if isinstance(probs, list) else [probs])]
+
+        if self.strict_mode:
+            raise RuntimeError("FATAL in strict_mode: Cannot compute reranker scores without genuine cross-encoder model.")
 
         # Fallback lexical/jaccard overlap
         scores = []

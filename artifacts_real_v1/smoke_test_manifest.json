@@ -1,0 +1,672 @@
+[
+  {
+    "sample_idx": 1,
+    "id": "pope_00000",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000310196",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg",
+    "image_sha256": "7f15921bd95ac2f1fac103aa6fe91beed71823af7c55a8ce431c68737945d379",
+    "question": "Is there a snowboard in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "retrieved_passages": [
+      "Outdoor park settings feature park benches, green trees, walking paths, birds, and recreational areas.",
+      "Common street scenes include moving vehicles, traffic signals, buildings, and riders on paved roadways.",
+      "Living rooms and kitchens often contain refrigerators, ovens, microwave ovens, counters, and sinks."
+    ],
+    "generated_answer": "Yes, there is a snowboard in the image.",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 6.747,
+      "generation": 113.26,
+      "perception": 20.555,
+      "utilization": 6.079
+    },
+    "pope_metrics": {
+      "parsed_answer": "yes",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": 0,
+      "omission_fn": 0,
+      "is_hallucination_gt": 0
+    },
+    "scores": {
+      "s_p": 0.0011,
+      "s_r": 0.2182,
+      "s_u": 0.2208
+    },
+    "features_25": {
+      "s_p": 0.0011,
+      "s_r": 0.2182,
+      "s_u": 0.2208,
+      "diff_sp_sr": -0.2172,
+      "diff_sp_su": -0.2198,
+      "diff_sr_su": -0.0026,
+      "abs_diff_sp_sr": 0.2172,
+      "abs_diff_sp_su": 0.2198,
+      "abs_diff_sr_su": 0.0026,
+      "min_score": 0.0011,
+      "max_score": 0.2208,
+      "mean_score": 0.1467,
+      "harmonic_mean": 0.0032,
+      "signal_variance": 0.0106,
+      "min_to_mean_ratio": 0.0073,
+      "is_perception_lowest": 1.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 0.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.0373,
+      "cross_modal_tension": 0.2198,
+      "knowledge_visual_gap": 0.2172,
+      "deficit_spread": 0.2198,
+      "min_to_max_ratio": 0.0049
+    }
+  },
+  {
+    "sample_idx": 2,
+    "id": "pope_00001",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000310196",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg",
+    "image_sha256": "7f15921bd95ac2f1fac103aa6fe91beed71823af7c55a8ce431c68737945d379",
+    "question": "Is there a backpack in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "retrieved_passages": [
+      "Electronic consumer devices in office or study environments include laptop computers, monitors, keyboards, and mobile phones.",
+      "Outdoor park settings feature park benches, green trees, walking paths, birds, and recreational areas.",
+      "Motorcyclists wear helmets, protective leather or synthetic riding gear, goggles, and ride street motorcycles."
+    ],
+    "generated_answer": "No, there is no backpack in the image.",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 1.645,
+      "generation": 75.284,
+      "perception": 10.847,
+      "utilization": 2.559
+    },
+    "pope_metrics": {
+      "parsed_answer": "no",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": 0,
+      "omission_fn": 0,
+      "is_hallucination_gt": 0
+    },
+    "scores": {
+      "s_p": 0.0,
+      "s_r": 0.2301,
+      "s_u": 0.0327
+    },
+    "features_25": {
+      "s_p": 0.0,
+      "s_r": 0.2301,
+      "s_u": 0.0327,
+      "diff_sp_sr": -0.2301,
+      "diff_sp_su": -0.0327,
+      "diff_sr_su": 0.1974,
+      "abs_diff_sp_sr": 0.2301,
+      "abs_diff_sp_su": 0.0327,
+      "abs_diff_sr_su": 0.1974,
+      "min_score": 0.0,
+      "max_score": 0.2301,
+      "mean_score": 0.0876,
+      "harmonic_mean": 0.0,
+      "signal_variance": 0.0103,
+      "min_to_mean_ratio": 0.0,
+      "is_perception_lowest": 1.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 0.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.0026,
+      "cross_modal_tension": 0.0327,
+      "knowledge_visual_gap": 0.2301,
+      "deficit_spread": 0.2301,
+      "min_to_max_ratio": 0.0
+    }
+  },
+  {
+    "sample_idx": 3,
+    "id": "pope_00002",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000310196",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg",
+    "image_sha256": "7f15921bd95ac2f1fac103aa6fe91beed71823af7c55a8ce431c68737945d379",
+    "question": "Is there a person in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "retrieved_passages": [
+      "Electronic consumer devices in office or study environments include laptop computers, monitors, keyboards, and mobile phones.",
+      "Household interior furniture commonly includes chairs, dining tables, sofas, and kitchen appliances.",
+      "Living rooms and kitchens often contain refrigerators, ovens, microwave ovens, counters, and sinks."
+    ],
+    "generated_answer": "Yes, there is a person in the image.",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 0.867,
+      "generation": 49.243,
+      "perception": 8.142,
+      "utilization": 1.383
+    },
+    "pope_metrics": {
+      "parsed_answer": "yes",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": 0,
+      "omission_fn": 0,
+      "is_hallucination_gt": 0
+    },
+    "scores": {
+      "s_p": 0.0,
+      "s_r": 0.1931,
+      "s_u": 0.0244
+    },
+    "features_25": {
+      "s_p": 0.0,
+      "s_r": 0.1931,
+      "s_u": 0.0244,
+      "diff_sp_sr": -0.1931,
+      "diff_sp_su": -0.0244,
+      "diff_sr_su": 0.1687,
+      "abs_diff_sp_sr": 0.1931,
+      "abs_diff_sp_su": 0.0244,
+      "abs_diff_sr_su": 0.1687,
+      "min_score": 0.0,
+      "max_score": 0.1931,
+      "mean_score": 0.0725,
+      "harmonic_mean": 0.0,
+      "signal_variance": 0.0074,
+      "min_to_mean_ratio": 0.0,
+      "is_perception_lowest": 1.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 0.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.0004,
+      "cross_modal_tension": 0.0244,
+      "knowledge_visual_gap": 0.1931,
+      "deficit_spread": 0.1931,
+      "min_to_max_ratio": 0.0
+    }
+  },
+  {
+    "sample_idx": 4,
+    "id": "pope_00003",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000310196",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg",
+    "image_sha256": "7f15921bd95ac2f1fac103aa6fe91beed71823af7c55a8ce431c68737945d379",
+    "question": "Is there a car in the image?",
+    "ground_truth_answers": [
+      "no"
+    ],
+    "retrieved_passages": [
+      "Common street scenes include moving vehicles, traffic signals, buildings, and riders on paved roadways.",
+      "Urban outdoor transportation features motorcycles, bicycles, cars, buses, and pedestrian crosswalks.",
+      "Motorcyclists wear helmets, protective leather or synthetic riding gear, goggles, and ride street motorcycles."
+    ],
+    "generated_answer": "No, there is no car in the image.",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 0.726,
+      "generation": 38.149,
+      "perception": 6.744,
+      "utilization": 1.911
+    },
+    "pope_metrics": {
+      "parsed_answer": "no",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": 0,
+      "omission_fn": 0,
+      "is_hallucination_gt": 0
+    },
+    "scores": {
+      "s_p": 0.0,
+      "s_r": 0.2537,
+      "s_u": 0.9994
+    },
+    "features_25": {
+      "s_p": 0.0,
+      "s_r": 0.2537,
+      "s_u": 0.9994,
+      "diff_sp_sr": -0.2537,
+      "diff_sp_su": -0.9994,
+      "diff_sr_su": -0.7457,
+      "abs_diff_sp_sr": 0.2537,
+      "abs_diff_sp_su": 0.9994,
+      "abs_diff_sr_su": 0.7457,
+      "min_score": 0.0,
+      "max_score": 0.9994,
+      "mean_score": 0.4177,
+      "harmonic_mean": 0.0,
+      "signal_variance": 0.1799,
+      "min_to_mean_ratio": 0.0,
+      "is_perception_lowest": 1.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 0.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.0033,
+      "cross_modal_tension": 0.9994,
+      "knowledge_visual_gap": 0.2537,
+      "deficit_spread": 0.9994,
+      "min_to_max_ratio": 0.0
+    }
+  },
+  {
+    "sample_idx": 5,
+    "id": "pope_00004",
+    "dataset": "pope",
+    "image_id": "COCO_val2014_000000310196",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/COCO_val2014_000000310196.jpg",
+    "image_sha256": "7f15921bd95ac2f1fac103aa6fe91beed71823af7c55a8ce431c68737945d379",
+    "question": "Is there a skis in the image?",
+    "ground_truth_answers": [
+      "yes"
+    ],
+    "retrieved_passages": [
+      "Common street scenes include moving vehicles, traffic signals, buildings, and riders on paved roadways.",
+      "Outdoor park settings feature park benches, green trees, walking paths, birds, and recreational areas.",
+      "Motorcyclists wear helmets, protective leather or synthetic riding gear, goggles, and ride street motorcycles."
+    ],
+    "generated_answer": "Yes",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 0.783,
+      "generation": 28.104,
+      "perception": 5.705,
+      "utilization": 1.74
+    },
+    "pope_metrics": {
+      "parsed_answer": "yes",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": 0,
+      "omission_fn": 0,
+      "is_hallucination_gt": 0
+    },
+    "scores": {
+      "s_p": 0.3816,
+      "s_r": 0.2383,
+      "s_u": 0.0077
+    },
+    "features_25": {
+      "s_p": 0.3816,
+      "s_r": 0.2383,
+      "s_u": 0.0077,
+      "diff_sp_sr": 0.1432,
+      "diff_sp_su": 0.3739,
+      "diff_sr_su": 0.2307,
+      "abs_diff_sp_sr": 0.1432,
+      "abs_diff_sp_su": 0.3739,
+      "abs_diff_sr_su": 0.2307,
+      "min_score": 0.0077,
+      "max_score": 0.3816,
+      "mean_score": 0.2092,
+      "harmonic_mean": 0.0219,
+      "signal_variance": 0.0237,
+      "min_to_mean_ratio": 0.0367,
+      "is_perception_lowest": 0.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 1.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.0887,
+      "cross_modal_tension": 0.3739,
+      "knowledge_visual_gap": 0.1432,
+      "deficit_spread": 0.3739,
+      "min_to_max_ratio": 0.0201
+    }
+  },
+  {
+    "sample_idx": 6,
+    "id": "aokvqa_00000",
+    "dataset": "aokvqa",
+    "image_id": "aokvqa_img_0",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_0.jpg",
+    "image_sha256": "12f0a98779e74b1c64ce3829217b83f39a09a853a0404e4be9b1f7f6835b9394",
+    "question": "What is in the motorcyclist's mouth?",
+    "ground_truth_answers": [
+      "He's smoking while riding.",
+      "The motorcyclist has a lit cigarette in his mouth while he rides on the street.",
+      "The man is smoking."
+    ],
+    "retrieved_passages": [
+      "Motorcyclists wear helmets, protective leather or synthetic riding gear, goggles, and ride street motorcycles.",
+      "Urban outdoor transportation features motorcycles, bicycles, cars, buses, and pedestrian crosswalks.",
+      "Common street scenes include moving vehicles, traffic signals, buildings, and riders on paved roadways."
+    ],
+    "generated_answer": "The motorcyclist is wearing sunglasses.",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 0.783,
+      "generation": 40.005,
+      "perception": 7.409,
+      "utilization": 1.762
+    },
+    "pope_metrics": {
+      "parsed_answer": "The motorcyclist is wearing sunglasses.",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": null,
+      "omission_fn": null,
+      "is_hallucination_gt": null
+    },
+    "scores": {
+      "s_p": 0.428,
+      "s_r": 0.2671,
+      "s_u": 0.8585
+    },
+    "features_25": {
+      "s_p": 0.428,
+      "s_r": 0.2671,
+      "s_u": 0.8585,
+      "diff_sp_sr": 0.1609,
+      "diff_sp_su": -0.4305,
+      "diff_sr_su": -0.5914,
+      "abs_diff_sp_sr": 0.1609,
+      "abs_diff_sp_su": 0.4305,
+      "abs_diff_sr_su": 0.5914,
+      "min_score": 0.2671,
+      "max_score": 0.8585,
+      "mean_score": 0.5179,
+      "harmonic_mean": 0.4141,
+      "signal_variance": 0.0623,
+      "min_to_mean_ratio": 0.5157,
+      "is_perception_lowest": 0.0,
+      "is_retrieval_lowest": 1.0,
+      "is_utilization_lowest": 0.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.4613,
+      "cross_modal_tension": 0.4305,
+      "knowledge_visual_gap": 0.1609,
+      "deficit_spread": 0.5914,
+      "min_to_max_ratio": 0.3111
+    }
+  },
+  {
+    "sample_idx": 7,
+    "id": "aokvqa_00001",
+    "dataset": "aokvqa",
+    "image_id": "aokvqa_img_1",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_1.jpg",
+    "image_sha256": "dc2f199496dc6d74a7b6ec48f1507c2bf8f7b3f03335e55290b39ad2fe3a27ff",
+    "question": "Which number birthday is probably being celebrated?",
+    "ground_truth_answers": [
+      "There is a birthday cake on the table with the number 30 written in icing.",
+      "The cake says 30.",
+      "The numerals three and zero are written on the cake, which indicates the person is 30 years of age as of the birthdate."
+    ],
+    "retrieved_passages": [
+      "Living rooms and kitchens often contain refrigerators, ovens, microwave ovens, counters, and sinks.",
+      "Common street scenes include moving vehicles, traffic signals, buildings, and riders on paved roadways.",
+      "Urban outdoor transportation features motorcycles, bicycles, cars, buses, and pedestrian crosswalks."
+    ],
+    "generated_answer": "The number on the cake is 30, which suggests that the birthday being",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 0.608,
+      "generation": 32.774,
+      "perception": 5.961,
+      "utilization": 1.728
+    },
+    "pope_metrics": {
+      "parsed_answer": "The number on the cake is 30, which suggests that the birthday being",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": null,
+      "omission_fn": null,
+      "is_hallucination_gt": null
+    },
+    "scores": {
+      "s_p": 0.0015,
+      "s_r": 0.1983,
+      "s_u": 0.0074
+    },
+    "features_25": {
+      "s_p": 0.0015,
+      "s_r": 0.1983,
+      "s_u": 0.0074,
+      "diff_sp_sr": -0.1968,
+      "diff_sp_su": -0.0059,
+      "diff_sr_su": 0.1909,
+      "abs_diff_sp_sr": 0.1968,
+      "abs_diff_sp_su": 0.0059,
+      "abs_diff_sr_su": 0.1909,
+      "min_score": 0.0015,
+      "max_score": 0.1983,
+      "mean_score": 0.0691,
+      "harmonic_mean": 0.0037,
+      "signal_variance": 0.0084,
+      "min_to_mean_ratio": 0.0217,
+      "is_perception_lowest": 1.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 0.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.013,
+      "cross_modal_tension": 0.0059,
+      "knowledge_visual_gap": 0.1968,
+      "deficit_spread": 0.1968,
+      "min_to_max_ratio": 0.0076
+    }
+  },
+  {
+    "sample_idx": 8,
+    "id": "aokvqa_00002",
+    "dataset": "aokvqa",
+    "image_id": "aokvqa_img_2",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_2.jpg",
+    "image_sha256": "0d0bfb88353f53273e8bcdfeed753c635b508ddfd2d2de00c4af4edc0437de23",
+    "question": "What best describes the pool of water?",
+    "ground_truth_answers": [
+      "The pool is dark brown.",
+      "It it brown and surrounded with mud.",
+      "The pool is dirty."
+    ],
+    "retrieved_passages": [
+      "Outdoor park settings feature park benches, green trees, walking paths, birds, and recreational areas.",
+      "Living rooms and kitchens often contain refrigerators, ovens, microwave ovens, counters, and sinks.",
+      "Urban outdoor transportation features motorcycles, bicycles, cars, buses, and pedestrian crosswalks."
+    ],
+    "generated_answer": "The pool of water is a small, shallow, and reflective body of water.",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 0.788,
+      "generation": 28.433,
+      "perception": 8.037,
+      "utilization": 1.723
+    },
+    "pope_metrics": {
+      "parsed_answer": "The pool of water is a small, shallow, and reflective body of water.",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": null,
+      "omission_fn": null,
+      "is_hallucination_gt": null
+    },
+    "scores": {
+      "s_p": 0.2327,
+      "s_r": 0.2051,
+      "s_u": 0.0018
+    },
+    "features_25": {
+      "s_p": 0.2327,
+      "s_r": 0.2051,
+      "s_u": 0.0018,
+      "diff_sp_sr": 0.0277,
+      "diff_sp_su": 0.2309,
+      "diff_sr_su": 0.2033,
+      "abs_diff_sp_sr": 0.0277,
+      "abs_diff_sp_su": 0.2309,
+      "abs_diff_sr_su": 0.2033,
+      "min_score": 0.0018,
+      "max_score": 0.2327,
+      "mean_score": 0.1465,
+      "harmonic_mean": 0.0053,
+      "signal_variance": 0.0106,
+      "min_to_mean_ratio": 0.0123,
+      "is_perception_lowest": 0.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 1.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.0442,
+      "cross_modal_tension": 0.2309,
+      "knowledge_visual_gap": 0.0277,
+      "deficit_spread": 0.2309,
+      "min_to_max_ratio": 0.0078
+    }
+  },
+  {
+    "sample_idx": 9,
+    "id": "aokvqa_00003",
+    "dataset": "aokvqa",
+    "image_id": "aokvqa_img_3",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_3.jpg",
+    "image_sha256": "20989dce3037a2dbe420b3e9d0ebb98dfe2c501349cf92eac8c81c5fb7e39fa4",
+    "question": "What is the white substance on top of the cupcakes?",
+    "ground_truth_answers": [
+      "This is frosting used to decorate and add more flavor to the cake",
+      "It's the icing.",
+      "Mayo is not sweet enough and butter and ice cream would melt."
+    ],
+    "retrieved_passages": [
+      "Living rooms and kitchens often contain refrigerators, ovens, microwave ovens, counters, and sinks.",
+      "Household interior furniture commonly includes chairs, dining tables, sofas, and kitchen appliances.",
+      "Common street scenes include moving vehicles, traffic signals, buildings, and riders on paved roadways."
+    ],
+    "generated_answer": "The white substance on top of the cupcakes is frosting.",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 0.857,
+      "generation": 41.0,
+      "perception": 7.889,
+      "utilization": 1.495
+    },
+    "pope_metrics": {
+      "parsed_answer": "The white substance on top of the cupcakes is frosting.",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": null,
+      "omission_fn": null,
+      "is_hallucination_gt": null
+    },
+    "scores": {
+      "s_p": 0.0106,
+      "s_r": 0.2014,
+      "s_u": 0.0054
+    },
+    "features_25": {
+      "s_p": 0.0106,
+      "s_r": 0.2014,
+      "s_u": 0.0054,
+      "diff_sp_sr": -0.1908,
+      "diff_sp_su": 0.0052,
+      "diff_sr_su": 0.196,
+      "abs_diff_sp_sr": 0.1908,
+      "abs_diff_sp_su": 0.0052,
+      "abs_diff_sr_su": 0.196,
+      "min_score": 0.0054,
+      "max_score": 0.2014,
+      "mean_score": 0.0725,
+      "harmonic_mean": 0.0106,
+      "signal_variance": 0.0083,
+      "min_to_mean_ratio": 0.0746,
+      "is_perception_lowest": 0.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 1.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.0226,
+      "cross_modal_tension": 0.0052,
+      "knowledge_visual_gap": 0.1908,
+      "deficit_spread": 0.196,
+      "min_to_max_ratio": 0.0268
+    }
+  },
+  {
+    "sample_idx": 10,
+    "id": "aokvqa_00004",
+    "dataset": "aokvqa",
+    "image_id": "aokvqa_img_4",
+    "image_path": "/Users/ketharajupallivenkat/xmca/data/smoke_test_images/aokvqa_img_4.jpg",
+    "image_sha256": "1cfef31a3ce6e3116e8081a46ce3469c25c576ad1bf89a6543bac03a5c330207",
+    "question": "What type of device is sitting next to the laptop?",
+    "ground_truth_answers": [
+      "It has the name of it on the top",
+      "The device has \"vodafone\" written on it which is a phone company. it is also the size and shape of a flip phone.",
+      "It's an older flip phone, but it's still a mobile phone."
+    ],
+    "retrieved_passages": [
+      "Electronic consumer devices in office or study environments include laptop computers, monitors, keyboards, and mobile phones.",
+      "Household interior furniture commonly includes chairs, dining tables, sofas, and kitchen appliances.",
+      "Domestic animals such as dogs and cats frequently sit on indoor furniture, rugs, or outdoor sidewalks."
+    ],
+    "generated_answer": "The device sitting next to the laptop is a Vodafone phone.",
+    "generation_status": "completed",
+    "generation_error": null,
+    "execution_times_sec": {
+      "retrieval": 0.746,
+      "generation": 33.855,
+      "perception": 6.487,
+      "utilization": 1.336
+    },
+    "pope_metrics": {
+      "parsed_answer": "The device sitting next to the laptop is a Vodafone phone.",
+      "parse_status": "success",
+      "is_correct": 1,
+      "hallucination_fp": null,
+      "omission_fn": null,
+      "is_hallucination_gt": null
+    },
+    "scores": {
+      "s_p": 0.6994,
+      "s_r": 0.3149,
+      "s_u": 0.0293
+    },
+    "features_25": {
+      "s_p": 0.6994,
+      "s_r": 0.3149,
+      "s_u": 0.0293,
+      "diff_sp_sr": 0.3845,
+      "diff_sp_su": 0.6701,
+      "diff_sr_su": 0.2856,
+      "abs_diff_sp_sr": 0.3845,
+      "abs_diff_sp_su": 0.6701,
+      "abs_diff_sr_su": 0.2856,
+      "min_score": 0.0293,
+      "max_score": 0.6994,
+      "mean_score": 0.3479,
+      "harmonic_mean": 0.0775,
+      "signal_variance": 0.0754,
+      "min_to_mean_ratio": 0.0842,
+      "is_perception_lowest": 0.0,
+      "is_retrieval_lowest": 0.0,
+      "is_utilization_lowest": 1.0,
+      "evidence_count": 3.0,
+      "claim_count": 1.0,
+      "geometric_mean": 0.1862,
+      "cross_modal_tension": 0.6701,
+      "knowledge_visual_gap": 0.3845,
+      "deficit_spread": 0.6701,
+      "min_to_max_ratio": 0.0419
+    }
+  }
+]

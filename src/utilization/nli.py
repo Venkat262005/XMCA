@@ -14,11 +14,12 @@ class DeBERTaNLIEngine:
     def __init__(
         self,
         model_id: str = "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
-        use_lora: bool = True,
+        use_lora: bool = False,
         lora_r: int = 8,
         lora_alpha: int = 16,
         lora_dropout: float = 0.1,
-        max_seq_length: int = 512
+        max_seq_length: int = 512,
+        strict_mode: bool = False
     ):
         self.model_id = model_id
         self.use_lora = use_lora
@@ -26,6 +27,7 @@ class DeBERTaNLIEngine:
         self.lora_alpha = lora_alpha
         self.lora_dropout = lora_dropout
         self.max_seq_length = max_seq_length
+        self.strict_mode = strict_mode
         self._tokenizer = None
         self._model = None
 
@@ -59,6 +61,8 @@ class DeBERTaNLIEngine:
             self._model.eval()
             logger.info(f"Loaded {self.model_id} for NLI.")
         except Exception as e:
+            if self.strict_mode:
+                raise RuntimeError(f"FATAL in strict_mode: Failed to load {self.model_id}: {e}") from e
             logger.info(f"Transformers NLI unavailable ({e}). Using semantic overlap fallback.")
             self._model = None
 
@@ -106,7 +110,12 @@ class DeBERTaNLIEngine:
                     })
                 return results
             except Exception as e:
+                if self.strict_mode:
+                    raise RuntimeError(f"FATAL in strict_mode: DeBERTa prediction error: {e}") from e
                 logger.warning(f"DeBERTa prediction error ({e}). Returning fallback probabilities.")
+
+        if self.strict_mode:
+            raise RuntimeError("FATAL in strict_mode: Cannot compute NLI entailment without genuine neural model.")
 
         # Fallback directional keyword coverage without stopwords
         STOPWORDS = {

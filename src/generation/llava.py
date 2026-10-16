@@ -19,12 +19,14 @@ class LLaVAOneVisionGenerator:
         model_id: str = "llava-hf/llava-onevision-qwen2-0.5b-ov-hf",
         quantization: str = "4bit_nf4",
         max_new_tokens: int = 128,
-        temperature: float = 0.1
+        temperature: float = 0.1,
+        strict_mode: bool = False
     ):
         self.model_id = model_id
         self.quantization = quantization
         self.max_new_tokens = max_new_tokens
         self.temperature = temperature
+        self.strict_mode = strict_mode
         self._model = None
         self._processor = None
 
@@ -54,19 +56,23 @@ class LLaVAOneVisionGenerator:
             self._model.eval()
             logger.info(f"Loaded transfer VLM {self.model_id} successfully.")
         except Exception as e:
+            if self.strict_mode:
+                raise RuntimeError(f"FATAL in strict_mode: Failed to load transfer VLM {self.model_id}: {e}") from e
             logger.info(f"LLaVA-OneVision not loadable in current environment ({e}). Using rule-based transfer generator.")
             self._model = None
 
     def generate_single(self, image_path: str, question: str, retrieved_passages: List[str]) -> str:
         self._init_model()
+        if not Path(image_path).exists():
+            if self.strict_mode:
+                raise FileNotFoundError(f"FATAL in strict_mode: Image path not found: {image_path}")
+            image = Image.new("RGB", (224, 224), color=(128, 128, 128))
+        else:
+            image = Image.open(image_path).convert("RGB")
+
         if self._model is not None and self._processor is not None:
             import torch
             try:
-                if Path(image_path).exists():
-                    image = Image.open(image_path).convert("RGB")
-                else:
-                    image = Image.new("RGB", (224, 224), color=(128, 128, 128))
-
                 prompt = build_rag_prompt(question, retrieved_passages)
                 conversation = [
                     {
@@ -93,7 +99,12 @@ class LLaVAOneVisionGenerator:
                 output_text = self._processor.decode(trimmed_ids, skip_special_tokens=True)
                 return output_text.strip()
             except Exception as e:
+                if self.strict_mode:
+                    raise RuntimeError(f"FATAL in strict_mode: LLaVA inference error: {e}") from e
                 logger.warning(f"LLaVA-OneVision inference error ({e}). Returning fallback transfer answer.")
+
+        if self.strict_mode:
+            raise RuntimeError("FATAL in strict_mode: Cannot generate transfer answer without genuine model.")
 
         # Deterministic fallback answer for testing
         evidence_summary = retrieved_passages[0] if retrieved_passages else "observed details"
@@ -117,14 +128,36 @@ class LLaVAOneVisionGenerator:
         shard_records = []
         shard_idx = len(list(Path(output_dir).glob(f"{prefix}_*.parquet")))
 
+        import time
+        from src.data.schema import parse_pope_answer
+
         for i, item in enumerate(remaining, 1):
             item_id = str(item["id"])
             retrieved = evidence_map.get(item_id, [])
-            answer = self.generate_single(
-                image_path=item.get("image_path", ""),
-                question=item.get("question", ""),
-                retrieved_passages=retrieved
-            )
+            ds_name = str(item.get("dataset", "")).lower()
+
+            t0 = time.time()
+            try:
+                answer = self.generate_single(
+                    image_path=item.get("image_path", ""),
+                    question=item.get("question", ""),
+                    retrieved_passages=retrieved
+                )
+                dt = time.time() - t0
+                status = "completed"
+                err_msg = None
+            except Exception as e:
+                dt = time.time() - t0
+                status = "failed"
+                err_msg = str(e)
+                answer = ""
+                logger.error(f"Sample {item_id} LLaVA generation failed: {e}")
+
+            pope_fields = {}
+            if ds_name == "pope" and status == "completed":
+                gt_ans = item.get("ground_truth_answers", ["yes"])[0]
+                pope_fields = parse_pope_answer(gt_ans, answer)
+
             gen_out = GenerationOutput(
                 id=item_id,
                 dataset=item.get("dataset", ""),
@@ -133,7 +166,14 @@ class LLaVAOneVisionGenerator:
                 question=item.get("question", ""),
                 retrieved_passages=retrieved,
                 generated_answer=answer,
-                is_hallucination_gt=int(item.get("is_hallucination_gt", 0)),
+                is_hallucination_gt=pope_fields.get("is_hallucination_gt", item.get("is_hallucination_gt")),
+                hallucination_fp=pope_fields.get("hallucination_fp"),
+                is_correct=pope_fields.get("is_correct"),
+                omission_fn=pope_fields.get("omission_fn"),
+                parse_status=pope_fields.get("parse_status", "success" if status == "completed" else "failed"),
+                status=status,
+                error_msg=err_msg,
+                execution_time_sec=dt,
                 metadata=item.get("metadata", {})
             ).to_dict()
 

@@ -20,27 +20,37 @@ def build_evidence_corpus(
     corpus_entries: List[Dict[str, Any]] = []
     seen_texts = set()
 
-    # Ingest from dataset ground-truth answers / metadata rationales
+    ALLOWED_SPLITS = {"train", "training"}
+
+    # Ingest ONLY from explicitly permitted training records (reject unknown/missing/held-out splits)
     for r in dataset_records:
+        raw_split = r.get("split")
+        if not raw_split or str(raw_split).strip().lower() not in ALLOWED_SPLITS:
+            # STRICT LEAKAGE PREVENTION: Reject missing, unknown, validation, and test splits
+            continue
+
         ans_list = r.get("ground_truth_answers", [])
         for ans in ans_list:
-            if ans and len(ans.strip()) > 5 and ans not in seen_texts:
-                seen_texts.add(ans)
+            clean_ans = ans.strip()
+            norm_key = " ".join(clean_ans.lower().split())
+            if clean_ans and len(clean_ans) > 5 and norm_key not in seen_texts:
+                seen_texts.add(norm_key)
                 corpus_entries.append({
                     "corpus_id": f"doc_{len(corpus_entries):06d}",
-                    "text": ans.strip(),
+                    "text": clean_ans,
                     "source_dataset": r.get("dataset", "unknown"),
                     "source_id": str(r.get("id", ""))
                 })
 
-    # Add extra domain passages if provided
+    # Add extra external domain passages if provided
     if extra_passages:
         for p in extra_passages:
-            if p and p not in seen_texts:
-                seen_texts.add(p)
+            clean_p = p.strip()
+            if clean_p and clean_p not in seen_texts:
+                seen_texts.add(clean_p)
                 corpus_entries.append({
                     "corpus_id": f"doc_{len(corpus_entries):06d}",
-                    "text": p.strip(),
+                    "text": clean_p,
                     "source_dataset": "external_knowledge",
                     "source_id": ""
                 })

@@ -83,11 +83,19 @@ class XMCACombiner:
         using isotonic regression on validation split.
         Strict rule: Never use test split for calibration!
         """
-        X_train = train_df[self.feature_columns]
-        y_train = train_df[target_col].values
+        # Strict training-label eligibility: filter out records with unknown/None targets (e.g. A-OKVQA)
+        train_clean = train_df.dropna(subset=[target_col])
+        train_clean = train_clean[train_clean[target_col].isin([0, 1])]
+        X_train = train_clean[self.feature_columns]
+        y_train = train_clean[target_col].astype(int).values
 
-        X_val = val_df[self.feature_columns]
-        y_val = val_df[target_col].values
+        val_clean = val_df.dropna(subset=[target_col])
+        val_clean = val_clean[val_clean[target_col].isin([0, 1])]
+        X_val = val_clean[self.feature_columns]
+        y_val = val_clean[target_col].astype(int).values
+
+        if len(y_train) == 0 or len(y_val) == 0:
+            raise ValueError("FATAL: No eligible labeled records found for combiner training/validation.")
 
         self.classifier = self._init_base_classifier()
         self.classifier.fit(X_train, y_train)

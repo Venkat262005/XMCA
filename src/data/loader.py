@@ -76,15 +76,21 @@ def load_dataset_records(
     dataset_name: str,
     max_samples: int = 1000,
     data_dir: Optional[str | Path] = None,
-    seed: int = 42
+    seed: int = 42,
+    strict_mode: bool = False,
+    image_save_dir: Optional[str | Path] = "data/images"
 ) -> List[Dict[str, Any]]:
     """
-    Load dataset from disk/HuggingFace if available, falling back cleanly
-    to benchmark records if offline or files not yet downloaded.
-    Enforces strict max_samples cap (up to 1,000, or available count if fewer).
+    Load real dataset from disk/HuggingFace, materializing real images to disk with SHA-256 hashes.
+    In strict_mode, fails loudly if HuggingFace/disk data is unavailable (no synthetic fallbacks).
     """
+    import hashlib
+    from PIL import Image
+
     dataset_key = dataset_name.lower().replace("-", "").replace("_", "")
     records: List[Dict[str, Any]] = []
+    img_dir_path = Path(image_save_dir) if image_save_dir else Path("data/images")
+    img_dir_path.mkdir(parents=True, exist_ok=True)
 
     # Check local pre-existing raw files
     if data_dir:
@@ -113,22 +119,33 @@ def load_dataset_records(
                         if k != "image" and not hasattr(v, "save") and isinstance(v, (str, int, float, bool, list, dict))
                     }
                     img_id = str(row.get("image_source", f"pope_img_{idx}"))
-                    img_path = f"data/images/{img_id}.jpg"
-                    if isinstance(row.get("image"), str):
-                        img_path = row.get("image")
+                    img_file = img_dir_path / f"{img_id}.jpg"
+
+                    # Materialize PIL Image if present
+                    raw_img = row.get("image")
+                    img_sha256 = None
+                    if raw_img is not None and hasattr(raw_img, "save"):
+                        if not img_file.exists():
+                            raw_img.convert("RGB").save(img_file, format="JPEG", quality=95)
+                    if img_file.exists():
+                        img_sha256 = hashlib.sha256(img_file.read_bytes()).hexdigest()
+
+                    gt_ans = str(row.get("answer", row.get("ground_truth", "yes"))).strip().lower()
                     records.append(XMCADataPoint(
                         id=f"pope_{idx:05d}",
                         dataset="pope",
                         image_id=img_id,
-                        image_path=img_path,
+                        image_path=str(img_file),
                         question=str(row.get("question", "")),
-                        ground_truth_answers=[str(row.get("ground_truth", "yes"))],
-                        is_hallucination_gt=1 if str(row.get("ground_truth", "")).lower() == "no" else 0,
+                        ground_truth_answers=[gt_ans],
+                        is_hallucination_gt=None,  # Populated post-generation by parse_pope_answer()
+                        image_sha256=img_sha256,
                         task_type="binary_vqa",
                         metadata=clean_meta
                     ).to_dict())
                     if (idx + 1) % 200 == 0 or (idx + 1) == max_samples:
                         print(f"[POPE] Loading: {idx + 1}/{max_samples} samples done", flush=True)
+
             elif "aokvqa" in dataset_key:
                 ds = load_dataset("HuggingFaceM4/A-OKVQA", split="validation")
                 for idx, row in enumerate(ds):
@@ -139,30 +156,51 @@ def load_dataset_records(
                         if k != "image" and not hasattr(v, "save") and isinstance(v, (str, int, float, bool, list, dict))
                     }
                     img_id = str(row.get("image_id", f"aokvqa_img_{idx}"))
-                    img_path = f"data/images/{img_id}.jpg"
-                    if isinstance(row.get("image"), str):
-                        img_path = row.get("image")
+                    img_file = img_dir_path / f"{img_id}.jpg"
+
+                    raw_img = row.get("image")
+                    img_sha256 = None
+                    if raw_img is not None and hasattr(raw_img, "save"):
+                        if not img_file.exists():
+                            raw_img.convert("RGB").save(img_file, format="JPEG", quality=95)
+                    if img_file.exists():
+                        img_sha256 = hashlib.sha256(img_file.read_bytes()).hexdigest()
+
+                    rationales = [str(r) for r in row.get("rationales", []) if str(r).strip()]
+                    direct_answers = [str(a) for a in row.get("direct_answers", []) if str(a).strip()]
+                    clean_meta["direct_answers"] = direct_answers
+                    clean_meta["choices"] = row.get("choices", [])
+
                     records.append(XMCADataPoint(
                         id=f"aokvqa_{idx:05d}",
                         dataset="aokvqa",
                         image_id=img_id,
-                        image_path=img_path,
+                        image_path=str(img_file),
                         question=str(row.get("question", "")),
-                        ground_truth_answers=[str(r) for r in row.get("rationales", [""])],
-                        is_hallucination_gt=0,
+                        ground_truth_answers=rationales if rationales else direct_answers,
+                        is_hallucination_gt=None,  # Evaluated post-generation
+                        image_sha256=img_sha256,
                         task_type="knowledge_vqa",
                         metadata=clean_meta
                     ).to_dict())
                     if (idx + 1) % 200 == 0 or (idx + 1) == max_samples:
                         print(f"[A-OKVQA] Loading: {idx + 1}/{max_samples} samples done", flush=True)
         except Exception as e:
-            logger.info(f"HuggingFace auto-load for {dataset_name} skipped/unavailable ({e}). Using offline benchmark pool.")
+            msg = f"HuggingFace auto-load for {dataset_name} failed: {e}"
+            if strict_mode:
+                raise RuntimeError(f"FATAL in strict_mode: {msg}") from e
+            logger.warning(msg + " Falling back to benchmark pool.")
 
-    # Fallback to reproducible benchmark records if empty or insufficient
+    # Strict mode prevents synthetic fallback
     if not records:
+        if strict_mode:
+            raise RuntimeError(
+                f"FATAL: No genuine records could be loaded for dataset '{dataset_name}' "
+                f"in strict_mode. Synthetic fallback is prohibited."
+            )
         records = generate_benchmark_records(dataset_name=dataset_name, num_samples=max_samples, seed=seed)
 
-    # Strictly cap at max_samples (takes 1k if present, else however many are there)
+    # Strictly cap at max_samples
     if len(records) > max_samples:
         records = records[:max_samples]
 
