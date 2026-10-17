@@ -55,9 +55,9 @@ def extract_queried_entity(question: str) -> Tuple[Optional[str], str]:
     if len(cleaned) < 5:
         return None, "question_too_short"
 
-    # Pattern 1: POPE standard "Is there a/an/any <entity> in/on/at the image?"
+    # Pattern 1: POPE standard "Is there a/an/any <entity> in/on/at the image/picture/photo?"
     pattern_pope = re.compile(
-        r"^(?:is|are)\s+there\s+(?:an\b|a\b|any\b|the\b)?\s*([a-zA-Z0-9_\-\s]+?)\s+(?:in|on|at|around)\s+(?:the|this)?\s*image\??$",
+        r"^(?:is|are)\s+there\s+(?:an\b|a\b|any\b|the\b)?\s*([a-zA-Z0-9_\-\s]+?)\s+(?:in|on|at|around)\s+(?:the|this)?\s*(?:image|imange|picture|photo|scene)\??$",
         re.IGNORECASE
     )
     m = pattern_pope.match(cleaned)
@@ -66,9 +66,9 @@ def extract_queried_entity(question: str) -> Tuple[Optional[str], str]:
         if entity:
             return entity.lower(), "success_pope_pattern"
 
-    # Pattern 2: "Do you see a/an <entity> in the image?"
+    # Pattern 2: "Do you see a/an <entity> in the image/picture/photo?"
     pattern_see = re.compile(
-        r"^(?:do\s+you\s+see|can\s+you\s+see)\s+(?:an\b|a\b|any\b|the\b)?\s*([a-zA-Z0-9_\-\s]+?)\s+(?:in|on|at)?\s*(?:the|this)?\s*image\??$",
+        r"^(?:do\s+you\s+see|can\s+you\s+see)\s+(?:an\b|a\b|any\b|the\b)?\s*([a-zA-Z0-9_\-\s]+?)\s+(?:in|on|at)?\s*(?:the|this)?\s*(?:image|imange|picture|photo|scene)\??$",
         re.IGNORECASE
     )
     m2 = pattern_see.match(cleaned)
@@ -77,7 +77,18 @@ def extract_queried_entity(question: str) -> Tuple[Optional[str], str]:
         if entity:
             return entity.lower(), "success_see_pattern"
 
-    # Pattern 3: General "What is in the <noun>?" or "What <noun> is ...?"
+    # Pattern 3: Fallback for POPE typos (e.g. "in the imange" or non-standard prepositions)
+    pattern_loose_pope = re.compile(
+        r"^(?:is|are)\s+there\s+(?:an\b|a\b|any\b|the\b)?\s*([a-zA-Z0-9_\-\s]+?)\s+(?:in|on|at|around)\b",
+        re.IGNORECASE
+    )
+    m_loose = pattern_loose_pope.match(cleaned)
+    if m_loose:
+        entity = m_loose.group(1).strip()
+        if entity:
+            return entity.lower(), "success_pope_loose_pattern"
+
+    # Pattern 4: General "What is in the <noun>?" or "What <noun> is ...?"
     pattern_what = re.compile(r"^what\s+(?:is|are|type\s+of)?\s*([a-zA-Z0-9_\-\s]+?)\b", re.IGNORECASE)
     m3 = pattern_what.match(cleaned)
     if m3:
