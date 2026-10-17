@@ -57,16 +57,17 @@ class Qwen2VLGenerator:
                     bnb_4bit_use_double_quant=True,
                 )
 
+            is_offline = os.environ.get("HF_HUB_OFFLINE") == "1" or os.environ.get("TRANSFORMERS_OFFLINE") == "1"
             device = "cuda" if torch.cuda.is_available() else "cpu"
             self._device = device
-            self._processor = AutoProcessor.from_pretrained(self.model_id, local_files_only=True)
+            self._processor = AutoProcessor.from_pretrained(self.model_id, local_files_only=is_offline)
             self._model = Qwen2VLForConditionalGeneration.from_pretrained(
                 self.model_id,
                 quantization_config=bnb_config,
                 device_map="auto" if device == "cuda" else None,
                 torch_dtype=torch.float16,
                 low_cpu_mem_usage=True,
-                local_files_only=True,
+                local_files_only=is_offline,
             )
             if device != "cuda":
                 self._model.to(device)

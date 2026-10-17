@@ -26,11 +26,12 @@ class DenseRetriever:
         if self._encoder is not None:
             return
         try:
+            import os
             from transformers import AutoModel, AutoTokenizer
             import torch
-            is_local = self.model_id.startswith("/")
-            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id, local_files_only=not is_local)
-            self._encoder = AutoModel.from_pretrained(self.model_id, local_files_only=not is_local)
+            is_offline = os.environ.get("HF_HUB_OFFLINE") == "1" or os.environ.get("TRANSFORMERS_OFFLINE") == "1"
+            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id, local_files_only=is_offline)
+            self._encoder = AutoModel.from_pretrained(self.model_id, local_files_only=is_offline)
             if torch.cuda.is_available():
                 self._encoder = self._encoder.to("cuda")
             self._encoder.eval()
