@@ -34,7 +34,7 @@ from src.retrieval.indexer import DenseRetriever
 from src.retrieval.reranker import MiniLMReranker
 from src.utilization.nli import DeBERTaNLIEngine
 
-from src.scoring.scoring_v2 import compute_scores_v2, SCORING_VERSION
+from src.scoring.scoring_v2_1 import compute_scores_v2_1, SCORING_VERSION
 
 
 def run_kaggle_gpu_smoke_test(output_dir: str = "artifacts_kaggle_gpu_smoke"):
@@ -122,9 +122,9 @@ def run_kaggle_gpu_smoke_test(output_dir: str = "artifacts_kaggle_gpu_smoke"):
     # Evaluation
     pope_eval = parse_pope_answer(ground_truth="yes", generated_answer=gen_ans)
 
-    # Scoring v2: Grounded Proposition Perception & Directional Utilization
+    # Scoring v2.1: Evidence-grounded Perception & Directional Utilization
     t_score0 = time.time()
-    scores_v2 = compute_scores_v2(
+    scores_v2 = compute_scores_v2_1(
         image_path=str(test_img_path),
         question=test_q,
         generated_answer=gen_ans,
