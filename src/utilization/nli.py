@@ -90,12 +90,10 @@ class DeBERTaNLIEngine:
         if self._model is not None:
             return
         try:
-            import os
             import torch
             from transformers import AutoModelForSequenceClassification, AutoTokenizer
-            is_offline = os.environ.get("HF_HUB_OFFLINE") == "1" or os.environ.get("TRANSFORMERS_OFFLINE") == "1"
-            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id, local_files_only=is_offline)
-            self._model = AutoModelForSequenceClassification.from_pretrained(self.model_id, local_files_only=is_offline)
+            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id)
+            self._model = AutoModelForSequenceClassification.from_pretrained(self.model_id)
 
             if self.use_lora:
                 try:

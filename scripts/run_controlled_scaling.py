@@ -190,10 +190,8 @@ class ControlledScalingPipeline:
 
     def init_models(self):
         """Initialize all inference models in strict mode."""
-        os.environ["HF_HUB_OFFLINE"] = "1"
-        os.environ["TRANSFORMERS_OFFLINE"] = "1"
         os.environ["TOKENIZERS_PARALLELISM"] = "false"
-        logger.info("Initializing models in strict mode (offline local cache verified)...")
+        logger.info("Initializing models in strict mode...")
         config = load_config()
 
         # 1. Retrieval

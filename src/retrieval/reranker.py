@@ -20,12 +20,10 @@ class MiniLMReranker:
         if self._model is not None:
             return
         try:
-            import os
             from transformers import AutoModelForSequenceClassification, AutoTokenizer
             import torch
-            is_offline = os.environ.get("HF_HUB_OFFLINE") == "1" or os.environ.get("TRANSFORMERS_OFFLINE") == "1"
-            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id, local_files_only=is_offline)
-            self._model = AutoModelForSequenceClassification.from_pretrained(self.model_id, local_files_only=is_offline)
+            self._tokenizer = AutoTokenizer.from_pretrained(self.model_id)
+            self._model = AutoModelForSequenceClassification.from_pretrained(self.model_id)
             if torch.cuda.is_available():
                 self._model = self._model.to("cuda")
             self._model.eval()
