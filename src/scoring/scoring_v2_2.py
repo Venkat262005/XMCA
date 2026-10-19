@@ -337,7 +337,17 @@ def compute_utilization_score_v2_2(
         extracted_entity=extracted_entity
     )
 
-    probs = nli_evaluator.predict_nli_probabilities(premise, hypothesis)
+    if hasattr(nli_evaluator, "predict_entailment_probabilities"):
+        res = nli_evaluator.predict_entailment_probabilities([(premise, hypothesis)])
+        probs = res[0] if res else {}
+    elif hasattr(nli_evaluator, "predict_proba"):
+        res = nli_evaluator.predict_proba([(premise, hypothesis)])
+        probs = res[0] if res else {}
+    elif hasattr(nli_evaluator, "predict_nli_probabilities"):
+        probs = nli_evaluator.predict_nli_probabilities(premise, hypothesis)
+    else:
+        probs = {"entailment": 0.0, "neutral": 1.0, "contradiction": 0.0}
+
     p_ent = probs.get("entailment", 0.0)
     p_neu = probs.get("neutral", 0.0)
     p_con = probs.get("contradiction", 0.0)
