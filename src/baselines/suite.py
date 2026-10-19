@@ -111,9 +111,15 @@ class BaselineEvaluationSuite:
         }
 
         for i, r in enumerate(records):
-            sp = float(r.get("s_p", 0.5))
-            sr = float(r.get("s_r", 0.5))
-            su = float(r.get("s_u", 0.5))
+            sp_raw = r.get("s_p")
+            sp = float(sp_raw) if sp_raw is not None else 0.5
+
+            sr_raw = r.get("s_r")
+            sr = float(sr_raw) if sr_raw is not None else 0.5
+
+            su_raw = r.get("s_u")
+            su = float(su_raw) if su_raw is not None else 0.5
+
             ans = str(r.get("generated_answer", ""))
 
             preds["vanilla_rag"][i] = self.vanilla.predict_hallucination_prob(ans)
