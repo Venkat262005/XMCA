@@ -121,6 +121,11 @@ class DeBERTaNLIEngine:
             logger.info(f"Transformers NLI unavailable ({e}). Using semantic overlap fallback.")
             self._model = None
 
+    def predict_nli_probabilities(self, premise: str, hypothesis: str) -> Dict[str, float]:
+        """Predict [entailment, neutral, contradiction] for a single (premise, hypothesis) pair."""
+        res = self.predict_entailment_probabilities([(premise, hypothesis)])
+        return res[0] if res else {"entailment": 0.0, "neutral": 1.0, "contradiction": 0.0}
+
     def predict_entailment_probabilities(
         self,
         premise_hypothesis_pairs: List[tuple[str, str]]
