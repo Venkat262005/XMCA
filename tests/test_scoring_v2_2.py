@@ -65,3 +65,42 @@ def test_utilization_unavailable_on_empty_premise():
     assert res["s_u"] is None
     assert res["status"] == "unavailable_no_context"
     mock_nli.predict_nli_probabilities.assert_not_called()
+
+
+def test_compute_multimodal_grounded_score_v2_2_integration():
+    from src.scoring.scoring_v2_2 import compute_multimodal_grounded_score_v2_2
+    
+    mock_detector = MagicMock()
+    mock_detector.detect.return_value = [{"label": "cat", "score": 0.85, "box": [0, 0, 100, 100]}]
+    mock_scorer = MagicMock()
+    mock_scorer.score_image_text.return_value = 0.78
+    mock_nli = MagicMock()
+    mock_nli.predict_entailment_probabilities.return_value = [{
+        "entailment": 0.85,
+        "neutral": 0.10,
+        "contradiction": 0.05
+    }]
+    mock_nli.predict_nli_probabilities.return_value = {
+        "entailment": 0.85,
+        "neutral": 0.10,
+        "contradiction": 0.05
+    }
+
+
+    res = compute_multimodal_grounded_score_v2_2(
+        question="What is the cat on the toilet lid staring at?",
+        generated_answer="The cat is staring at the bird.",
+        retrieved_premise="Cats often stare at birds through the window.",
+        image_path="/dummy/path.jpg",
+        detector=mock_detector,
+        siglip_scorer=mock_scorer,
+        nli_engine=mock_nli,
+        s_r=0.82
+    )
+
+    assert res["scoring_version"] == "v2_2_multimodal_grounded"
+    assert res["s_r"] == 0.82
+    assert res["s_u"] == 0.90  # (1 + 0.85 - 0.05) / 2 = 0.90
+    assert "perception_details" in res
+    assert "utilization_details" in res
+

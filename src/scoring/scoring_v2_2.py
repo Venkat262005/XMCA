@@ -398,17 +398,13 @@ def compute_multimodal_grounded_score_v2_2(
     )
 
     entity = perc_res.get("entity")
-    hypothesis, method = construct_directional_hypothesis_v2_2(
-        question=question,
-        generated_answer=generated_answer,
-        extracted_entity=entity
-    )
 
     util_res = compute_utilization_score_v2_2(
         premise=retrieved_premise,
-        hypothesis=hypothesis,
+        question=question,
+        generated_answer=generated_answer,
         nli_evaluator=nli_engine,
-        method=method
+        extracted_entity=entity
     )
 
     computed_sr = s_r
