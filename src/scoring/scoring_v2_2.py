@@ -81,16 +81,20 @@ def extract_queried_entity_v2_2(question: str, generated_answer: str = "") -> Tu
         if len(entity) > 2:
             return entity, "success_demonstrative_syntax"
 
-    # Pattern 5: Open-ended WH questions with specific visual subject ("What is the <noun> staring at/doing?")
+    # Pattern 5: Open-ended WH questions with specific visual subject ("What is the <noun> staring at/doing?" or "What is in the <noun>...")
     m_wh = re.search(
-        r"\bwhat\s+(?:is|are)\s+(?:the\s+|a\s+|an\s+)?([a-zA-Z0-9_\-]+(?:\s+[a-zA-Z0-9_\-]+)?)\b",
+        r"\bwhat\s+(?:is|are)\s+(?:in|on|at|inside|under|behind|by|with)?\s*(?:the\s+|a\s+|an\s+)?([a-zA-Z0-9_\-'\’]+(?:\s+[a-zA-Z0-9_\-'\’]+)?)\b",
         cleaned,
         re.IGNORECASE
     )
     if m_wh:
         cand = m_wh.group(1).strip().lower()
-        # Strip trailing preposition if any
-        cand = re.sub(r"\s+(?:in|on|at|by|with|for|from|to|about|of)$", "", cand).strip()
+        # Strip leading prepositions/articles
+        cand = re.sub(r"^(?:in|on|at|by|with|for|from|to|about|of|inside|the|a|an)\s+", "", cand).strip()
+        # Strip trailing prepositions/articles
+        cand = re.sub(r"\s+(?:in|on|at|by|with|for|from|to|about|of|the|a|an)$", "", cand).strip()
+        # Strip possessive 's
+        cand = re.sub(r"['\’]s$", "", cand).strip()
         if cand not in {"color", "name", "kind", "type", "difference", "reason", "purpose", "not", "it", "this", "that"} and not cand.startswith("not"):
             if len(cand) > 2:
                 return cand, "success_wh_subject_syntax"

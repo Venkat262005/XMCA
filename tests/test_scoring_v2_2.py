@@ -33,6 +33,11 @@ def test_entity_extraction_pope_and_open_domain():
     assert e4 == "animals"
     assert "success_preposition_noun" in r4
 
+    # A-OKVQA WH preposition subject
+    e5, r5 = extract_queried_entity_v2_2("What is in the motorcyclist's mouth?")
+    assert "motorcyclist" in e5
+    assert "success_wh" in r5
+
 
 def test_parse_answer_polarity_factual_assertion():
     # Yes / No
