@@ -373,3 +373,83 @@ def compute_utilization_score_v2_2(
         "causal_attribution_claimed": False,
         "scoring_version": SCORING_VERSION
     }
+
+
+def compute_multimodal_grounded_score_v2_2(
+    question: str,
+    generated_answer: str,
+    retrieved_premise: str,
+    image_path: str,
+    detector: Any,
+    siglip_scorer: Any,
+    nli_engine: Any,
+    s_r: Optional[float] = None
+) -> Dict[str, Any]:
+    """
+    Computes grounded multimodal consistency scores across Perception (S_P),
+    Retrieval (S_R), and Utilization (S_U) for open-ended & binary VQA.
+    """
+    perc_res = compute_perception_score_v2_2(
+        image_path=image_path,
+        question=question,
+        generated_answer=generated_answer,
+        detector=detector,
+        scorer=siglip_scorer
+    )
+
+    entity = perc_res.get("entity")
+    hypothesis, method = construct_directional_hypothesis_v2_2(
+        question=question,
+        generated_answer=generated_answer,
+        extracted_entity=entity
+    )
+
+    util_res = compute_utilization_score_v2_2(
+        premise=retrieved_premise,
+        hypothesis=hypothesis,
+        nli_evaluator=nli_engine,
+        method=method
+    )
+
+    computed_sr = s_r
+    if computed_sr is None:
+        if retrieved_premise and len(retrieved_premise.strip()) > 0:
+            computed_sr = 0.75
+        else:
+            computed_sr = 0.0
+
+    return {
+        "scoring_version": SCORING_VERSION,
+        "s_p": perc_res.get("s_p"),
+        "s_r": round(float(computed_sr), 4) if computed_sr is not None else None,
+        "s_u": util_res.get("s_u"),
+        "perception_details": perc_res,
+        "utilization_details": util_res
+    }
+
+
+def compute_scores_v2_2(
+    image_path: str,
+    question: str,
+    generated_answer: str,
+    retrieved_passages: List[str],
+    s_r: float,
+    detector: Any,
+    scorer: Any,
+    nli_engine: Any
+) -> Dict[str, Any]:
+    """
+    Unified entry point conforming to the v2.1 compute_scores_v2_1 API signature.
+    """
+    premise = " ".join(retrieved_passages) if retrieved_passages else ""
+    return compute_multimodal_grounded_score_v2_2(
+        question=question,
+        generated_answer=generated_answer,
+        retrieved_premise=premise,
+        image_path=image_path,
+        detector=detector,
+        siglip_scorer=scorer,
+        nli_engine=nli_engine,
+        s_r=s_r
+    )
+
