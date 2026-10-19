@@ -217,7 +217,7 @@ def build_feature_dataframe(records: List[Dict[str, Any]], ablation: Optional[st
         f["id"] = r.get("id", "")
         f["dataset"] = r.get("dataset", "")
         f["proxy_attribution"] = determine_proxy_attribution(r.get("s_p", 0.5), r.get("s_r", 0.5), r.get("s_u", 0.5))
-        gt = r.get("is_hallucination_gt")
+        gt = r.get("target") if r.get("target") is not None else r.get("is_hallucination_gt")
         if gt is not None:
             try:
                 f["target"] = int(gt)
