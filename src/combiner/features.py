@@ -206,14 +206,24 @@ def build_feature_dataframe(records: List[Dict[str, Any]], ablation: Optional[st
     """Convert score records to feature DataFrame for classifier training / inference."""
     rows = []
     for r in records:
+        sp_raw = r.get("s_p")
+        sp = float(sp_raw) if sp_raw is not None else 0.5
+
+        sr_raw = r.get("s_r")
+        sr = float(sr_raw) if sr_raw is not None else 0.5
+
+        su_raw = r.get("s_u")
+        su = float(su_raw) if su_raw is not None else 0.5
+
         f = extract_combiner_features(
-            s_p=r.get("s_p", 0.5),
-            s_r=r.get("s_r", 0.5),
-            s_u=r.get("s_u", 0.5),
+            s_p=sp,
+            s_r=sr,
+            s_u=su,
             evidence_count=r.get("evidence_count", 1),
             claim_count=r.get("claim_count", 1),
             ablation=ablation
         )
+
         f["id"] = r.get("id", "")
         f["dataset"] = r.get("dataset", "")
         f["proxy_attribution"] = determine_proxy_attribution(r.get("s_p", 0.5), r.get("s_r", 0.5), r.get("s_u", 0.5))
