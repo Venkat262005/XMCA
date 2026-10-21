@@ -94,10 +94,16 @@ class BaselineEvaluationSuite:
         self.rora = RoRAVLMBaseline()
         self.realign = ReAlignBaseline()
 
-    def evaluate_all(self, records: List[Dict[str, Any]]) -> Dict[str, np.ndarray]:
+    def evaluate_all(
+        self,
+        records: List[Dict[str, Any]],
+        y_true: Optional[np.ndarray] = None,
+        threshold: float = 0.5
+    ) -> Dict[str, Any]:
         """
-        Produce prediction vectors for all 7 baselines.
-        Returns dict mapping baseline name to predicted hallucination probabilities array.
+        Produce prediction vectors or evaluated metrics for all 7 baselines.
+        If y_true is provided, returns dict mapping baseline name to its metrics dictionary.
+        If y_true is None, returns dict mapping baseline name to predicted probabilities array.
         """
         n = len(records)
         preds = {
@@ -130,4 +136,17 @@ class BaselineEvaluationSuite:
             preds["rora_vlm"][i] = self.rora.predict_hallucination_prob(sr, su)
             preds["realign"][i] = self.realign.predict_hallucination_prob(sp, su)
 
+        if y_true is not None:
+            from src.evaluation.metrics import compute_all_metrics
+            metrics_dict = {}
+            for name, p in preds.items():
+                metrics_dict[name] = compute_all_metrics(y_true, p, threshold=threshold)
+            return metrics_dict
+
         return preds
+
+    def get_baseline_probabilities(self, records: List[Dict[str, Any]], baseline_name: str) -> np.ndarray:
+        """Helper to get probability array for a specific baseline."""
+        raw_preds = self.evaluate_all(records)
+        return raw_preds.get(baseline_name, np.zeros(len(records)))
+
