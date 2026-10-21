@@ -189,15 +189,18 @@ def compute_cause_attribution(
     return primary_cause, cause_probs
 
 
-def determine_proxy_attribution(s_p: float, s_r: float, s_u: float) -> str:
+def determine_proxy_attribution(s_p: Optional[float], s_r: Optional[float], s_u: Optional[float]) -> str:
     """
     Proxy failure attribution based on lowest individual consistency score.
     Strictly marked as proxy attribution (not human-validated causal attribution).
     """
+    val_p = float(s_p) if (s_p is not None and not np.isnan(s_p)) else 0.5
+    val_r = float(s_r) if (s_r is not None and not np.isnan(s_r)) else 0.5
+    val_u = float(s_u) if (s_u is not None and not np.isnan(s_u)) else 0.5
     scores = {
-        "perception_proxy_failure": s_p,
-        "retrieval_proxy_failure": s_r,
-        "utilization_proxy_failure": s_u
+        "perception_proxy_failure": val_p,
+        "retrieval_proxy_failure": val_r,
+        "utilization_proxy_failure": val_u
     }
     return min(scores, key=scores.get)
 
@@ -226,13 +229,14 @@ def build_feature_dataframe(records: List[Dict[str, Any]], ablation: Optional[st
 
         f["id"] = r.get("id", "")
         f["dataset"] = r.get("dataset", "")
-        f["proxy_attribution"] = determine_proxy_attribution(r.get("s_p", 0.5), r.get("s_r", 0.5), r.get("s_u", 0.5))
+        f["proxy_attribution"] = determine_proxy_attribution(sp, sr, su)
         gt = r.get("target") if r.get("target") is not None else r.get("is_hallucination_gt")
         if gt is not None:
             try:
                 f["target"] = int(gt)
             except (ValueError, TypeError):
                 f["target"] = np.nan
+
         else:
             f["target"] = np.nan
         rows.append(f)
