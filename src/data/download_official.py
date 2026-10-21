@@ -102,14 +102,17 @@ def download_official_datasets(output_dir: str | Path, max_per_dataset: int = 20
             if len(infoseek_records) >= max_per_dataset:
                 break
             q = str(row.get("question", ""))
-            ans = str(row.get("answer", "")).strip()
+            gold = str(row.get("gold_answer", "")).strip()
+            ans_list = [str(a).strip() for a in row.get("answers", []) if str(a).strip()]
+            if gold and gold not in ans_list:
+                ans_list.insert(0, gold)
             infoseek_records.append(XMCADataPoint(
                 id=f"infoseek_{i:05d}",
                 dataset="infoseek",
                 image_id=str(row.get("img_path", f"infoseek_img_{i}")),
                 image_path=str(row.get("img_path", "")),
                 question=q,
-                ground_truth_answers=[ans] if ans else [],
+                ground_truth_answers=ans_list,
                 is_hallucination_gt=None,
                 task_type="entity_qa",
                 metadata={
