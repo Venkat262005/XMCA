@@ -15,9 +15,12 @@ def generate_benchmark_records(
     seed: int = 42
 ) -> List[Dict[str, Any]]:
     """
-    Generate realistic benchmark records adhering to XMCADataPoint schema.
-    Used for local testing, offline fallback, and reproducible smoke tests.
+    PROHIBITED: Generating synthetic benchmark records violates research integrity rules.
     """
+    raise RuntimeError(
+        f"Synthetic record generation for '{dataset_name}' is strictly prohibited. "
+        "Only genuine datasets with verified provenance may be loaded."
+    )
     import numpy as np
     rng = np.random.RandomState(seed)
 
@@ -104,6 +107,24 @@ def load_dataset_records(
             except Exception as e:
                 logger.warning(f"Failed to read {candidate_file}: {e}")
 
+    # Check local split files in artifacts/splits/ if empty
+    if not records:
+        for split_candidate in [
+            Path("artifacts/splits") / dataset_key / "test.json",
+            Path("artifacts/splits") / dataset_key / "val.json",
+            Path("artifacts/splits") / dataset_key / "train.json"
+        ]:
+            if split_candidate.exists():
+                try:
+                    with open(split_candidate, "r", encoding="utf-8") as f:
+                        raw_data = json.load(f)
+                        records = raw_data[:max_samples] if len(raw_data) > max_samples else raw_data
+                    if records:
+                        logger.info(f"Loaded {len(records)} records from {split_candidate}")
+                        break
+                except Exception as e:
+                    logger.warning(f"Failed to read {split_candidate}: {e}")
+
     # Attempt HuggingFace datasets if empty
     if not records:
         try:
@@ -185,20 +206,97 @@ def load_dataset_records(
                     ).to_dict())
                     if (idx + 1) % 200 == 0 or (idx + 1) == max_samples:
                         print(f"[A-OKVQA] Loading: {idx + 1}/{max_samples} samples done", flush=True)
-        except Exception as e:
-            msg = f"HuggingFace auto-load for {dataset_name} failed: {e}"
-            if strict_mode:
-                raise RuntimeError(f"FATAL in strict_mode: {msg}") from e
-            logger.warning(msg + " Falling back to benchmark pool.")
+            elif "infoseek" in dataset_key:
+                # InfoSeek loader: Requires verified access to open-compass/InfoSeek or official Wikipedia corpus
+                try:
+                    ds = load_dataset("open-compass/InfoSeek", split="val")
+                    for idx, row in enumerate(ds):
+                        if idx >= max_samples:
+                            break
+                        clean_meta = {
+                            k: v for k, v in row.items()
+                            if k != "image" and not hasattr(v, "save") and isinstance(v, (str, int, float, bool, list, dict))
+                        }
+                        img_id = str(row.get("image_id", f"infoseek_img_{idx}"))
+                        img_file = img_dir_path / f"{img_id}.jpg"
+                        raw_img = row.get("image")
+                        img_sha256 = None
+                        if raw_img is not None and hasattr(raw_img, "save"):
+                            if not img_file.exists():
+                                raw_img.convert("RGB").save(img_file, format="JPEG", quality=95)
+                        if img_file.exists():
+                            img_sha256 = hashlib.sha256(img_file.read_bytes()).hexdigest()
 
-    # Strict mode prevents synthetic fallback
+                        records.append(XMCADataPoint(
+                            id=f"infoseek_{idx:05d}",
+                            dataset="infoseek",
+                            image_id=img_id,
+                            image_path=str(img_file),
+                            question=str(row.get("question", "")),
+                            ground_truth_answers=[str(a) for a in row.get("answer", [])] if isinstance(row.get("answer"), list) else [str(row.get("answer", ""))],
+                            is_hallucination_gt=None,
+                            image_sha256=img_sha256,
+                            task_type="entity_qa",
+                            metadata=clean_meta
+                        ).to_dict())
+                except Exception as e:
+                    raise RuntimeError(
+                        f"Genuine InfoSeek dataset ingestion from 'open-compass/InfoSeek' failed: {e}. "
+                        "Synthetic fallback generation is strictly prohibited."
+                    ) from e
+
+            elif "faithscore" in dataset_key:
+                # FaithScore loader: Requires verified access to genuine image-grounded prompts
+                try:
+                    ds = load_dataset("lmms-lab/LLaVA-Bench", split="test")
+                    for idx, row in enumerate(ds):
+                        if idx >= max_samples:
+                            break
+                        clean_meta = {
+                            k: v for k, v in row.items()
+                            if k != "image" and not hasattr(v, "save") and isinstance(v, (str, int, float, bool, list, dict))
+                        }
+                        img_id = str(row.get("image_id", f"faithscore_img_{idx}"))
+                        img_file = img_dir_path / f"{img_id}.jpg"
+                        raw_img = row.get("image")
+                        img_sha256 = None
+                        if raw_img is not None and hasattr(raw_img, "save"):
+                            if not img_file.exists():
+                                raw_img.convert("RGB").save(img_file, format="JPEG", quality=95)
+                        if img_file.exists():
+                            img_sha256 = hashlib.sha256(img_file.read_bytes()).hexdigest()
+
+                        records.append(XMCADataPoint(
+                            id=f"faithscore_{idx:05d}",
+                            dataset="faithscore",
+                            image_id=img_id,
+                            image_path=str(img_file),
+                            question=str(row.get("question", row.get("prompt", ""))),
+                            ground_truth_answers=[str(row.get("ground_truth", row.get("gpt_answer", "")))],
+                            is_hallucination_gt=None,
+                            image_sha256=img_sha256,
+                            task_type="free_form",
+                            metadata=clean_meta
+                        ).to_dict())
+                except Exception as e:
+                    raise RuntimeError(
+                        f"Genuine FaithScore dataset ingestion failed: {e}. "
+                        "Synthetic fallback generation is strictly prohibited."
+                    ) from e
+            else:
+                raise ValueError(f"Unrecognized dataset name: '{dataset_name}'")
+
+        except Exception as e:
+            msg = f"Dataset loading error for '{dataset_name}': {e}"
+            logger.error(msg)
+            raise RuntimeError(f"FATAL: {msg}. Synthetic fallback generation is strictly prohibited.") from e
+
+    # Strict non-fabrication guarantee: never fall back to synthetic data
     if not records:
-        if strict_mode:
-            raise RuntimeError(
-                f"FATAL: No genuine records could be loaded for dataset '{dataset_name}' "
-                f"in strict_mode. Synthetic fallback is prohibited."
-            )
-        records = generate_benchmark_records(dataset_name=dataset_name, num_samples=max_samples, seed=seed)
+        raise RuntimeError(
+            f"FATAL: Zero genuine records could be loaded for dataset '{dataset_name}'. "
+            "Synthetic record generation is strictly prohibited by research integrity rules."
+        )
 
     # Strictly cap at max_samples
     if len(records) > max_samples:

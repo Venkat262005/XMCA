@@ -2,7 +2,7 @@
 
 import logging
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 import numpy as np
 from PIL import Image
 
@@ -40,11 +40,13 @@ class PerceptionScorer:
         self,
         image_path: str,
         claims: List[str],
-        boxes: List[List[float]]
+        boxes: List[List[float]],
+        box_scores: Optional[List[float]] = None
     ) -> float:
         """
         Compute Perception Consistency Score (S_P) in [0, 1].
-        Evaluates how well visual regions support the atomic claims.
+        Evaluates how well visual regions support the atomic claims using
+        normalized vision-language cosine similarity and detector confidences.
         """
         if not claims:
             return 1.0  # Empty claims assume neutral
@@ -75,26 +77,46 @@ class PerceptionScorer:
                 if not crops:
                     crops = [full_image]
 
-                inputs = self._processor(
-                    text=claims,
-                    images=crops,
-                    padding="max_length",
-                    truncation=True,
-                    max_length=64,
-                    return_tensors="pt"
-                )
-                if torch.cuda.is_available():
-                    inputs = {k: v.to("cuda") for k, v in inputs.items()}
+                # Process claims with prompt template and negative assertion detection
+                per_claim_scores = []
+                for claim in claims:
+                    is_neg = claim.lower().startswith("no ")
+                    concept = claim[3:].strip() if is_neg else claim
+                    prompt = f"a photo of {concept}" if not concept.lower().startswith("a photo of") else concept
 
-                with torch.no_grad():
-                    outputs = self._model(**inputs)
-                    # SigLIP logits_per_image has shape (batch_images, batch_texts)
-                    logits = outputs.logits_per_image
-                    probs = torch.sigmoid(logits).cpu().numpy()
+                    inputs = self._processor(
+                        text=[prompt],
+                        images=crops,
+                        padding="max_length",
+                        truncation=True,
+                        max_length=64,
+                        return_tensors="pt"
+                    )
+                    if torch.cuda.is_available():
+                        inputs = {k: v.to("cuda") for k, v in inputs.items()}
 
-                # For each claim, take max support across image regions, then mean across claims
-                claim_max_scores = np.max(probs, axis=0)
-                s_p = float(np.mean(claim_max_scores))
+                    with torch.no_grad():
+                        outputs = self._model(**inputs)
+                        img_e = outputs.image_embeds / outputs.image_embeds.norm(dim=-1, keepdim=True)
+                        txt_e = outputs.text_embeds / outputs.text_embeds.norm(dim=-1, keepdim=True)
+                        # Cosine similarity across crops
+                        cos_sim = (img_e * txt_e).sum(dim=-1).cpu().numpy()
+
+                    # Normalized heuristic linear mapping from cosine similarity to [0, 1] (non-calibrated)
+                    cos_norm = np.clip((cos_sim + 0.05) / 0.35, 0.0, 1.0)
+                    max_cos = float(np.max(cos_norm))
+
+                    # Fuse with detector box score if available
+                    if boxes and box_scores and len(box_scores) > 0:
+                        max_box = float(np.max(box_scores))
+                        support = 0.5 * max_box + 0.5 * max_cos
+                    else:
+                        support = max_cos
+
+                    claim_support = (1.0 - support) if is_neg else support
+                    per_claim_scores.append(float(np.clip(claim_support, 0.0, 1.0)))
+
+                s_p = float(np.mean(per_claim_scores))
                 return float(np.clip(s_p, 0.0, 1.0))
             except Exception as e:
                 if self.strict_mode:

@@ -25,19 +25,19 @@ class UtilizationScorer:
         Otherwise, combines retrieved passages with visual context (cross-modal utilization).
         """
         if not claims:
-            return 1.0
+            return None
 
         if not retrieved_passages and not visual_context:
-            return 0.1  # No evidence available to justify claims
+            return None  # Evidence premise unavailable; cannot evaluate utilization
 
         # Build composite premise
         premise_parts = list(retrieved_passages)
         if visual_context and not is_text_only:
-            premise_parts.append(f"Visual Context: {visual_context}")
+            premise_parts.append(str(visual_context))
 
         premise = " ".join(premise_parts).strip()
         if not premise:
-            return 0.1
+            return None
 
         pairs = [(premise, claim) for claim in claims]
         nli_outputs = self.nli_engine.predict_entailment_probabilities(pairs)
@@ -45,9 +45,10 @@ class UtilizationScorer:
         entailment_scores = [out["entailment"] for out in nli_outputs]
         contradiction_scores = [out["contradiction"] for out in nli_outputs]
 
-        # Aggregate: mean entailment penalized by mean contradiction
+        # Standardized linear margin formula mapping [-1, 1] into [0, 1]
+        # Neutral evidence (entail=0, contra=0) maps to 0.5000.
         mean_entail = float(np.mean(entailment_scores))
         mean_contra = float(np.mean(contradiction_scores))
 
-        s_u = max(0.0, mean_entail - 0.5 * mean_contra)
+        s_u = (1.0 + mean_entail - mean_contra) / 2.0
         return float(np.clip(s_u, 0.0, 1.0))

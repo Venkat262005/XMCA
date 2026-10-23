@@ -18,12 +18,12 @@ class VanillaRAGBaseline:
     """Vanilla RAG-VLM: No detector layer. Uses minimum token confidence / length penalty."""
 
     def predict_hallucination_prob(self, answer: str, token_probs: Optional[List[float]] = None) -> float:
-        if token_probs and len(token_probs) > 0:
+        if token_probs is not None and len(token_probs) > 0:
             # 1 - geometric mean of token confidence
             geo_mean = np.exp(np.mean(np.log(np.clip(token_probs, 1e-4, 1.0))))
             return float(np.clip(1.0 - geo_mean, 0.0, 1.0))
-        # Length/hesitation heuristic fallback
-        return 0.35 if len(answer.split()) > 6 else 0.50
+        # Forbidden: arbitrary length/hesitation heuristic fallback. Return NaN when token probabilities are unavailable.
+        return float(np.nan)
 
 
 class POPEProbeBaseline:
@@ -127,8 +127,11 @@ class BaselineEvaluationSuite:
             su = float(su_raw) if su_raw is not None else 0.5
 
             ans = str(r.get("generated_answer", ""))
+            raw_tprobs = r.get("token_probs")
+            if raw_tprobs is None and r.get("token_logprobs"):
+                raw_tprobs = [float(np.exp(lp)) for lp in r["token_logprobs"]]
 
-            preds["vanilla_rag"][i] = self.vanilla.predict_hallucination_prob(ans)
+            preds["vanilla_rag"][i] = self.vanilla.predict_hallucination_prob(ans, token_probs=raw_tprobs)
             preds["pope_probe"][i] = self.pope.predict_hallucination_prob(sp)
             preds["faithscore"][i] = self.faithscore.predict_hallucination_prob([sp])
             preds["opera"][i] = self.opera.predict_hallucination_prob(sp)

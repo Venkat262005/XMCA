@@ -79,11 +79,8 @@ class Qwen2VLGenerator:
 
     def generate_single(self, image_path: str, question: str, retrieved_passages: List[str]) -> str:
         if not Path(image_path).exists():
-            if self.strict_mode:
-                raise FileNotFoundError(f"FATAL in strict_mode: Image path not found: {image_path}")
-            image = Image.new("RGB", (224, 224), color=(128, 128, 128))
-        else:
-            image = Image.open(image_path).convert("RGB")
+            raise FileNotFoundError(f"FATAL: Image path does not exist: {image_path}. Cannot generate without genuine image.")
+        image = Image.open(image_path).convert("RGB")
 
         self._init_model()
 
@@ -127,16 +124,12 @@ class Qwen2VLGenerator:
                 )[0]
                 return output_text.strip()
             except Exception as e:
-                if self.strict_mode:
-                    raise RuntimeError(f"FATAL in strict_mode: Qwen2-VL inference error: {e}") from e
-                logger.warning(f"Qwen2-VL inference error ({e}). Returning fallback answer.")
+                raise RuntimeError(f"FATAL: Qwen2-VL genuine inference error: {e}") from e
 
-        if self.strict_mode:
-            raise RuntimeError("FATAL in strict_mode: Cannot generate answer without genuine model.")
-
-        # Deterministic fallback answer for testing
-        evidence_summary = retrieved_passages[0] if retrieved_passages else "visual scene"
-        return f"Based on the image and evidence, the answer relates to {evidence_summary[:50]}."
+        raise RuntimeError(
+            "FATAL: Qwen2-VL model is not loaded. Cannot execute genuine inference without loaded model. "
+            "Synthetic or template-generated fallbacks are strictly prohibited."
+        )
 
     def run_sharded_generation(
         self,

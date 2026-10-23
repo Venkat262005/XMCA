@@ -120,27 +120,30 @@ class XMCADiagnosticEngine:
         image_str = str(image)
 
         # 1. Atomic Claim Extraction
-        claims = extract_claims_from_answer(answer)
+        claims = extract_claims_from_answer(answer, question=question)
 
         # 2. Perception Consistency (S_P)
         boxes, labels, confidences = self.detector.detect_regions(image_str, claims)
-        s_p = self.p_scorer.compute_s_p(image_str, claims, boxes)
+        s_p = self.p_scorer.compute_s_p(image_str, claims, boxes, box_scores=confidences)
 
         # 3. Retrieval Consistency (S_R)
         if retrieved_passages is None or len(retrieved_passages) == 0:
             search_results = self.retriever.search(question, top_k=self.config["models"]["retriever"]["top_k"])
-            passages = [doc["text"] for doc, _ in search_results] if search_results else ["No relevant evidence found."]
-            dense_scores = [score for _, score in search_results] if search_results else [0.1]
+            passages = [doc["text"] for doc, _ in search_results] if search_results else []
+            dense_scores = [score for _, score in search_results] if search_results else []
         else:
             passages = list(retrieved_passages)
-            dense_scores = [0.85] * len(passages)
+            # Evaluate genuine semantic similarity between answer and passages using retriever
+            dense_scores = [self.retriever.compute_similarity(answer, p) if hasattr(self.retriever, "compute_similarity") else 0.5 for p in passages]
 
-        rerank_scores = self.reranker.score_pairs(question, passages)
-        s_r = self.retrieval_fusion.fuse(dense_scores, rerank_scores)
+        if passages and len(passages) > 0:
+            rerank_scores = self.reranker.score_pairs(answer, passages)
+            s_r = self.retrieval_fusion.fuse(dense_scores, rerank_scores)
+        else:
+            s_r = None
 
         # 4. Utilization Consistency (S_U)
-        v_ctx = visual_context or "visual scene elements"
-        s_u = self.u_scorer.compute_s_u(claims, passages, visual_context=v_ctx, is_text_only=False)
+        s_u = self.u_scorer.compute_s_u(claims, passages, visual_context=visual_context, is_text_only=False)
 
         # Apply override scores if explicitly provided (e.g. from preset simulation)
         if override_scores:
@@ -166,9 +169,9 @@ class XMCADiagnosticEngine:
         # 6. Granular Claim-Level Audit
         claim_audits: List[ClaimDiagnosticAudit] = []
         for i, c in enumerate(claims):
-            c_sp = self.p_scorer.compute_s_p(image_str, [c], boxes)
+            c_sp = self.p_scorer.compute_s_p(image_str, [c], boxes, box_scores=confidences)
             c_sr = s_r  # Retrieval context is at query level
-            c_su = self.u_scorer.compute_s_u([c], passages, visual_context=v_ctx)
+            c_su = self.u_scorer.compute_s_u([c], passages, visual_context=visual_context)
 
             if c_sp < 0.4:
                 verdict = "unsupported_perception"

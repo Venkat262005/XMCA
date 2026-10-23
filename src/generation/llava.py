@@ -64,11 +64,8 @@ class LLaVAOneVisionGenerator:
     def generate_single(self, image_path: str, question: str, retrieved_passages: List[str]) -> str:
         self._init_model()
         if not Path(image_path).exists():
-            if self.strict_mode:
-                raise FileNotFoundError(f"FATAL in strict_mode: Image path not found: {image_path}")
-            image = Image.new("RGB", (224, 224), color=(128, 128, 128))
-        else:
-            image = Image.open(image_path).convert("RGB")
+            raise FileNotFoundError(f"FATAL: Image path does not exist: {image_path}. Cannot generate without genuine image.")
+        image = Image.open(image_path).convert("RGB")
 
         if self._model is not None and self._processor is not None:
             import torch
@@ -99,16 +96,12 @@ class LLaVAOneVisionGenerator:
                 output_text = self._processor.decode(trimmed_ids, skip_special_tokens=True)
                 return output_text.strip()
             except Exception as e:
-                if self.strict_mode:
-                    raise RuntimeError(f"FATAL in strict_mode: LLaVA inference error: {e}") from e
-                logger.warning(f"LLaVA-OneVision inference error ({e}). Returning fallback transfer answer.")
+                raise RuntimeError(f"FATAL: LLaVA-OneVision genuine inference error: {e}") from e
 
-        if self.strict_mode:
-            raise RuntimeError("FATAL in strict_mode: Cannot generate transfer answer without genuine model.")
-
-        # Deterministic fallback answer for testing
-        evidence_summary = retrieved_passages[0] if retrieved_passages else "observed details"
-        return f"Transfer VLM analysis: {evidence_summary[:45]} is consistent with the image."
+        raise RuntimeError(
+            "FATAL: LLaVA-OneVision model is not loaded. Cannot execute genuine inference without loaded model. "
+            "Synthetic or template-generated fallbacks are strictly prohibited."
+        )
 
     def run_sharded_generation(
         self,
