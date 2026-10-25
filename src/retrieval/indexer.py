@@ -104,6 +104,20 @@ class DenseRetriever:
         self.index.add(embeddings)
         logger.info(f"FAISS index built with {self.index.ntotal} documents, dimension {self.dimension}.")
 
+    def build_index_from_corpus(self, corpus_path: str | Path) -> None:
+        """Load and index JSON or JSONL knowledge corpus from disk."""
+        p = Path(corpus_path)
+        docs = []
+        if p.name.endswith(".jsonl"):
+            with open(p, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        docs.append(json.loads(line))
+        else:
+            with open(p, "r", encoding="utf-8") as f:
+                docs = json.load(f)
+        self.build_index(docs)
+
     def search(
         self,
         query: str,
