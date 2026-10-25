@@ -32,11 +32,11 @@ def validate_and_resolve_nli_mapping(config: Any, num_logits: int) -> Dict[int, 
             raise ValueError(f"Invalid non-integer label index in id2label: {raw_k}")
 
         lbl_str = str(raw_v).strip().lower()
-        if "entail" in lbl_str:
+        if "entail" in lbl_str or lbl_str == "label_0":
             norm_lbl = "entailment"
-        elif "contra" in lbl_str:
+        elif "contra" in lbl_str or lbl_str == "label_2":
             norm_lbl = "contradiction"
-        elif "neut" in lbl_str:
+        elif "neut" in lbl_str or lbl_str == "label_1":
             norm_lbl = "neutral"
         else:
             raise ValueError(f"Unrecognized NLI class label '{raw_v}' at index {idx}.")
