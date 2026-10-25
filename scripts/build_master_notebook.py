@@ -47,6 +47,7 @@ def build_master_notebook():
 import os
 import sys
 import time
+import json
 from pathlib import Path
 
 # Execution Policy Configuration
@@ -329,6 +330,9 @@ print("Stage 1 adapter configuration checks: ALL PASSED.")"""))
 
     # Cell 13: Stage 1 Artifacts and Checkpoint
     cells.append(make_cell("code", """# ## Cell 13: Stage 1 Artifacts and Checkpoint
+import json
+import time
+
 stage1_out_dir = OUTPUT_ROOT / "stage1_foundation"
 stage1_out_dir.mkdir(parents=True, exist_ok=True)
 stage1_summary_file = stage1_out_dir / "stage1_summary.json"
