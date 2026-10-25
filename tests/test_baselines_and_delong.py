@@ -26,10 +26,10 @@ def test_seven_baselines_suite():
     suite = BaselineEvaluationSuite()
 
     records = [
-        {"s_p": 0.9, "s_r": 0.85, "s_u": 0.95, "generated_answer": "Valid factual statement."},
-        {"s_p": 0.1, "s_r": 0.85, "s_u": 0.80, "generated_answer": "Perception hallucination."},
-        {"s_p": 0.9, "s_r": 0.10, "s_u": 0.80, "generated_answer": "Retrieval hallucination."},
-        {"s_p": 0.9, "s_r": 0.90, "s_u": 0.10, "generated_answer": "Utilization hallucination."}
+        {"s_p": 0.9, "s_r": 0.85, "s_u": 0.95, "generated_answer": "Valid factual statement.", "token_probs": [0.95, 0.90]},
+        {"s_p": 0.1, "s_r": 0.85, "s_u": 0.80, "generated_answer": "Perception hallucination.", "token_probs": [0.30, 0.40]},
+        {"s_p": 0.9, "s_r": 0.10, "s_u": 0.80, "generated_answer": "Retrieval hallucination.", "token_probs": [0.50, 0.60]},
+        {"s_p": 0.9, "s_r": 0.90, "s_u": 0.10, "generated_answer": "Utilization hallucination.", "token_probs": [0.45, 0.55]}
     ]
 
     preds = suite.evaluate_all(records)

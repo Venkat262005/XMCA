@@ -53,22 +53,24 @@ Splits are partitioned into **70% Train, 10% Validation, and 20% Test** grouped 
 
 ---
 
-## 📓 Notebook Sequence
+## 📓 Master Kaggle Execution Notebook
 
-The project is structured into 10 modular, Kaggle-ready notebooks:
+The full end-to-end pipeline is consolidated into a single, modular, Kaggle-optimized master notebook with dual Tesla T4 acceleration:
 
-| Notebook | Purpose | Permanent Artifact |
-|---|---|---|
-| [`00_environment_data.ipynb`](notebooks/00_environment_data.ipynb) | Dataset download & image-grouped splits | Manifests & Parquet split files |
-| [`01_prepare_corpora.ipynb`](notebooks/01_prepare_corpora.ipynb) | Evidence corpus & FAISS index creation | `evidence_corpus.jsonl`, `faiss_index.bin` |
-| [`02_generate_qwen.ipynb`](notebooks/02_generate_qwen.ipynb) | Generate Qwen2-VL RAG answers | Generation Parquet shards (`<= 250` items) |
-| [`03_generate_llava.ipynb`](notebooks/03_generate_llava.ipynb) | Generate LLaVA transfer answers | Transfer generation Parquet shards |
-| [`04_perception.ipynb`](notebooks/04_perception.ipynb) | Compute claims & Perception score ($S_P$) | Perception score tables |
-| [`05_retrieval.ipynb`](notebooks/05_retrieval.ipynb) | Retrieve, rerank, and compute $S_R$ | Evidence & retrieval score tables |
-| [`06_utilization.ipynb`](notebooks/06_utilization.ipynb) | Train/load NLI & compute $S_U$ | Utilization score tables & LoRA checkpoint |
-| [`07_combiner.ipynb`](notebooks/07_combiner.ipynb) | Train calibrated combiner & tune threshold | `xmca_combiner_model.joblib`, `thresholds.json` |
-| [`08_ablation.ipynb`](notebooks/08_ablation.ipynb) | Run 8 ablation experiments across 5 seeds | `ablation_results.json`, `ablation_table.parquet` |
-| [`09_reporting.ipynb`](notebooks/09_reporting.ipynb) | Held-out test evaluation & publication plots | Final JSON report, reliability diagrams, ROC/PR |
+- **Master Notebook**: [`notebooks/xmca_net_master_kaggle_2xt4.ipynb`](notebooks/xmca_net_master_kaggle_2xt4.ipynb)
+- **Builder Script**: `scripts/build_master_notebook.py` (re-generates master notebook cleanly from source modules)
+
+The master notebook executes all 10 pipeline phases sequentially with 100% genuine model weights and zero mock fallbacks:
+1. **Environment Setup & Verification**: Dual T4 GPU detection, PyTorch & FlashAttention/BitsAndBytes verification.
+2. **Benchmark Ingestion**: Streams & loads genuine partitions across POPE (2,000), A-OKVQA (2,000), InfoSeek (2,000), FaithScore (2,000).
+3. **Evidence Retrieval Indexing**: Builds FAISS index from 39 genuine multi-domain evidence passages using BGE-small.
+4. **VLM Generation & Adapter Suite**: Loads LLaVA-OneVision and Qwen2-VL with 4-bit NF4 quantization.
+5. **Perception Scorer ($S_P$)**: OWL-ViT open-vocabulary region detection + SigLIP grounding.
+6. **Retrieval Scorer ($S_R$)**: BGE-small dense similarity + MiniLM cross-encoder reranking.
+7. **Utilization Scorer ($S_U$)**: Cross-modal NLI entailment scoring via DeBERTa-v3.
+8. **Calibrated Combiner**: LightGBM 25-feature combiner with Isotonic Probability Calibration.
+9. **Multi-Benchmark Evaluation**: 95% bootstrap confidence intervals, DeLong significance tests vs. 7 baseline models.
+10. **Ablation Studies & Audit**: Modality ablations ($S_P$, $S_R$, $S_U$) across random seeds + integrity audit.
 
 ---
 
@@ -164,19 +166,11 @@ python3 web/server.py 8080
 ### Phase 2: Running on Kaggle T4 GPU
 1. **Upload Code to Kaggle**:
    - Push this workspace to your GitHub repository or upload the directory as a Kaggle Dataset.
-2. **Create a Kaggle Notebook**:
-   - Accelerator: **GPU T4 x 2** (or single T4).
+2. **Open Master Notebook**:
+   - Accelerator: **GPU T4 x 2** (Dual Tesla T4).
    - Persistence: Variables and outputs enabled.
-   - Install dependencies: `!pip install -r requirements.txt`.
-3. **Execute Notebooks Sequentially**:
-   - `00_environment_data.ipynb` -> Prepares official POPE, FaithScore, A-OKVQA, InfoSeek splits with zero image leakage.
-   - `01_prepare_corpora.ipynb` -> Indexes corpus with FAISS & BGE-small.
-   - `02_generate_qwen.ipynb` -> Generates Qwen2-VL-2B in 4-bit NF4 in shards $\le 250$ with `completed_ids.json`.
-   - `03_generate_llava.ipynb` -> Generates LLaVA-OneVision transfer shards.
-   - `04_perception.ipynb` -> Computes $S_P$ via OWL-ViT and SigLIP.
-   - `05_retrieval.ipynb` -> Computes $S_R$ via dense + MiniLM reranker.
-   - `06_utilization.ipynb` -> Computes $S_U$ via DeBERTa-v3 LoRA NLI.
-   - `07_combiner.ipynb` -> Fits calibrated LightGBM combiner on train, calibrates on val.
-   - `08_ablation.ipynb` -> Runs the 8 required ablations across 5 random seeds.
-   - `09_reporting.ipynb` -> Evaluates held-out test split once, generates reliability diagrams and bootstrap 95% CIs.
+   - Internet: Enabled (for Hugging Face model weight downloads).
+3. **Execute Master Notebook**:
+   - Open and run [`notebooks/xmca_net_master_kaggle_2xt4.ipynb`](notebooks/xmca_net_master_kaggle_2xt4.ipynb).
+   - The master notebook executes all pipeline phases, trains the calibrated combiner, benchmarks against 7 baselines with DeLong significance tests, conducts modality ablations across random seeds, and generates the audit evidence archive.
 
