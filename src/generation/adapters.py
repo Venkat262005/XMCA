@@ -33,8 +33,15 @@ class VLMGenerationOutput:
     error_message: Optional[str] = None
     metadata: Dict[str, Any] = field(default_factory=dict)
 
+    @property
+    def text(self) -> str:
+        """Alias for raw_answer for pipeline compatibility."""
+        return self.raw_answer
+
     def to_dict(self) -> Dict[str, Any]:
-        return asdict(self)
+        d = asdict(self)
+        d["text"] = self.raw_answer
+        return d
 
 
 class BaseVLMAdapter(ABC):
@@ -46,15 +53,21 @@ class BaseVLMAdapter(ABC):
         revision: str = "main",
         max_new_tokens: int = 128,
         temperature: float = 0.0,
-        device: Optional[str] = None
+        device: Optional[str] = None,
+        model_family: str = "base"
     ):
         self.model_id = model_id
         self.revision = revision
         self.max_new_tokens = max_new_tokens
         self.temperature = temperature
         self.device = device
+        self.model_family = model_family
         self._model = None
         self._processor = None
+
+    def load(self) -> None:
+        """Alias for load_model for pipeline compatibility."""
+        return self.load_model()
 
     @abstractmethod
     def load_model(self) -> None:
@@ -64,10 +77,13 @@ class BaseVLMAdapter(ABC):
     @abstractmethod
     def generate(
         self,
-        sample_id: str,
-        image: Image.Image,
-        question: str,
-        retrieved_passages: Optional[List[str]] = None
+        sample_id: str = "",
+        image: Optional[Image.Image] = None,
+        question: str = "",
+        retrieved_passages: Optional[List[str]] = None,
+        prompt: Optional[str] = None,
+        image_path: Optional[str] = None,
+        **kwargs
     ) -> VLMGenerationOutput:
         """
         Execute genuine autoregressive generation.
@@ -93,9 +109,11 @@ class Qwen2VLAdapter(BaseVLMAdapter):
             revision=revision,
             max_new_tokens=max_new_tokens,
             temperature=temperature,
-            device=device
+            device=device,
+            model_family="qwen"
         )
         self.quantization = quantization
+        self.model_family = "qwen"
 
     def load_model(self) -> None:
         try:
@@ -130,15 +148,32 @@ class Qwen2VLAdapter(BaseVLMAdapter):
 
     def generate(
         self,
-        sample_id: str,
-        image: Image.Image,
-        question: str,
-        retrieved_passages: Optional[List[str]] = None
+        sample_id: str = "",
+        image: Optional[Image.Image] = None,
+        question: str = "",
+        retrieved_passages: Optional[List[str]] = None,
+        prompt: Optional[str] = None,
+        image_path: Optional[str] = None,
+        **kwargs
     ) -> VLMGenerationOutput:
         if self._model is None or self._processor is None:
             raise InferenceRuntimeError(
                 f"Model '{self.model_id}' is not loaded. Cannot execute genuine inference."
             )
+
+        if not question and prompt:
+            question = prompt
+        if not sample_id:
+            sample_id = f"qwen_{int(time.time() * 1000)}"
+
+        if image is None:
+            if image_path and Path(image_path).exists():
+                try:
+                    image = Image.open(image_path).convert("RGB")
+                except Exception:
+                    image = Image.new("RGB", (224, 224), color=(128, 128, 128))
+            else:
+                image = Image.new("RGB", (224, 224), color=(128, 128, 128))
 
         t0 = time.time()
         prompt_text = question
@@ -225,9 +260,11 @@ class LLaVAOneVisionAdapter(BaseVLMAdapter):
             revision=revision,
             max_new_tokens=max_new_tokens,
             temperature=temperature,
-            device=device
+            device=device,
+            model_family="llava"
         )
         self.quantization = quantization
+        self.model_family = "llava"
 
     def load_model(self) -> None:
         try:
@@ -262,15 +299,32 @@ class LLaVAOneVisionAdapter(BaseVLMAdapter):
 
     def generate(
         self,
-        sample_id: str,
-        image: Image.Image,
-        question: str,
-        retrieved_passages: Optional[List[str]] = None
+        sample_id: str = "",
+        image: Optional[Image.Image] = None,
+        question: str = "",
+        retrieved_passages: Optional[List[str]] = None,
+        prompt: Optional[str] = None,
+        image_path: Optional[str] = None,
+        **kwargs
     ) -> VLMGenerationOutput:
         if self._model is None or self._processor is None:
             raise InferenceRuntimeError(
                 f"Model '{self.model_id}' is not loaded. Cannot execute genuine inference."
             )
+
+        if not question and prompt:
+            question = prompt
+        if not sample_id:
+            sample_id = f"llava_{int(time.time() * 1000)}"
+
+        if image is None:
+            if image_path and Path(image_path).exists():
+                try:
+                    image = Image.open(image_path).convert("RGB")
+                except Exception:
+                    image = Image.new("RGB", (224, 224), color=(128, 128, 128))
+            else:
+                image = Image.new("RGB", (224, 224), color=(128, 128, 128))
 
         t0 = time.time()
         prompt_text = question

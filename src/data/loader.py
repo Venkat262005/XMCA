@@ -109,21 +109,27 @@ def load_dataset_records(
 
     # Check local split files in artifacts/splits/ if empty
     if not records:
-        for split_candidate in [
-            Path("artifacts/splits") / dataset_key / "test.json",
-            Path("artifacts/splits") / dataset_key / "val.json",
-            Path("artifacts/splits") / dataset_key / "train.json"
-        ]:
-            if split_candidate.exists():
-                try:
-                    with open(split_candidate, "r", encoding="utf-8") as f:
-                        raw_data = json.load(f)
-                        records = raw_data[:max_samples] if len(raw_data) > max_samples else raw_data
-                    if records:
-                        logger.info(f"Loaded {len(records)} records from {split_candidate}")
-                        break
-                except Exception as e:
-                    logger.warning(f"Failed to read {split_candidate}: {e}")
+        repo_root = Path(__file__).resolve().parent.parent.parent
+        search_dirs = [
+            Path("artifacts/splits") / dataset_key,
+            repo_root / "artifacts/splits" / dataset_key,
+            Path("/kaggle/working/xmca/artifacts/splits") / dataset_key,
+        ]
+        for sdir in search_dirs:
+            for sname in ["test.json", "val.json", "train.json"]:
+                split_candidate = sdir / sname
+                if split_candidate.exists():
+                    try:
+                        with open(split_candidate, "r", encoding="utf-8") as f:
+                            raw_data = json.load(f)
+                            records = raw_data[:max_samples] if len(raw_data) > max_samples else raw_data
+                        if records:
+                            logger.info(f"Loaded {len(records)} records from {split_candidate}")
+                            break
+                    except Exception as e:
+                        logger.warning(f"Failed to read {split_candidate}: {e}")
+            if records:
+                break
 
     # Attempt HuggingFace datasets if empty
     if not records:
