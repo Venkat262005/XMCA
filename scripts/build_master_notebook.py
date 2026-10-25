@@ -1095,6 +1095,7 @@ from src.evaluation.delong import compute_delong_test
 
 print("--- [Step 4: Comparative Benchmarking Against 7 Baselines] ---")
 suite = BaselineEvaluationSuite()
+suite.fit_trainable_baselines(all_train_recs, y_train)
 baseline_metrics = suite.evaluate_all(all_test_recs, y_true=y_test, threshold=0.5)
 baseline_probs = suite.evaluate_all(all_test_recs, y_true=None)
 
